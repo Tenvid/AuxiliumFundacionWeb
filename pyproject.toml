@@ -1,0 +1,11 @@
+[project]
+name = "auxiliumfundacionweb"
+version = "0.1.0"
+description = "Web para la fundación Auxilium"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "django==6.0.3",
+    "mypy==1.19.1",
+    "ruff==0.15.4",
+]
