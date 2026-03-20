@@ -1,0 +1,16 @@
+:root {
+  --primary: #006633;
+  --primary-dark: #063F1E;
+  --secondary: #FFC75B;
+  --accent-dark: #E0E499;
+  --accent-light: #F2F2F0;
+  --paragraph-dark: #000000;
+  --paragraph-light: #FFFFFF;
+  --dark: #000000;
+  --light: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
