@@ -7,8 +7,8 @@ function App() {
   return (
     <>
       <nav className='home-nav'>
-        <div className='logo-wrapper'>
-          <img src={logo_light} alt="Ola" className='home-nav-logo'></img>
+        <div className='home-nav__logo-wrapper'>
+          <img src={logo_light} alt="Ola" className='home-nav__logo-wrapper__logo'></img>
         </div>
         <div className='home-nav__content'>
           <ul className='home-nav__content__list'>
@@ -35,9 +35,22 @@ function App() {
             </NavLink>
           </ul>
         </div>
-      </nav >
+      </nav>
+
       <section>
+        <p className="main-image__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec fringilla leo. Etiam quis pulvinar eros. Aenean ullamcorper nunc vel vehicula laoreet. Quisque lobortis arcu lacus, ut placerat leo euismod non. Donec hendrerit venenatis enim. Aliquam lobortis odio sagittis maximus eleifend. Mauris gravida enim id odio feugiat euismod. Vestibulum magna erat, egestas a ipsum ac, sollicitudin semper ex. Curabitur metus neque, efficitur eget urna id, pellentesque vehicula purus. Praesent molestie, velit a blandit gravida, nibh enim molestie augue, eu tempor mauris velit a lectus. Ut vestibulum maximus congue. Proin venenatis bibendum metus quis mollis.</p>
         <img src={main_image} alt="Main image" className='main-image' />
+      </section>
+
+      <section className='image-grid-wrapper'>
+        <div className='image-grid'>
+          <img src={main_image} alt="Grid Image" className='image-grid__image' />
+          <img src={main_image} alt="Grid Image" className='image-grid__image' />
+          <img src={main_image} alt="Grid Image" className='image-grid__image' />
+          <img src={main_image} alt="Grid Image" className='image-grid__image' />
+          <img src={main_image} alt="Grid Image" className='image-grid__image' />
+          <img src={main_image} alt="Grid Image" className='image-grid__image' />
+        </div>
       </section>
     </>
   )
