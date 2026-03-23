@@ -1,5 +1,6 @@
 import logo_light from "../assets/LogoAuxiliumVector.svg"
 import { NavLink } from './NavLink'
+import { LeftArrow } from "./LeftArrow"
 import './MainNav.css'
 
 export function MainNav() {
@@ -8,6 +9,10 @@ export function MainNav() {
   const toggleNav = () => {
     const navContent = document.getElementById('homeNavContent');
     navContent.className = navContent.className == 'home-nav__content' ? 'home-nav__content--toggle' : 'home-nav__content';
+    const navButton = document.getElementById("navButton");
+
+    navButton.className = navButton.className.includes("minus-ninety-degrees") ?
+      "home-nav__toggle-nav-button" : "home-nav__toggle-nav-button minus-ninety-degrees"
   }
 
   return (
@@ -43,8 +48,11 @@ export function MainNav() {
       <button
         type="button"
         className="home-nav__toggle-nav-button"
-        onClick={toggleNav}>
-        ABRIR NAV
+        onClick={toggleNav}
+        id="navButton"
+      >
+        {/* ABRIR NAV */}
+        <LeftArrow />
       </button>
     </nav>
   )
