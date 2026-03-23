@@ -4,16 +4,6 @@ import { MainNav } from './components/MainNav'
 import { TextImage } from './components/TextImage'
 function App() {
 
-  // TODO:
-  // - Nav should hide in order to be responsive.
-  // - Grid gap should be in relative units
-  // - Missing fonts
-  // - Styling for links
-  // - Grid should have one column in mobile phone
-  // - Main image font size should change with screen size
-  // - Links should have a hover effect
-
-
   const loadGridImages = () => {
     const gridImages = [];
     const images = [
