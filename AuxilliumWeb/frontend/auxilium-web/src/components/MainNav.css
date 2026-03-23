@@ -1,10 +1,13 @@
+:root {
+  --nav-height: 5vh;
+}
 .home-nav {
   display: flex;
   justify-content: space-between;
   padding: 0 3vw;
   background: var(--primary);
   color: var(paragraph-light);
-  height: 5vh;
+  height: var(--nav-height);
   box-shadow: 1px 1px 5px color-mix(in srgb, var(--dark) 50%, transparent 50%) ;
   position: sticky;
   z-index: 2
@@ -20,12 +23,15 @@
 }
 
 .home-nav__content {
-  display:flex;
+  display: flex;
 }
 
 .home-nav__content__list {
-  display:flex;
-  list-style-type: none; gap: 1vw; align-items: center;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  gap: 1vw;
+  align-items: center;
 }
 
 .home-nav__toggle-nav-button{
@@ -35,12 +41,22 @@
 .home-nav__content--toggle {
     display: block;
     height: 10em;
-    background-color: var(--primary-dark);
-    margin-top: 5vh;
+    background-color: var(--accent-dark);
+    margin-top: var(--nav-height);
     position: absolute;
     margin-left: -3vw;
     width: 100vw;
     text-align: center;
+}
+
+.home-nav__content--toggle .home-nav__content__list {
+  flex-direction: column;
+  margin-top: 1vh;
+  gap: .5vh;
+}
+
+.home-nav__content--toggle a {
+  color: var(--paragraph-dark);
 }
 
 /* Media Queries */

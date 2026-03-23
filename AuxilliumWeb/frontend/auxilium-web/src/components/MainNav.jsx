@@ -8,10 +8,6 @@ export function MainNav() {
   const toggleNav = () => {
     const navContent = document.getElementById('homeNavContent');
     navContent.className = navContent.className == 'home-nav__content' ? 'home-nav__content--toggle' : 'home-nav__content';
-
-    const navContentList = document.getElementsByClassName('home-nav__content__list')[0];
-    navContentList.style.display = "block";
-
   }
 
   return (

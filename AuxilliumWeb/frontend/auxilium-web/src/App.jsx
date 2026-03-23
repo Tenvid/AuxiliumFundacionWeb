@@ -11,6 +11,7 @@ function App() {
   // - Styling for links
   // - Grid should have one column in mobile phone
   // - Main image font size should change with screen size
+  // - Links should have a hover effect
 
 
   const loadGridImages = () => {
