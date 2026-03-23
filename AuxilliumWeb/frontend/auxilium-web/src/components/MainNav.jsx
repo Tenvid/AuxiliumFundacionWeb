@@ -51,7 +51,6 @@ export function MainNav() {
         onClick={toggleNav}
         id="navButton"
       >
-        {/* ABRIR NAV */}
         <LeftArrow />
       </button>
     </nav>
