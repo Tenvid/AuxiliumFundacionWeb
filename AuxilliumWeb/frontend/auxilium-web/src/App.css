@@ -12,6 +12,7 @@
   grid-template-columns: auto auto;
   grid-gap: 1%;
   align-content: center;
+  margin: 1rem;
 }
 
 .image-grid img {
