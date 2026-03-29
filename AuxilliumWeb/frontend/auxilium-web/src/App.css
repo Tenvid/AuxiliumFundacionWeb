@@ -44,10 +44,13 @@
   color: var(--accent-dark)
 }
 
-
 .footer-wrapper{
   background: var(--accent-dark);
   display: flex;
   justify-content: center;
   padding: 5vw
+}
+
+.footer-logo {
+  width: 50%
 }

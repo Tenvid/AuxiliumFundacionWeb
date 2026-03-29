@@ -1,7 +1,7 @@
 import './App.css'
 import main_image from "./assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg"
-import { MainNav } from './components/MainNav'
-import { TextImage } from './components/TextImage'
+import { MainNav } from './components/MainNav/MainNav'
+import { TextImage } from './components/TextImage/TextImage'
 import logo_dark from "./assets/LogoAuxiliumVector--dark.svg"
 
 function App() {
@@ -73,7 +73,7 @@ function App() {
       </section>
 
       <footer className='footer-wrapper'>
-        <img src={logo_dark} alt="" />
+        <img src={logo_dark} className='footer-logo' alt="" />
       </footer>
     </>
   )
