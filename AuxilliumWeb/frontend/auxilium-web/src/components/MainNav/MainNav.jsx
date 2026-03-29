@@ -1,6 +1,6 @@
-import logo_light from "../assets/LogoAuxiliumVector.svg"
-import { NavLink } from './NavLink'
-import { LeftArrow } from "./LeftArrow"
+import logo_light from "../../assets/LogoAuxiliumVector.svg"
+import { NavLink } from '../NavLink/NavLink'
+import { LeftArrow } from "../LeftArrow/LeftArrow"
 import './MainNav.css'
 
 export function MainNav() {
