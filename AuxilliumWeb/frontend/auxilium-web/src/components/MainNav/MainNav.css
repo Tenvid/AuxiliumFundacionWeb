@@ -33,6 +33,7 @@
   list-style-type: none;
   gap: 1vw;
   align-items: center;
+  font-family: AntonSC;
 }
 
 .home-nav__toggle-nav-button{

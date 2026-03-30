@@ -81,11 +81,11 @@ function ProjectsPage() {
     const [projects, setProjects] = useState(projectsData)
     
     useEffect(() => {
-        console.log(projects) // Verifica que el JSON se cargó correctamente
+        console.log(projects)
     }, [])
 
     return (
-        <div>
+        <div className={styles.ProjectsPageContainer}>
             <MainNav/>
             {GenerateProject(projects.Project1.Title, projects.Project1.Text1, projects.Project1.Text2, projects.Project1.Image1, projects.Project1.Image2)}
             {GenerateProject(projects.Project2.Title,projects.Project2.Text1,projects.Project2.Text2,projects.Project2.Image1)}
@@ -95,7 +95,7 @@ function ProjectsPage() {
                 <img src={logo_dark} alt="" />
             </footer>
         </div>
-
     )
 }
+
 export default ProjectsPage

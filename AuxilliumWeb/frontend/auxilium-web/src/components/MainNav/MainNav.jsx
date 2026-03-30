@@ -22,13 +22,13 @@ export function MainNav() {
       </div>
       <div className='home-nav__content' id="homeNavContent">
         <ul className='home-nav__content__list'>
-          <NavLink href="#">
+          <NavLink href="/">
             Inicio
           </NavLink>
           <NavLink href="#">
             Quiénes somos
           </NavLink>
-          <NavLink href="#">
+          <NavLink href="/projects">
             Proyectos
           </NavLink>
           <NavLink href="#">
