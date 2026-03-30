@@ -1,0 +1,144 @@
+/* Variables y estilos base */
+:root {
+  --img-height: 30vh;
+  --border-radius: 20px;
+  --gap: 4vw;
+  --margin-left: 3vw;
+  --margin-top: 2vh;
+  --font-family: Monda;
+  --font-size: 20px;
+}
+
+/* Estilos comunes */
+.ProjectHeader {
+    display: flex;
+    font-size: xxx-large;
+    width: 95%;
+    margin: 3vh auto 0;
+    justify-content: center;
+    background-color: var(--primary);
+    border-radius: 15px;
+    font-weight: bolder;
+    color: #ffffff;
+    padding: 0.5vh;
+    font-family: AntonSC;
+}
+
+.footerWrapper {
+  background: var(--accent-dark);
+  display: flex;
+  justify-content: center;
+  padding: 5vw;
+}
+
+/* Mixins para textos */
+p {
+    display: flex;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+}
+
+/* Wrappers comunes */
+.ProjectOneWrapperOne,
+.ProjectTwoWrapper {
+    display: grid;
+    gap: var(--gap);
+    margin-left: var(--margin-left);
+    margin-top: var(--margin-top);
+}
+
+.ProjectOneWrapperOne {
+    grid-template-columns: 70% 25%;
+}
+
+.ProjectOneWrapperOne img {
+    border-radius: var(--border-radius);
+    height: var(--img-height);
+    justify-self: left;
+}
+
+.ProjectTwoWrapper {
+    grid-template-columns: 60% 25%;
+}
+
+.ProjectTwoWrapper img {
+    border-radius: var(--border-radius);
+    height: var(--img-height);
+}
+
+.ProjectOneWrapperTwo {
+    display: grid;
+    grid-template-columns: 20% 70%;
+    gap: var(--gap);
+    margin-left: var(--margin-left);
+    margin-top: var(--margin-top);
+    margin-bottom: var(--margin-top);
+}
+
+.ProjectOneWrapperTwo img {
+    border-radius: var(--border-radius);
+    height: var(--img-height);
+}
+
+.ProjectType2 {
+    margin-left: var(--margin-left);
+    margin-top: var(--margin-top);
+    padding-bottom: var(--margin-top);
+}
+
+.ProjectTwoButtomText {
+    display: flex;
+    justify-content: center;
+    margin-top: 1vh;
+    width: 95%;
+}
+
+/* Project Three */
+.ProjectThreeWrapper {
+    display: grid;
+    grid-template-columns: 70% 20%;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.ProjectThreePhotoWrapper {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 2vh;
+}
+
+.ProjectThreePhotoWrapper img {
+    border-radius: var(--border-radius);
+    height: var(--img-height);
+}
+
+.ProjectThreeText {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    margin: auto;
+    font-family: var(--font-family);
+    font-size: large;
+}
+
+/* Project Four */
+.ProjectFourWrapper {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    margin-bottom: 4vh;
+}
+
+.ProjectFourWrapper img {
+    border-radius: var(--border-radius);
+    height: 40vh;
+    margin: 2vh auto;
+}
+
+.ProjectFourWrapper p {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    margin: auto;
+    font-family: var(--font-family);
+    font-size: large;
+}

@@ -1,0 +1,30 @@
+{
+    "Project1": {
+        "Title": "Agua para Camerún",
+        "Text1": "Camerún es un pais con mas de 25 millones de habitantes, con gran cantidad de recursos naturales, pero con un acceso al agua muy limitado en muchas comunidad perjudicando a la salud de las personas y provocando enfermedades por el cosumo de agua contaminada, especialmente en niños. El objetivo de este proyecto era construir un pozo de agua y educar sobre el uso responsable del agua y los recursos hidricos. Dividimos el proyecto en varias etapas, identificamos el lugar adecuado para la construcción del pozo, realizamos los estudios geologicos y perforación del pozo. Luego instalamos los sistemas de bombeo y de pratamiento del agua. Además capcitamos a la comunidad para que se encargue del mantenimiento del pozo y gestione correctamente el agua.",
+        "Text2": "Esperamos que este proyecto tenga un impacto muy signifcativo en la calidad de las vida de las personas de la zona, mejorando mucho su salud y bienestar, además esperamos que tenga un impacto economico positivo, sobretodo en todas las actividades que dependen del agua como la agricultura y la ganadería lo que permitira la producción de alimentos de mayor calidad en la zona. Estamos seguros de que este proyecto representa una oprtunidad unica para mejorar la vida de las personas de la región y concienciar sobre el correcto uso de los recursos hídricos. Esperamos que este proyecto sirva como ejemplo para que surjan iniciativas similares alrededor del mundo para trabajar en un futuro mas justo y sostenible para todos.",
+        "Image1": "/src/assets/gallery/projects/PozoCamerun/PozoCamerun1.jpeg",
+        "Image2": "/src/assets/gallery/projects/PozoCamerun/PozoCamerun2.jpeg"
+    },
+    "Project2": {
+        "Title": "Proyecto 2",
+        "Text1": "Lorem Ipsum",
+        "Text2": "Lorem Ipsum",
+        "Image1": "http://localhost:5173/src/assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg",
+        "Image2": "http://localhost:5173/src/assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg"
+    },
+    "Project3": {
+        "Title": "Proyecto 3",
+        "Text1": "Lorem Ipsum",
+        "Text2": "Lorem Ipsum",
+        "Image1": "http://localhost:5173/src/assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg",
+        "Image2": "http://localhost:5173/src/assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg"
+    },
+    "Project4": {
+        "Title": "Proyecto 4",
+        "Text1": "Lorem Ipsum",
+        "Text2": "Lorem Ipsum",
+        "Image1": "http://localhost:5173/src/assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg",
+        "Image2": "http://localhost:5173/src/assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg"
+    }
+}
