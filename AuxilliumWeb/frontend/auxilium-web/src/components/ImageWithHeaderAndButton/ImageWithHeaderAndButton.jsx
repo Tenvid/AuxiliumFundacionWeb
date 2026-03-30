@@ -1,24 +1,25 @@
-import "./ImageWithHeaderAndButton.css"
+import styles from "./ImageWithHeaderAndButton.module.css"
 
 export function ImageWithHeaderAndButton({ header, text, buttonText, buttonHref, image, imageAlt = null }) {
   return (
-    <section className="image-with-header-and-button-wrapper">
+    <section className={styles.imageWithHeaderAndButtonWrapper}>
       <img
         src={image}
         alt={imageAlt ? imageAlt : ""}
-        className="image-with-header-and-button__image"
+        className={styles.imageWithHeaderAndButtonImage}
       />
-      <div className="image-with-header-and-button__content">
-        <h4 className="image-with-header-and-button__header">
+      <div className={styles.imageWithHeaderAndButtonContent}>
+        <h4 className={styles.imageWithHeaderAndButtonHeader}>
           {header}
         </h4>
-        <p className="image-with-header-and-button__text">
+        <p className={styles.imageWithHeaderAndButtonText}>
           {text}
         </p>
-        <a href={buttonHref} className="image-with-header-and-button__button">
+        <a href={buttonHref} className={styles.imageWithHeaderAndButtonButton}>
           {buttonText}
         </a>
       </div>
     </section>
   )
 }
+export default ImageWithHeaderAndButton
