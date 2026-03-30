@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { MainNav } from '../../components/MainNav'
+import { MainNav } from '../../components/MainNav/MainNav'
 import logo_dark from "../../assets/LogoAuxiliumVector--dark.svg"
 import styles from './ProjectsPage.module.css'
 import projectsData from '../../../mocked_results/mocked_projects.json'

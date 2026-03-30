@@ -3,51 +3,40 @@
 .image-grid-wrapper{
   display:flex;
   justify-content: center;
-  padding: 30px 0;
+  padding: 2rem;
+  align-items: center;
  }
 
 .image-grid{
   display: grid;
   grid-template-columns: auto auto;
-  grid-gap: 40px;
+  grid-gap: 1%;
+  align-content: center;
+  margin: 1rem;
 }
 
 .image-grid img {
   max-width: 40vw;
   border-radius: 10px
 }
-.footer-image__header-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: center
-}
 
-.footer-image__header {
-  position: absolute;
-  margin-top: 20%;
-  font-size: 3em;
-  color: var(--light)
-}
-
-.footer-image__button-wrapper{
-  background: var(--primary-dark);
-  width: 20vw;
-  border-radius: 30px;
-  text-align: center;
-  padding: 1vw;
-  position: absolute;
-  margin-top: 100vh
-}
-
-.footer-image__button{
-  color: var(--accent-dark)
-}
-
-
-.footer-wrapper{
+.footer-wrapper {
   background: var(--accent-dark);
   display: flex;
   justify-content: center;
   padding: 5vw
+}
+
+.footer-logo {
+  width: 50%
+}
+
+@media (max-width: 425px)
+{
+  .image-grid {
+    grid-template-columns: auto;
+  }
+  .image-grid img {
+    max-width: 80vw;
+  }
 }

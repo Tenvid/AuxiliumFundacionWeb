@@ -1,7 +1,8 @@
 import './MainPage.css'
 import main_image from "../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg"
-import { MainNav } from '../../components/MainNav'
-import { TextImage } from '../../components/TextImage'
+import {MainNav} from '../../components/MainNav/MainNav'
+import {TextImage}  from '../../components/TextImage/TextImage'
+import {ImageWithHeaderAndButton} from '../../components/ImageWithHeaderAndButton/ImageWithHeaderAndButton.jsx'
 import logo_dark from "../../assets/LogoAuxiliumVector--dark.svg"
 
 function MainPage() {
@@ -55,25 +56,17 @@ function MainPage() {
       </section>
 
       <section>
-        <div className='footer-image__header-wrapper'>
-          <h4 className='footer-image__header'>
-            COLABORA
-          </h4>
-
-          <div className='footer-image__button-wrapper'>
-            <a href="#" className='footer-image__button'>
-              COLABORA CON NOSOTROS
-            </a>
-          </div>
-        </div>
-
-        <TextImage image={main_image}>
-          Forma parte del cambio:
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac pretium  mi, eget vulputate ante. Integer sodales, mauris at laoreet posuere,  erat libero tempus diam, quis varius massa massa a.</TextImage>
+        <ImageWithHeaderAndButton
+          header="COLABORA"
+          text="Forma parte del cambio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac pretium mi, eget vulputate ante. Integer sodales, mauris at laoreet posuere, erat libero tempus diam, quis varius massa massa a."
+          buttonText="COLABORA CON NOSOTROS"
+          buttonHref="#"
+          image={main_image}
+        />
       </section>
 
       <footer className='footer-wrapper'>
-        <img src={logo_dark} alt="" />
+        <img src={logo_dark} className='footer-logo' alt="" />
       </footer>
     </>
   )
