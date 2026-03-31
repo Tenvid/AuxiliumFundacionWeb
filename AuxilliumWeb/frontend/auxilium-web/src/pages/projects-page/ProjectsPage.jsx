@@ -1,15 +1,20 @@
 import { useState, useEffect } from 'react'
 import { MainNav } from '../../components/MainNav/MainNav'
+import {HeaderImage} from '../../components/HeaderImage/HeaderImage'
 import logo_dark from "../../assets/LogoAuxiliumVector--dark.svg"
 import styles from './ProjectsPage.module.css'
 import projectsData from '../../../mocked_results/mocked_projects.json'
+import main_image from "../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg"
+
 
 const ProjectStyleComponents = {
     styleOne: ({ text1, text2, image1, image2 }) => (
         <div className='Project1'>
             <div className={styles.ProjectType1}>
                 <div className={styles.ProjectOneWrapperOne}>
-                    <p>{text1}</p>
+                    <p>
+                        {text1}
+                    </p>
                     <img src={image1} alt=""/>
                 </div>
                 <div className={styles.ProjectOneWrapperTwo}>
@@ -33,7 +38,9 @@ const ProjectStyleComponents = {
     styleThree: ({ text1, image1, image2 }) => (
         <div className='Project3'>
             <div className={styles.ProjectThreeWrapper}>
-                <p className={styles.ProjectThreeText}>{text1}</p>
+                <p className={styles.ProjectThreeText}>
+                    {text1}
+                    </p>
                 <div className={styles.ProjectThreePhotoWrapper}>
                     <img src={image1} alt=""/>
                     <img src={image2} alt=""/>
@@ -87,10 +94,12 @@ function ProjectsPage() {
     return (
         <div className={styles.ProjectsPageContainer}>
             <MainNav/>
+            <HeaderImage image={main_image}>
+                Proyectos
+            </HeaderImage>
             {GenerateProject(projects.Project1.Title, projects.Project1.Text1, projects.Project1.Text2, projects.Project1.Image1, projects.Project1.Image2)}
-            {GenerateProject(projects.Project2.Title,projects.Project2.Text1,projects.Project2.Text2,projects.Project2.Image1)}
-            {GenerateProject(projects.Project3.Title,projects.Project3.Text1,"",projects.Project3.Image1,projects.Project3.Image2)}
-            {GenerateProject(projects.Project4.Title,projects.Project4.Text1,projects.Project4.Text2,projects.Project4.Image1,"",true)}
+            {GenerateProject(projects.Project2.Title,projects.Project2.Text1,"",projects.Project2.Image1, projects.Project2.Image2)}
+            {GenerateProject(projects.Project3.Title,projects.Project3.Text1,projects.Project3.Text2,projects.Project3.Image1,"", true)}
             <footer className={styles.footerWrapper}>
                 <img src={logo_dark} alt="" />
             </footer>

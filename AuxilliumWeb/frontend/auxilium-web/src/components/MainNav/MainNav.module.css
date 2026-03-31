@@ -1,0 +1,93 @@
+:root {
+  --nav-height: 5vh;
+}
+
+.homeNav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3vw;
+  background: var(--primary);
+  color: var(paragraph-light);
+  height: var(--nav-height);
+  box-shadow: 1px 1px 5px color-mix(in srgb, var(--dark) 50%, transparent 50%) ;
+  position: sticky;
+  z-index: 2
+}
+
+.homeNavLogoWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.homeNavLogoWrapperLogo {
+  width: 10vw;
+}
+
+.homeNavContent {
+  display: flex;
+}
+
+.homeNavContentList {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  gap: 1vw;
+  align-items: center;
+  font-family: AntonSC;
+}
+
+.homeNavToggleNavButton {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--light);
+  transition: transform 0.5s ease;
+}
+
+.minusNinetyDegrees {
+  transform: rotate(-90deg);
+  transition: transform 0.5s ease;
+}
+
+.homeNavContentToggle {
+    display: block;
+    height: 10em;
+    background-color: var(--accent-dark);
+    margin-top: var(--nav-height);
+    position: absolute;
+    margin-left: -3vw;
+    width: 100vw;
+    text-align: center;
+}
+
+.homeNavContentToggle .homeNavContentList {
+  flex-direction: column;
+  margin-top: 1vh;
+  gap: .5vh;
+}
+
+.homeNavContentToggle a {
+  color: var(--paragraph-dark);
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+  .homeNavContentList {
+    font-size: 0.75em
+  }
+
+  .homeNavLogoWrapperLogo {
+    width: 20vw;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .homeNavContent {
+    display: none;
+  }
+
+  .homeNavToggleNavButton {
+    display: block;
+  }
+}

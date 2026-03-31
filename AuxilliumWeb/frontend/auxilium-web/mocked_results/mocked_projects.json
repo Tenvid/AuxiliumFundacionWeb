@@ -1,30 +1,23 @@
 {
     "Project1": {
         "Title": "Agua para Camerún",
-        "Text1": "Camerún es un pais con mas de 25 millones de habitantes, con gran cantidad de recursos naturales, pero con un acceso al agua muy limitado en muchas comunidad perjudicando a la salud de las personas y provocando enfermedades por el cosumo de agua contaminada, especialmente en niños. El objetivo de este proyecto era construir un pozo de agua y educar sobre el uso responsable del agua y los recursos hidricos. Dividimos el proyecto en varias etapas, identificamos el lugar adecuado para la construcción del pozo, realizamos los estudios geologicos y perforación del pozo. Luego instalamos los sistemas de bombeo y de pratamiento del agua. Además capcitamos a la comunidad para que se encargue del mantenimiento del pozo y gestione correctamente el agua.",
-        "Text2": "Esperamos que este proyecto tenga un impacto muy signifcativo en la calidad de las vida de las personas de la zona, mejorando mucho su salud y bienestar, además esperamos que tenga un impacto economico positivo, sobretodo en todas las actividades que dependen del agua como la agricultura y la ganadería lo que permitira la producción de alimentos de mayor calidad en la zona. Estamos seguros de que este proyecto representa una oprtunidad unica para mejorar la vida de las personas de la región y concienciar sobre el correcto uso de los recursos hídricos. Esperamos que este proyecto sirva como ejemplo para que surjan iniciativas similares alrededor del mundo para trabajar en un futuro mas justo y sostenible para todos.",
+        "Text1": "Camerún es un pais con mas de 25 millones de habitantes, con gran cantidad de recursos naturales, pero con un acceso al agua muy limitado en muchas comunidad perjudicando a la salud de las personas y provocando enfermedades por el cosumo de agua contaminada, especialmente en niños.\n\nEl objetivo de este proyecto era construir un pozo de agua y educar sobre el uso responsable del agua y los recursos hidricos. Dividimos el proyecto en varias etapas, identificamos el lugar adecuado para la construcción del pozo, realizamos los estudios geologicos y perforación del pozo, luego instalamos los sistemas de bombeo y de pratamiento del agua. Además capcitamos a la comunidad para que se encargue del mantenimiento del pozo y gestione correctamente el agua.",
+        "Text2": "Esperamos que este proyecto tenga un impacto muy signifcativo en la calidad de las vida de las personas de la zona, mejorando mucho su salud y bienestar, además esperamos que tenga un impacto economico positivo, sobretodo en todas las actividades que dependen del agua como la agricultura y la ganadería lo que permitira la producción de alimentos de mayor calidad en la zona.\n\nEstamos seguros de que este proyecto representa una oprtunidad unica para mejorar la vida de las personas de la región y concienciar sobre el correcto uso de los recursos hídricos.\n Esperamos que este proyecto sirva como ejemplo para que surjan iniciativas similares alrededor del mundo para trabajar en un futuro mas justo y sostenible para todos.",
         "Image1": "/src/assets/gallery/projects/PozoCamerun/PozoCamerun1.jpeg",
         "Image2": "/src/assets/gallery/projects/PozoCamerun/PozoCamerun2.jpeg"
     },
     "Project2": {
-        "Title": "Proyecto 2",
-        "Text1": "Lorem Ipsum",
-        "Text2": "Lorem Ipsum",
-        "Image1": "http://localhost:5173/src/assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg",
-        "Image2": "http://localhost:5173/src/assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg"
+        "Title": "Reparto de ropa donada por Inditex",
+        "Text1": "En el marco de nuestras múltiples campañas solidarias orientadas a la recogida y distribución de recursos básicos, queremos destacar especialmente una iniciativa que tuvo un impacto significativo en nuestra comunidad.\n\nEn esta ocasión, contamos con la valiosa colaboración de la empresa textil española Inditex, que realizó una generosa donación consistente en un amplio número de pares de calzado. Gracias a esta aportación, desde la asociación pudimos organizar un proceso de clasificación y distribución eficiente, asegurándonos de que el material llegara a las personas y familias en situación de mayor vulnerabilidad dentro de nuestra zona de actuación.\n\nEl calzado, un elemento esencial para el día a día, no solo cubre una necesidad básica, sino que también contribuye a mejorar la salud, la movilidad y la dignidad de quienes lo reciben. Nuestro equipo de voluntariado trabajó activamente para garantizar que cada par de zapatos encontrara un destino adecuado, teniendo en cuenta las diferentes edades y necesidades de los beneficiarios.\n\nEste tipo de iniciativas refuerza nuestro compromiso con la inclusión social y la mejora de la calidad de vida de las personas más desfavorecidas.\n\nConfiamos plenamente en que todas las personas beneficiadas por esta campaña hayan experimentado una mejora tangible en su bienestar cotidiano. Asimismo, queremos poner en valor la importancia de la colaboración entre el tejido empresarial y las entidades sociales, ya que este tipo de alianzas resultan fundamentales para generar un impacto positivo y duradero en la sociedad.",
+        "Text2": " ",
+        "Image1": "/src/assets/gallery/projects/CampanaDonacionRopa/CampanaDonacionRopa_1.jpeg",
+        "Image2": "/src/assets/gallery/projects/CampanaDonacionRopa/CampanaDonacionRopa_2.jpeg"
     },
     "Project3": {
-        "Title": "Proyecto 3",
-        "Text1": "Lorem Ipsum",
-        "Text2": "Lorem Ipsum",
-        "Image1": "http://localhost:5173/src/assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg",
-        "Image2": "http://localhost:5173/src/assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg"
-    },
-    "Project4": {
-        "Title": "Proyecto 4",
-        "Text1": "Lorem Ipsum",
-        "Text2": "Lorem Ipsum",
-        "Image1": "http://localhost:5173/src/assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg",
-        "Image2": "http://localhost:5173/src/assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg"
+        "Title": "Donación de alimentos a las familias necesitadas",
+        "Text1": "En una de las campañas de donaciones más recientes que hemos llevado a cabo, pedimos a la gente que donara alimentos y productos de primera necesidad a nuestra asociación, los cuales posteriormente repartimos entre las múltiples familias en situación de vulnerabilidad de la zona.\n\nSomos muy conscientes de lo importante que es una buena alimentación para disfrutar de una vida saludable y para asegurar un correcto desarrollo en los niños, por lo que consideramos los alimentos como productos de primera necesidad y queremos garantizar una alimentación saludable y equilibrada a quienes no pueden permitírsela.",
+        "Text2": "Confiamos en que esta iniciativa tenga un gran impacto en la vida y en la salud de las familias beneficiadas, sobre todo en los niños, quienes podrán tener un mejor desarrollo y estar mejor nutridos de cara a los retos futuros que se les presenten.\n\nEsperamos ayudar a que se realicen más campañas así en el futuro, con el fin de erradicar la pobreza infantil y la desnutrición en muchos hogares.",
+        "Image1": "/src/assets/gallery/projects/CampanaDonacionComida/CampanaDonacionComida_1.jpeg",
+        "Image2": " "
     }
 }
