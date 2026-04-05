@@ -48,6 +48,10 @@
   transform: rotate(-90deg);
 }
 
+.home-nav__content--toggle a:hover {
+  color: var(--primary);
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 768px) {
