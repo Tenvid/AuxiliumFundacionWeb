@@ -17,12 +17,13 @@ const ProjectStyle = {
 function GenerateProject(title = "", style = ProjectStyle.ONE, { text1 = "", text2 = "", image1 = "", image2 = "" } = {}) {
     const tileElement = <div className={styles.ProjectHeader}>{title}</div>
     
-    const Component = ProjectStyles[style]
+    /*INFO: This constant must be in PascalCase because is a React component*/
+    const ProjectComponent = ProjectStyles[style]
     
-    return Component ? (
+    return ProjectComponent ? (
         <>
             {tileElement}
-            <Component text1={text1} text2={text2} image1={image1} image2={image2} />
+            <ProjectComponent text1={text1} text2={text2} image1={image1} image2={image2} />
         </>
     ) : null
 }
