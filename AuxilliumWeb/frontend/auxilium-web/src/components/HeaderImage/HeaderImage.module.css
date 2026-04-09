@@ -1,19 +1,20 @@
-.text-image__image {
+.textImageContent {
   width: 100%;
-  max-height: 600px;
+  max-height: 500px;
   object-fit: cover;
 }
 
-.text-image-wrapper{
+.textImageWrapper{
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.text-image__text{
+.textImageText{
   position: absolute;
   padding: 0% 10%;
-  font-size: clamp(0.5rem, 10vw, 1.5rem);
+  font-size: clamp(2rem, 10vw, 4rem);
   color: var(--paragraph-light);
   text-align: center;
+  font-family: AntonSC;
 }

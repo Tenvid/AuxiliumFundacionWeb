@@ -1,34 +1,34 @@
 import logo_light from "../../assets/LogoAuxiliumVector.svg"
 import { NavLink } from '../NavLink/NavLink'
 import { LeftArrow } from "../LeftArrow/LeftArrow"
-import './MainNav.css'
+import styles from './MainNav.module.css'
 
 export function MainNav() {
 
 
   const toggleNav = () => {
     const navContent = document.getElementById('homeNavContent');
-    navContent.className = navContent.className == 'home-nav__content' ? 'home-nav__content--toggle' : 'home-nav__content';
+    navContent.className = navContent.className == styles.homeNavContent ? styles.homeNavContentToggle : styles.homeNavContent;
     const navButton = document.getElementById("navButton");
 
-    navButton.className = navButton.className.includes("minus-ninety-degrees") ?
-      "home-nav__toggle-nav-button" : "home-nav__toggle-nav-button minus-ninety-degrees"
+    navButton.className = navButton.className.includes(styles.minusNinetyDegrees) ?
+      styles.homeNavToggleNavButton : `${styles.homeNavToggleNavButton} ${styles.minusNinetyDegrees}`
   }
 
   return (
-    <nav className='home-nav'>
-      <div className='home-nav__logo-wrapper'>
-        <img src={logo_light} alt="Ola" className='home-nav__logo-wrapper__logo'></img>
+    <nav className={styles.homeNav}>
+      <div className={styles.homeNavLogoWrapper}>
+        <img src={logo_light} alt="Ola" className={styles.homeNavLogoWrapperLogo}></img>
       </div>
-      <div className='home-nav__content' id="homeNavContent">
-        <ul className='home-nav__content__list'>
-          <NavLink href="#">
+      <div className={styles.homeNavContent} id="homeNavContent">
+        <ul className={styles.homeNavContentList}>
+          <NavLink href="/">
             Inicio
           </NavLink>
           <NavLink href="#">
             Quiénes somos
           </NavLink>
-          <NavLink href="#">
+          <NavLink href="/projects">
             Proyectos
           </NavLink>
           <NavLink href="#">
@@ -47,7 +47,7 @@ export function MainNav() {
       </div>
       <button
         type="button"
-        className="home-nav__toggle-nav-button"
+        className={styles.homeNavToggleNavButton}
         onClick={toggleNav}
         id="navButton"
       >

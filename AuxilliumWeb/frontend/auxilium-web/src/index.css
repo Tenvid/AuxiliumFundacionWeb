@@ -1,3 +1,15 @@
+@font-face {
+  font-family: Antonio;
+  src: url(assets/fonts/Antonio/Antonio-Bold.ttf);
+}
+@font-face {
+  font-family: AntonSC;
+  src: url(assets/fonts/AntonSC/AntonSC-Regular.ttf);
+}
+@font-face {
+  font-family: Monda;
+  src: url(assets/fonts/Monda/Monda-Medium.ttf);
+}
 :root {
   --primary: #006633;
   --primary-dark: #063F1E;

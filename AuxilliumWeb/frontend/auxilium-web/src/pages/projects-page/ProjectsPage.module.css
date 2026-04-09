@@ -1,0 +1,40 @@
+.ProjectsPageContainer {
+  --img-height: 30vh;
+  --border-radius: 20px;
+  --gap: 4vw;
+  --margin-left: 3vw;
+  --margin-top: 2vh;
+  --font-family: Monda;
+  --font-size: clamp(1.0rem,1.1vw,1.5rem);
+}
+
+.ProjectHeader {
+    display: flex;
+    font-size: clamp(2rem,2.5vw,5rem);
+    width: 95%;
+    margin: 3vh auto 0;
+    justify-content: center;
+    background-color: var(--primary);
+    border-radius: 15px;
+    font-weight: bolder;
+    color: #ffffff;
+    padding: 0.5vh;
+    font-family: AntonSC;
+}
+
+@media (max-width: 425px) {
+    .ProjectHeader {
+        font-size: clamp(1.75rem,2vw,5rem);
+        text-align: center;
+        padding: 1vh;
+        width: 90%;
+    }
+}
+
+.footerWrapper {
+  background: var(--accent-dark);
+  display: flex;
+  justify-content: center;
+  padding: 5vw;
+}
+

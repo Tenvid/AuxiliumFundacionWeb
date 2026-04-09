@@ -1,7 +1,7 @@
-import styles from "./TextImage.module.css"
+import styles from "./HeaderImage.module.css"
 
 
-export function TextImage({ children, image, imageAlt = null }) {
+export function HeaderImage({ children, image, imageAlt = null }) {
   return (
     <section className={styles.textImageWrapper}>
       <p className={styles.textImageText}>
