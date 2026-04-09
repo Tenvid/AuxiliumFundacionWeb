@@ -5,59 +5,7 @@ import logo_dark from "../../assets/LogoAuxiliumVector--dark.svg"
 import styles from './ProjectsPage.module.css'
 import projectsData from '../../../mocked_results/mocked_projects.json'
 import main_image from "../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg"
-
-
-const ProjectStyleComponents = {
-    styleOne: ({ text1, text2, image1, image2 }) => (
-        <div className='Project1'>
-            <div className={styles.ProjectType1}>
-                <div className={styles.ProjectOneWrapperOne}>
-                    <p>
-                        {text1}
-                    </p>
-                    <img src={image1} alt=""/>
-                </div>
-                <div className={styles.ProjectOneWrapperTwo}>
-                    <img src={image2} alt=""/>
-                    <p>{text2}</p>
-                </div>
-            </div>
-        </div>
-    ),
-    styleTwo: ({ text1, text2, image1 }) => (
-        <div className='Project2'>
-            <div className={styles.ProjectType2}>
-                <div className={styles.ProjectTwoWrapper}>
-                    <p>{text1}</p>
-                    <img src={image1} alt=""/>
-                </div>
-                <p className={styles.ProjectTwoButtomText}>{text2}</p>
-            </div>
-        </div>
-    ),
-    styleThree: ({ text1, image1, image2 }) => (
-        <div className='Project3'>
-            <div className={styles.ProjectThreeWrapper}>
-                <p className={styles.ProjectThreeText}>
-                    {text1}
-                    </p>
-                <div className={styles.ProjectThreePhotoWrapper}>
-                    <img src={image1} alt=""/>
-                    <img src={image2} alt=""/>
-                </div>
-            </div>
-        </div>
-    ),
-    styleFour: ({ text1, text2, image1 }) => (
-        <div className='Project4'>
-            <div className={styles.ProjectFourWrapper}>
-                <p>{text1}</p>
-                <img src={image1} className={styles.ProjectFourImage} alt=""/>
-                <p>{text2}</p>
-            </div>
-        </div>
-    )
-}
+import ProjectStyles from '../../components/ProjectStyles/ProjectStyles'
 
 function GenerateProject(title = "", text1 = "", text2 = "", image1 = "", image2 = "", stylefour = false) {
     const tileElement = <div className={styles.ProjectHeader}>{title}</div>
@@ -74,7 +22,7 @@ function GenerateProject(title = "", text1 = "", text2 = "", image1 = "", image2
         styleKey = 'styleThree'
     }
     
-    const Component = styleKey ? ProjectStyleComponents[styleKey] : null
+    const Component = styleKey ? ProjectStyles[styleKey] : null
     
     return Component ? (
         <>
