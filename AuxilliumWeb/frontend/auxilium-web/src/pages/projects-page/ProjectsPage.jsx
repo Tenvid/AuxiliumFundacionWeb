@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState} from 'react'
 import { MainNav } from '../../components/MainNav/MainNav'
 import {HeaderImage} from '../../components/HeaderImage/HeaderImage'
 import logo_dark from "../../assets/LogoAuxiliumVector--dark.svg"
