@@ -21,6 +21,7 @@
     padding: 0.5vh;
     font-family: AntonSC;
 }
+
 @media (max-width: 425px) {
     .ProjectHeader {
         font-size: clamp(1.75rem,2vw,5rem);

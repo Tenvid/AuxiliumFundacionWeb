@@ -59,16 +59,19 @@ p {
         justify-self: end;
     }
 }
+
 @media (max-width:1350px) {
     .ProjectOneWrapperTwo {
         grid-template-columns: 25% 60%;
     }
 }
+
 @media (max-width:1150px) {
     .ProjectOneWrapperTwo {
         grid-template-columns: 35% 50%;
     }
 }
+
 @media (max-width: 850px) {
     .ProjectHeader {
         font-size: clamp(1rem,1.5vw,2rem);
@@ -226,6 +229,7 @@ p {
     text-align: center;
     margin-top: 3vh;
 }
+
 @media (max-width: 825px) {
     .ProjectFourWrapper {
         width: 85%;
