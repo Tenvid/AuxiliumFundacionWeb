@@ -1,0 +1,61 @@
+li ul li {
+  margin-left: 5vw;
+}
+
+li a {
+  color: var(--primary);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  /* font-size: 1.5rem; */
+}
+
+.transparencySubtitle {
+  font-family: Antonio;
+  text-align: center;
+  /* font-size: 2.25rem; */
+  font-size: clamp(1.25rem, 3vw, 3rem);
+  margin-bottom: 5vh;
+}
+
+.bodyWrapper {
+  padding: 0 5vw;
+}
+
+.transparencyTitle {
+  font-family: Antonio;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  /* font-size: 2em; */
+  margin-bottom: 5vh;
+  margin-top: 1vh;
+}
+
+.transparencyParagraph {
+  font-family: Monda;
+  /* font-size: 1.5em; */
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  /* line-height: 1.2em; */
+  line-height: clamp(1.5rem, 2vw, 1.5rem);
+}
+
+.transparencyList {
+  list-style-position: inside;
+}
+
+.transparencyListElement {
+  font-family: Monda;
+  /* font-size: 1.5rem; */
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+@media (max-width: 375px) {
+  .bodyWrapper {
+    padding: 0 3vw;
+  }
+
+  .transparencyTitle {
+    text-align: center;
+  }
+
+  .transparencyParagraph {
+    margin-bottom: 5vh;
+  }
+}
