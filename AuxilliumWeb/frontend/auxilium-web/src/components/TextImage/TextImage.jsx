@@ -8,8 +8,6 @@ export function TextImage({ children, image, imageAlt = null }) {
         src={image}
         alt={imageAlt ? imageAlt : ''}
         className={styles.textImageContent}
-        // width={800}
-        // height={300}
       />
     </section>
   );
