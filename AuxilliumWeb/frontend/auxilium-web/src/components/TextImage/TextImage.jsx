@@ -1,17 +1,14 @@
-import styles from "./TextImage.module.css"
-
+import styles from './TextImage.module.css';
 
 export function TextImage({ children, image, imageAlt = null }) {
   return (
     <section className={styles.textImageWrapper}>
-      <p className={styles.textImageText}>
-        {children}
-      </p>
+      <p className={styles.textImageText}>{children}</p>
       <img
         src={image}
-        alt={imageAlt ? imageAlt : ""}
+        alt={imageAlt ? imageAlt : ''}
         className={styles.textImageContent}
       />
     </section>
-  )
+  );
 }
