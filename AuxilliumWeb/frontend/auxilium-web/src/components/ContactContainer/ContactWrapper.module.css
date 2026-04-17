@@ -1,0 +1,17 @@
+.contactWrapper{
+    background-color: var(--primary-dark);
+    width: 30vw;
+    border-radius: 25px;
+    padding: 1vw;
+    margin-bottom: 2vh;
+
+}
+.contactWrapper p, h4 {
+    color: var( --paragraph-light);
+}
+
+h4 {
+    font-size: x-large;
+    justify-content: center;
+    text-align: center;
+}

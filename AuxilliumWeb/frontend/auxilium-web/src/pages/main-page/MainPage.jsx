@@ -1,12 +1,11 @@
-import './MainPage.css'
-import main_image from "../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg"
-import {MainNav} from '../../components/MainNav/MainNav'
-import {TextImage}  from '../../components/TextImage/TextImage'
-import {ImageWithHeaderAndButton} from '../../components/ImageWithHeaderAndButton/ImageWithHeaderAndButton.jsx'
-import logo_dark from "../../assets/LogoAuxiliumVector--dark.svg"
+import './MainPage.css';
+import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
+import { MainNav } from '../../components/MainNav/MainNav';
+import { TextImage } from '../../components/TextImage/TextImage';
+import { ImageWithHeaderAndButton } from '../../components/ImageWithHeaderAndButton/ImageWithHeaderAndButton.jsx';
+import logo_dark from '../../assets/LogoAuxiliumVector--dark.svg';
 
 function MainPage() {
-
   const loadGridImages = () => {
     const gridImages = [];
     const images = [
@@ -16,7 +15,7 @@ function MainPage() {
       main_image,
       main_image,
       main_image,
-    ]
+    ];
 
     const gridImagesText = [
       'Lorem Ipsum dolor sit amet',
@@ -25,34 +24,31 @@ function MainPage() {
       'Lorem Ipsum dolor sit amet',
       'Lorem Ipsum dolor sit amet',
       'Lorem Ipsum dolor sit amet',
-    ]
+    ];
 
     for (let i = 0; i < 6; i++) {
       gridImages.push(
-        <TextImage
-          image={images[i]}
-          key={i}>
+        <TextImage image={images[i]} key={i}>
           {gridImagesText[i]}
         </TextImage>
       );
     }
 
-    return gridImages
-  }
-  const gridImages = loadGridImages()
+    return gridImages;
+  };
+  const gridImages = loadGridImages();
 
   return (
     <>
       <MainNav></MainNav>
 
       <TextImage image={main_image}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec fringilla leo.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
+        fringilla leo.
       </TextImage>
 
-      <section className='image-grid-wrapper'>
-        <div className='image-grid'>
-          {gridImages}
-        </div>
+      <section className="image-grid-wrapper">
+        <div className="image-grid">{gridImages}</div>
       </section>
 
       <section>
@@ -65,11 +61,11 @@ function MainPage() {
         />
       </section>
 
-      <footer className='footer-wrapper'>
-        <img src={logo_dark} className='footer-logo' alt="" />
+      <footer className="footer-wrapper">
+        <img src={logo_dark} className="footer-logo" alt="" />
       </footer>
     </>
-  )
+  );
 }
 
-export default MainPage
+export default MainPage;
