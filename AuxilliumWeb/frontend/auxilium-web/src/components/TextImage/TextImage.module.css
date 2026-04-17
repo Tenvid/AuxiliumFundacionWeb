@@ -1,20 +1,23 @@
 .textImageContent {
-  width: 100%;
+  width: 100vw;
+  height: 80%;
   max-height: 600px;
   object-fit: cover;
+  filter: brightness(50%);
 }
 
-.textImageWrapper{
+.textImageWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.textImageText{
+.textImageText {
   position: absolute;
   padding: 0% 10%;
   font-size: clamp(0.5rem, 10vw, 1.5rem);
   color: var(--paragraph-light);
   text-align: center;
   font-family: Monda;
+  z-index: 1;
 }

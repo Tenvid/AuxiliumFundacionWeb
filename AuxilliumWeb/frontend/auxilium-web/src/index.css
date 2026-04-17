@@ -12,14 +12,14 @@
 }
 :root {
   --primary: #006633;
-  --primary-dark: #063F1E;
-  --secondary: #FFC75B;
-  --accent-dark: #E0E499;
-  --accent-light: #F2F2F0;
+  --primary-dark: #063f1e;
+  --secondary: #ffc75b;
+  --accent-dark: #e0e499;
+  --accent-light: #f2f2f0;
   --paragraph-dark: #000000;
-  --paragraph-light: #FFFFFF;
+  --paragraph-light: #ffffff;
   --dark: #000000;
-  --light: #FFFFFF;
+  --light: #ffffff;
 }
 
 * {

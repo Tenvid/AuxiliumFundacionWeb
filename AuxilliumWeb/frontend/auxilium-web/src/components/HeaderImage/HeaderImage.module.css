@@ -4,13 +4,13 @@
   object-fit: cover;
 }
 
-.textImageWrapper{
+.textImageWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.textImageText{
+.textImageText {
   position: absolute;
   padding: 0% 10%;
   font-size: clamp(2rem, 10vw, 4rem);
