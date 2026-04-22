@@ -11,15 +11,18 @@ function ContactPage() {
       <HeaderImage image={main_image}>Contacta con Nosostros</HeaderImage>
       <div className={styles.contactTitle}>
         <h3>Nuestras Sedes</h3>
-        <div className={styles.ContactGrid}>
-          <ContactWrapper
-            title="Sede en Murcia"
-            adress="Calle Falsa 123"
-            contact_name="Samuel"
-            phone_number="+34 600 00 00 00"
-            email="contact@auxilium.es"
-          />
-        </div>
+      </div>
+      <div className={styles.ContactGrid}>
+        <ContactWrapper
+          title="Sede en Murcia"
+          adress="Calle Falsa 123"
+          contact_name="Samuel"
+          phone_number="+34 600 00 00 00"
+          email="contact@auxilium.es"
+        />
+      </div>
+      <div className={styles.emailTitle}>
+        <h3>Contacta con Nosotros</h3>
       </div>
       <footer className={styles.footerWrapper}>
         <img src={logo_dark} className={styles.footerLogo} alt="" />

@@ -11,7 +11,11 @@
 }
 
 h4 {
+    font-family: AntonSC;
     font-size: x-large;
     justify-content: center;
     text-align: center;
+}
+p {
+    font-family: Monda;
 }

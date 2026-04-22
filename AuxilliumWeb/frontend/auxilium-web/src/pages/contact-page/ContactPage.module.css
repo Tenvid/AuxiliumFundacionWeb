@@ -8,3 +8,14 @@
 .footerLogo {
   width: 50%
 }
+h3 {
+  font-family: AntonSC;
+  justify-content: center;
+  font-size: 3vw;
+  margin-top: 3vh;
+}
+.contactTitle, .ContactGrid, .emailTitle {
+  display: flex;
+  justify-content: center;
+
+}
