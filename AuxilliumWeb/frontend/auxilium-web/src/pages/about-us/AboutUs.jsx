@@ -1,7 +1,11 @@
+import styles from './AboutUs.module.css';
+import { MainNav } from '../../components/MainNav/MainNav';
+
 export default function AboutUs() {
   return (
     <>
-      <h1>¿Quiénes somos?</h1>
+      <MainNav />
+      <h1 className={styles.aboutUsTitle}>¿Quiénes somos?</h1>
     </>
   );
 }

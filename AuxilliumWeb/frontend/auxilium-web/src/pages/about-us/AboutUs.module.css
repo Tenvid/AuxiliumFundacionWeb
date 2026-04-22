@@ -1,0 +1,5 @@
+.aboutUsTitle {
+  font-family: AntonSC;
+  text-align: center;
+  font-size: clamp(2rem, 10vw, 10rem);
+}
