@@ -31,7 +31,7 @@ export function MainNav() {
       <div className={styles.homeNavContent} id="homeNavContent">
         <ul className={styles.homeNavContentList}>
           <NavLink href="/">Inicio</NavLink>
-          <NavLink href="#">Quiénes somos</NavLink>
+          <NavLink href="/about-us">Quiénes somos</NavLink>
           <NavLink href="/projects">Proyectos</NavLink>
           <NavLink href="#">Impacto</NavLink>
           <NavLink href="/transparency">Transparencia</NavLink>
