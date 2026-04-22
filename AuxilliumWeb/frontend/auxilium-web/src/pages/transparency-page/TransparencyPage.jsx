@@ -1,7 +1,9 @@
 import { HeaderImage } from '../../components/HeaderImage/HeaderImage';
 import { MainNav } from '../../components/MainNav/MainNav';
+import UnorderedList from '../../components/UnorderedList/UnorderedList.jsx';
 import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
 import styles from './TransparencyPage.module.css';
+import UnorderedLinkList from '../../components/UnorderedLinkList/UnorderedLinkList.jsx';
 
 export default function TransparencyPage() {
   return (
@@ -24,51 +26,30 @@ export default function TransparencyPage() {
           garantizando una total transparencia en la forma de actuar de la
           empresa.
         </p>
-        <ul className={styles.transparencyList}>
-          <li className={styles.transparencyListElement}>
-            Domicilio fiscal: Calle Gloria 79 2B 30150 Murcia.
-          </li>
-          <li className={styles.transparencyListElement}>
-            Domicilio social: Calle Gloria 79 2B 30150 Murcia.
-          </li>
-          <li className={styles.transparencyListElement}>
-            Número de asociados: []
-          </li>
-          <li className={styles.transparencyListElement}>
-            Forma jurídica: Asociación
-          </li>
-          <li className={styles.transparencyListElement}>
-            Número de registro de la empresa: G13932249
-          </li>
-          <li className={styles.transparencyListElement}>
-            Número de personas en el consejo de administración:
-            <ul className={styles.transparencyList}>
-              <li className={styles.transparencyListElement}>Presidente: []</li>
-              <li className={styles.transparencyListElement}>
-                Vicepresidente: []
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <UnorderedList
+          elementList={[
+            'Domicilio fiscal: Calle Gloria 79 2B 30150 Murcia.',
+            'Domicilio social: Calle Gloria 79 2B 30150 Murcia.',
+            'Número de asociados: []',
+            ['Miembros: ', ['Presidente: []', 'Vicepresidente: []']],
+          ]}
+          listClassName={styles.transparencyList}
+          elementClassName={styles.transparencyListElement}
+        ></UnorderedList>
 
         <p className={styles.transparencyParagraph}>
           Además adjuntamos la siguiente documentación:
         </p>
-        <ul className={styles.transparencyList}>
-          <li className={styles.transparencyListElement}>
-            <a href="">Estatus de la entidad</a>
-          </li>
-          <li className={styles.transparencyListElement}>
-            <a href="">Acta fundacional</a>
-          </li>
-          <li className={styles.transparencyListElement}>
-            <a href="">Certificado de inscripción registral</a>
-          </li>
-          <li className={styles.transparencyListElement}>
-            <a href="">Reglamento interno</a>
-          </li>
-        </ul>
-
+        <UnorderedLinkList
+          elementList={[
+            ['Estatus de la entidad', '#'],
+            ['Acta fundacional', '#'],
+            ['Certificado de inscripción registral', '#'],
+            ['Reglamento interno', '#'],
+          ]}
+          listClassName={styles.transparencyList}
+          elementClassName={styles.transparencyListElement}
+        ></UnorderedLinkList>
         <h3 className={styles.transparencyTitle}>Resumen del año fiscal</h3>
         <p className={styles.transparencyParagraph}>
           Queremos garantizar la transparencia de la contabilidad de la
@@ -77,20 +58,16 @@ export default function TransparencyPage() {
           auditorias para que puedan ser revisados:
         </p>
 
-        <ul className={styles.transparencyList}>
-          <li className={styles.transparencyListElement}>
-            <a href="">Informe año fiscal 2027</a>
-          </li>
-          <li className={styles.transparencyListElement}>
-            <a href="">Informe año fiscal 2026</a>
-          </li>
-          <li className={styles.transparencyListElement}>
-            <a href="">Informe año fiscal 2025</a>
-          </li>
-          <li className={styles.transparencyListElement}>
-            <a href="">Informe año fiscal 2024</a>
-          </li>
-        </ul>
+        <UnorderedLinkList
+          elementList={[
+            ['Informe año fiscal 2027', '#'],
+            ['Informe año fiscal 2026', '#'],
+            ['Informe año fiscal 2025', '#'],
+            ['Informe año fiscal 2024', '#'],
+          ]}
+          listClassName={styles.transparencyList}
+          elementClassName={styles.transparencyListElement}
+        ></UnorderedLinkList>
 
         <h3 className={styles.transparencyTitle}>
           Desglose de gastos en proyectos
@@ -102,17 +79,15 @@ export default function TransparencyPage() {
           como se ha financiado y el personal involucrado:
         </p>
 
-        <ul className={styles.transparencyList}>
-          <li className={styles.transparencyListElement}>
-            <a href="">Informe proyecto 1</a>
-          </li>
-          <li className={styles.transparencyListElement}>
-            <a href="">Informe proyecto 2</a>
-          </li>
-          <li className={styles.transparencyListElement}>
-            <a href="">Informe proyecto 3</a>
-          </li>
-        </ul>
+        <UnorderedLinkList
+          elementList={[
+            ['Informe proyecto 1', '#'],
+            ['Informe proyecto 2', '#'],
+            ['Informe proyecto 3', '#'],
+          ]}
+          listClassName={styles.transparencyList}
+          elementClassName={styles.transparencyListElement}
+        ></UnorderedLinkList>
       </div>
     </>
   );
