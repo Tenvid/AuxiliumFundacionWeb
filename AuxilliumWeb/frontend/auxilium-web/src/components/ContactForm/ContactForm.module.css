@@ -1,0 +1,126 @@
+.contactFormContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-family: Antonio;
+  color: var(--text-dark, #1a1a1a);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 1rem;
+  font-family: Monda;
+  color: var(--text-dark, #1a1a1a);
+  font-weight: 500;
+}
+
+.input,
+.textarea {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-family: Monda;
+  transition: border-color 0.3s ease;
+  background-color: #fff;
+  color: var(--text-dark, #1a1a1a);
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.button {
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  font-family: Antonio;
+  font-weight: 600;
+  color: var(--primary-dark);
+  background-color: var(--accent-dark);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 20px;
+  width: 25vw;
+  margin: auto;
+}
+
+.button:hover {
+  background-color: var(--primary-dark);
+}
+
+
+.button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error {
+  padding: 0.75rem 1rem;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  font-family: Monda;
+  font-size: 0.95rem;
+}
+
+.success {
+  padding: 0.75rem 1rem;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  font-family: Monda;
+  font-size: 0.95rem;
+}
+@media (max-width: 1200px) {
+  .button {
+    width: 40vw;
+  }
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .contactFormContainer {
+    padding: 1.5rem 1rem;
+  }
+
+  .form {
+    gap: 1rem;
+  }
+  .button {
+    width: 70vw;
+  }
+}
+@media (max-width: 320px) {
+  .button {
+    width: 80vw;
+  }
+}

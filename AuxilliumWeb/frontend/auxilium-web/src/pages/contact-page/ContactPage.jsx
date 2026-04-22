@@ -4,26 +4,28 @@ import { MainNav } from '../../components/MainNav/MainNav';
 import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
 import logo_dark from '../../assets/LogoAuxiliumVector--dark.svg';
 import ContactWrapper from '../../components/ContactContainer/ContactWrapper';
+import ContactForm from '../../components/ContactForm/ContactForm';
 function ContactPage() {
   return (
     <>
       <MainNav></MainNav>
       <HeaderImage image={main_image}>Contacta con Nosostros</HeaderImage>
       <div className={styles.contactTitle}>
-        <h3>Nuestras Sedes</h3>
+        <h3>Nuestraa Sede</h3>
       </div>
       <div className={styles.ContactGrid}>
         <ContactWrapper
           title="Sede en Murcia"
-          adress="Calle Falsa 123"
+          adress="Calle de la gloria 79 | 30150 | Murcia "
           contact_name="Samuel"
-          phone_number="+34 600 00 00 00"
-          email="contact@auxilium.es"
+          phone_number="+34 603 73 80 00"
+          email="auxiliumasociacion@gmail.com"
         />
       </div>
       <div className={styles.emailTitle}>
         <h3>Contacta con Nosotros</h3>
       </div>
+      <ContactForm />
       <footer className={styles.footerWrapper}>
         <img src={logo_dark} className={styles.footerLogo} alt="" />
       </footer>
