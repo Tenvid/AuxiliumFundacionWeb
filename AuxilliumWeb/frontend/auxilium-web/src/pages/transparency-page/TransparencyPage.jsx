@@ -27,6 +27,7 @@ export default function TransparencyPage() {
           garantizando una total transparencia en la forma de actuar de la
           empresa.
         </p>
+        {/*TODO: Fill with correct data*/}
         <UnorderedList
           elementList={[
             'Domicilio fiscal: Calle Gloria 79 2B 30150 Murcia.',
