@@ -11,9 +11,9 @@ function ContactContainer({
       <h4>{title}</h4>
       <p>Dirección: {adress}</p>
       <p>
-        {contact_name} Telefono: {phone_number}
+        {contact_name} Teléfono: {phone_number}
       </p>
-      <p>Correo eléctronico: {email}</p>
+      <p>Correo electrónico: {email}</p>
     </div>
   );
 }
