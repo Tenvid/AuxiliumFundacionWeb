@@ -73,7 +73,7 @@
 
 .button:hover {
   background-color: var(--primary-dark);
-  color: #fff;
+  color: var(--accent-dark);
 }
 
 
