@@ -41,7 +41,7 @@ function DisplayProject({
 }
 
 function ProjectsPage() {
-  const [projects, setProjects] = useState(projectsData);
+  const [projects, _] = useState(projectsData);
 
   return (
     <div className={styles.ProjectsPageContainer}>
