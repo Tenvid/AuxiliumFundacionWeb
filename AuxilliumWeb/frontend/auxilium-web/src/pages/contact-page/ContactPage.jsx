@@ -25,6 +25,7 @@ function ContactPage() {
       <div className={styles.emailTitle}>
         <h3>Contacta con Nosotros</h3>
       </div>
+      {/*TODO */}
       <ContactForm />
       <footer className={styles.footerWrapper}>
         <img src={logo_dark} className={styles.footerLogo} alt="" />
