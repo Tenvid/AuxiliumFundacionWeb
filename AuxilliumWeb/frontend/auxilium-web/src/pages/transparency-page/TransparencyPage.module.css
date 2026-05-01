@@ -1,0 +1,60 @@
+li ul li {
+  margin-left: 5vw;
+}
+
+li a {
+  color: var(--primary);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  text-decoration: underline;
+}
+
+.transparencySubtitle {
+  font-family: Antonio;
+  text-align: center;
+  font-size: clamp(1.25rem, 3vw, 3rem);
+  margin-bottom: 2vh;
+}
+
+.bodyWrapper {
+  padding: 0 5vw;
+}
+
+.transparencyTitle {
+  font-family: AntonSC;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  margin-top: 1vh;
+  text-align: center;
+}
+
+.transparencyParagraph {
+  font-family: Monda;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  line-height: clamp(1.5rem, 2vw, 1.5rem);
+}
+
+.transparencyList {
+  list-style-position: inside;
+}
+
+.transparencyListElement {
+  font-family: Monda;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.footerWrapper {
+  background: var(--accent-dark);
+  display: flex;
+  justify-content: center;
+  padding: 5vw;
+  margin-top: 5vh;
+}
+
+@media (max-width: 375px) {
+  .bodyWrapper {
+    padding: 0 3vw;
+  }
+
+  .transparencyParagraph {
+    margin-bottom: 1vh;
+  }
+}
