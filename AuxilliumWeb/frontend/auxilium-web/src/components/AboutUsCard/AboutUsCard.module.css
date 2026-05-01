@@ -1,0 +1,22 @@
+.aboutUsCard {
+  background-color: var(--secondary);
+  border-radius: 10px;
+  border: 2px solid var(--dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+}
+
+.aboutUsCard__Title {
+  margin: 0;
+  padding: 0 1rem 0 1rem;
+}
+
+.aboutUsCard p {
+  font-family: Antonio;
+  color: var(--primary-dark);
+  width: 75%;
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  text-align: center;
+}
