@@ -1,18 +1,28 @@
-import { useState} from 'react'
-import { MainNav } from '../../components/MainNav/MainNav'
-import {HeaderImage} from '../../components/HeaderImage/HeaderImage'
-import logo_dark from "../../assets/LogoAuxiliumVector--dark.svg"
-import styles from './ProjectsPage.module.css'
-import projectsData from '../../../mocked_results/mocked_projects.json'
-import main_image from "../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg"
-import ProjectStyles from '../../components/ProjectStyles/ProjectStyles'
+import { useState } from 'react';
+import { MainNav } from '../../components/MainNav/MainNav';
+import { HeaderImage } from '../../components/HeaderImage/HeaderImage';
+import logo_dark from '../../assets/LogoAuxiliumVector--dark.svg';
+import styles from './ProjectsPage.module.css';
+import projectsData from '../../../mocked_results/mocked_projects.json';
+import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
+import ProjectStyles from '../../components/ProjectStyles/ProjectStyles';
 
 const ProjectStyle = {
-    ONE: 'styleOne',
-    TWO: 'styleTwo',
-    THREE: 'styleThree',
-    FOUR: 'styleFour'
-}
+  ONE: 'styleOne',
+  TWO: 'styleTwo',
+  THREE: 'styleThree',
+  FOUR: 'styleFour',
+};
+
+function GenerateProject(
+  title = '',
+  style = ProjectStyle.ONE,
+  { text1 = '', text2 = '', image1 = '', image2 = '' } = {}
+) {
+  const tileElement = <div className={styles.ProjectHeader}>{title}</div>;
+
+  /*INFO: This constant must be in PascalCase because is a React component*/
+  const ProjectComponent = ProjectStyles[style];
 
 function DisplayProject({ title = "", style = ProjectStyle.ONE, text1 = "", text2 = "", image1 = "", image2 = "" }) {
     const tileElement = <div className={styles.ProjectHeader}>{title}</div>
@@ -29,7 +39,7 @@ function DisplayProject({ title = "", style = ProjectStyle.ONE, text1 = "", text
 }
 
 function ProjectsPage() {
-    const [projects, setProjects] = useState(projectsData)
+  const [projects, setProjects] = useState(projectsData);
 
     return (
         <div className={styles.ProjectsPageContainer}>
@@ -47,4 +57,4 @@ function ProjectsPage() {
     )
 }
 
-export default ProjectsPage
+export default ProjectsPage;
