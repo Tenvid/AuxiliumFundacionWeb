@@ -5,6 +5,7 @@ import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
 import styles from './TransparencyPage.module.css';
 import UnorderedLinkList from '../../components/UnorderedLinkList/UnorderedLinkList.jsx';
 
+import logo_dark from '../../assets/LogoAuxiliumVector--dark.svg';
 export default function TransparencyPage() {
   return (
     <>
@@ -89,6 +90,9 @@ export default function TransparencyPage() {
           elementClassName={styles.transparencyListElement}
         ></UnorderedLinkList>
       </div>
+      <footer className="footer-wrapper">
+        <img src={logo_dark} className="footer-logo" alt="" />
+      </footer>
     </>
   );
 }
