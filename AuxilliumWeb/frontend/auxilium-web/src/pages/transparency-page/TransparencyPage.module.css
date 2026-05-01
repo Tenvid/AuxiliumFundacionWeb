@@ -22,8 +22,8 @@ li a {
 .transparencyTitle {
   font-family: Antonio;
   font-size: clamp(1.5rem, 3vw, 2.25rem);
-  margin-bottom: 2vh;
   margin-top: 1vh;
+  text-align: center;
 }
 
 .transparencyParagraph {
@@ -54,11 +54,7 @@ li a {
     padding: 0 3vw;
   }
 
-  .transparencyTitle {
-    text-align: center;
-  }
-
   .transparencyParagraph {
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
   }
 }
