@@ -14,16 +14,6 @@ const ProjectStyle = {
   FOUR: 'styleFour',
 };
 
-function GenerateProject(
-  title = '',
-  style = ProjectStyle.ONE,
-  { text1 = '', text2 = '', image1 = '', image2 = '' } = {}
-) {
-  const tileElement = <div className={styles.ProjectHeader}>{title}</div>;
-
-  /*INFO: This constant must be in PascalCase because is a React component*/
-  const ProjectComponent = ProjectStyles[style];
-}
 function DisplayProject({
   title = '',
   style = ProjectStyle.ONE,
