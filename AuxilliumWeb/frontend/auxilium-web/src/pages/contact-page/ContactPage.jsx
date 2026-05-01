@@ -9,7 +9,7 @@ function ContactPage() {
   return (
     <>
       <MainNav></MainNav>
-      <HeaderImage image={main_image}>Contacta con Nosostros</HeaderImage>
+      <HeaderImage image={main_image}>Contacta con Nosotros</HeaderImage>
       <div className={styles.contactTitle}>
         <h3>Nuestra Sede</h3>
       </div>
@@ -17,7 +17,7 @@ function ContactPage() {
         <ContactWrapper
           title="Sede en Murcia"
           adress="Calle de la gloria 79 | 30150 | Murcia "
-          contact_name="Samuel"
+          contact_name=""
           phone_number="+34 603 73 80 00"
           email="auxiliumasociacion@gmail.com"
         />
