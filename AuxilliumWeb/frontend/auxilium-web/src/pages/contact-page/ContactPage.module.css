@@ -1,0 +1,105 @@
+.footerWrapper {
+  background: var(--accent-dark);
+  display: flex;
+  justify-content: center;
+  padding: 5vw;
+}
+
+.footerLogo {
+  width: 50%;
+  max-width: 300px;
+}
+
+h3 {
+  font-family: AntonSC;
+  justify-content: center;
+  font-size: 3vw;
+  margin-top: 3vh;
+  text-align: center;
+}
+
+.contactTitle,
+.ContactGrid,
+.emailTitle {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contactTitle {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  margin-bottom: 2rem;
+}
+
+.emailTitle {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  margin: 1rem 0;
+}
+
+.ContactGrid {
+  width: 100%;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+/* Responsive: Tablet y abajo */
+@media (max-width: 768px) {
+  .footerWrapper {
+    padding: 4vw;
+  }
+
+  .footerLogo {
+    width: 60%;
+    max-width: 250px;
+  }
+
+  h3 {
+    font-size: clamp(1.8rem, 6vw, 3rem);
+    margin-top: 2vh;
+  }
+
+  .contactTitle {
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .emailTitle {
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  }
+
+  .ContactGrid {
+    gap: 1.5rem;
+    padding: 0 0.5rem;
+  }
+}
+
+/* Responsive: Móvil pequeño */
+@media (max-width: 480px) {
+  .footerWrapper {
+    padding: 3vw;
+  }
+
+  .footerLogo {
+    width: 70%;
+    max-width: 200px;
+  }
+
+  h3 {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    margin-top: 1.5vh;
+  }
+
+  .contactTitle {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .emailTitle {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+  }
+
+  .ContactGrid {
+    gap: 1rem;
+    padding: 0;
+  }
+}

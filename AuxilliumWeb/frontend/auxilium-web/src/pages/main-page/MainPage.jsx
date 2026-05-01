@@ -4,17 +4,18 @@ import { MainNav } from '../../components/MainNav/MainNav';
 import { TextImage } from '../../components/TextImage/TextImage';
 import { ImageWithHeaderAndButton } from '../../components/ImageWithHeaderAndButton/ImageWithHeaderAndButton.jsx';
 import logo_dark from '../../assets/LogoAuxiliumVector--dark.svg';
-import image_1 from '../../assets/gallery/projects/CampanaDonacionComida/CampanaDonacionComida_1.jpeg';
-import image_2 from '../../assets/gallery/projects/CampanaDonacionRopa/CampanaDonacionRopa_1.jpeg';
-import image_3 from '../../assets/gallery/projects/CampanaDonacionRopa/CampanaDonacionRopa_2.jpeg';
-import image_4 from '../../assets/gallery/projects/PozoCamerun/PozoCamerun1.jpeg';
-import image_5 from '../../assets/gallery/projects/PozoCamerun/PozoCamerun2.jpeg';
-import image_6 from '../../assets/gallery/projects/index/ManosUnidas.jpeg';
 
 function MainPage() {
   const loadGridImages = () => {
     const gridImages = [];
-    const images = [image_1, image_2, image_3, image_4, image_5, image_6];
+    const images = [
+      main_image,
+      main_image,
+      main_image,
+      main_image,
+      main_image,
+      main_image,
+    ];
 
     const gridImagesText = [
       'Lorem Ipsum dolor sit amet',

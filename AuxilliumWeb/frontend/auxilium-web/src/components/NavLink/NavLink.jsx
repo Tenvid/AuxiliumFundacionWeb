@@ -1,7 +1,8 @@
+import { Link } from 'react-router';
 export function NavLink({ children, href }) {
   return (
-    <a className="nav-link" href={href}>
+    <Link className="nav-link" to={href}>
       <li className="nav-element">{children}</li>
-    </a>
+    </Link>
   );
 }

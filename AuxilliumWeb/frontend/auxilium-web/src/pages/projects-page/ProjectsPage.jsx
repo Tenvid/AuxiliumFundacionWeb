@@ -14,11 +14,14 @@ const ProjectStyle = {
   FOUR: 'styleFour',
 };
 
-function GenerateProject(
+function DisplayProject({
   title = '',
   style = ProjectStyle.ONE,
-  { text1 = '', text2 = '', image1 = '', image2 = '' } = {}
-) {
+  text1 = '',
+  text2 = '',
+  image1 = '',
+  image2 = '',
+}) {
   const tileElement = <div className={styles.ProjectHeader}>{title}</div>;
 
   /*INFO: This constant must be in PascalCase because is a React component*/
@@ -38,30 +41,36 @@ function GenerateProject(
 }
 
 function ProjectsPage() {
-  const [projects, setProjects] = useState(projectsData);
+  const [projects, _] = useState(projectsData);
 
   return (
     <div className={styles.ProjectsPageContainer}>
       <MainNav />
       <HeaderImage image={main_image}>Proyectos</HeaderImage>
-      {GenerateProject(projects.Project1.Title, ProjectStyle.ONE, {
-        text1: projects.Project1.Text1,
-        text2: projects.Project1.Text2,
-        image1: projects.Project1.Image1,
-        image2: projects.Project1.Image2,
-      })}
-      {GenerateProject(projects.Project2.Title, ProjectStyle.THREE, {
-        text1: projects.Project2.Text1,
-        text2: '',
-        image1: projects.Project2.Image1,
-        image2: projects.Project2.Image2,
-      })}
-      {GenerateProject(projects.Project3.Title, ProjectStyle.FOUR, {
-        text1: projects.Project3.Text1,
-        text2: projects.Project3.Text2,
-        image1: projects.Project3.Image1,
-        image2: '',
-      })}
+      <DisplayProject
+        title={projects.Project1.Title}
+        style={ProjectStyle.ONE}
+        text1={projects.Project1.Text1}
+        text2={projects.Project1.Text2}
+        image1={projects.Project1.Image1}
+        image2={projects.Project1.Image2}
+      />
+      <DisplayProject
+        title={projects.Project2.Title}
+        style={ProjectStyle.THREE}
+        text1={projects.Project2.Text1}
+        text2=""
+        image1={projects.Project2.Image1}
+        image2={projects.Project2.Image2}
+      />
+      <DisplayProject
+        title={projects.Project3.Title}
+        style={ProjectStyle.FOUR}
+        text1={projects.Project3.Text1}
+        text2={projects.Project3.Text2}
+        image1={projects.Project3.Image1}
+        image2=""
+      />
       <footer className={styles.footerWrapper}>
         <img src={logo_dark} alt="" />
       </footer>
