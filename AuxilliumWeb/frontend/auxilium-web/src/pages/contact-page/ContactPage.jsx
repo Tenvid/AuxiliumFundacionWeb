@@ -11,7 +11,7 @@ function ContactPage() {
       <MainNav></MainNav>
       <HeaderImage image={main_image}>Contacta con Nosostros</HeaderImage>
       <div className={styles.contactTitle}>
-        <h3>Nuestraa Sede</h3>
+        <h3>Nuestra Sede</h3>
       </div>
       <div className={styles.ContactGrid}>
         <ContactWrapper
