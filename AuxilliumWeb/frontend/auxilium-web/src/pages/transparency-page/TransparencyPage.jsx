@@ -90,7 +90,8 @@ export default function TransparencyPage() {
           elementClassName={styles.transparencyListElement}
         ></UnorderedLinkList>
       </div>
-      <footer className="footer-wrapper">
+
+      <footer className={styles.footerWrapper}>
         <img src={logo_dark} className="footer-logo" alt="" />
       </footer>
     </>

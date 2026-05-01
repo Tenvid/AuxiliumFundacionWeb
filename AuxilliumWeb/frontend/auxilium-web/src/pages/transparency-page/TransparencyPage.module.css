@@ -41,6 +41,14 @@ li a {
   font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
+.footerWrapper {
+  background: var(--accent-dark);
+  display: flex;
+  justify-content: center;
+  padding: 5vw;
+  margin-top: 5vh;
+}
+
 @media (max-width: 375px) {
   .bodyWrapper {
     padding: 0 3vw;
