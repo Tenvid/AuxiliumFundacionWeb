@@ -1,0 +1,62 @@
+{
+    "New1":{
+        "title": "Lorem Ipsun",
+        "image": "https://placehold.co/600x400?text=Noticia+1"
+    },
+    "New2":{
+        "title": "Proyecto comunitario exitoso",
+        "image": "https://placehold.co/600x400?text=Noticia+2"
+    },
+    "New3":{
+        "title": "Nuevas iniciativas para el desarrollo sostenible",
+        "image": "https://placehold.co/600x400?text=Noticia+3"
+    },
+    "New4":{
+        "title": "Auxilium y la comunidad crece cada día",
+        "image": "https://placehold.co/600x400?text=Noticia+4"
+    },
+    "New5":{
+        "title": "Impacto transformador de nuestros programas en la región",
+        "image": "https://placehold.co/600x400?text=Noticia+5"
+    },
+    "New6":{
+        "title": "Alianzas estratégicas que fortalecen nuestras iniciativas comunitarias",
+        "image": "https://placehold.co/600x400?text=Noticia+6"
+    },
+    "New7":{
+        "title": "Capacitación y oportunidades laborales para jóvenes del sector",
+        "image": "https://placehold.co/600x400?text=Noticia+7"
+    },
+    "New8":{
+        "title": "Logros alcanzados gracias al compromiso y dedicación de nuestro equipo",
+        "image": "https://placehold.co/600x400?text=Noticia+8"
+    },
+    "New9":{
+        "title": "Nuevos proyectos de infraestructura que benefician a miles de personas",
+        "image": "https://placehold.co/600x400?text=Noticia+9"
+    },
+    "New10":{
+        "title": "Transformación digital y acceso a tecnología en comunidades vulnerables del país",
+        "image": "https://placehold.co/600x400?text=Noticia+10"
+    },
+    "New11":{
+        "title": "Impacto ambiental positivo mediante programas de educación y conservación comunitaria",
+        "image": "https://placehold.co/600x400?text=Noticia+11"
+    },
+    "New12":{
+        "title": "Fortalecimiento de capacidades locales para garantizar sostenibilidad y crecimiento económico",
+        "image": "https://placehold.co/600x400?text=Noticia+12"
+    },
+    "New13":{
+        "title": "Auxilium reconocida como organización líder en desarrollo social e impacto comunitario",
+        "image": "https://placehold.co/600x400?text=Noticia+13"
+    },
+    "New14":{
+        "title": "Programa innovador de empoderamiento femenino y liderazgo en sectores marginados",
+        "image": "https://placehold.co/600x400?text=Noticia+14"
+    },
+    "New15":{
+        "title": "Expansión regional de servicios básicos alcanzando a población desatendida del territorio nacional",
+        "image": "https://placehold.co/600x400?text=Noticia+15"
+    }
+}

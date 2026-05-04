@@ -35,7 +35,7 @@ export function MainNav() {
           <NavLink href="/projects">Proyectos</NavLink>
           <NavLink href="#">Impacto</NavLink>
           <NavLink href="/transparency">Transparencia</NavLink>
-          <NavLink href="#">Noticias</NavLink>
+          <NavLink href="/news">Noticias</NavLink>
           <NavLink href="/contact">Contacto</NavLink>
         </ul>
       </div>
