@@ -34,12 +34,19 @@
 }
 
 .aboutUsCardsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-top: 2rem;
   width: 60%;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .aboutUsCardsContainer {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
 }
 
 .aboutUsUnorderedList {
