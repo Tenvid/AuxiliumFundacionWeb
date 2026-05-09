@@ -7,7 +7,7 @@ export default function ImpactPage() {
   return (
     <>
       <MainNav />
-      <TextImage image={main_image}>Texto de la imagen</TextImage>
+      <TextImage image={main_image}>Impacto de la asociación</TextImage>
       <Footer />
     </>
   );
