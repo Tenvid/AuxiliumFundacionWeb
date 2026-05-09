@@ -22,6 +22,7 @@ export default function ImpactPage() {
         <span>+10000€ Destinados a proyectos de integración social</span>
       </div>
 
+      <h3>Conoce a quienes se han beneficiado de nuestros proyectos</h3>
       <Footer />
     </>
   );
