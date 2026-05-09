@@ -64,3 +64,15 @@
   border: 5px solid var(--dark);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
+
+.footerWrapper {
+  background: var(--accent-dark);
+  display: flex;
+  justify-content: center;
+  padding: 5vw;
+}
+
+.footerLogo {
+  width: 50%;
+  max-width: 300px;
+}

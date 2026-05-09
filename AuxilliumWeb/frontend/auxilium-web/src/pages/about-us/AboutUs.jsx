@@ -2,6 +2,7 @@ import styles from './AboutUs.module.css';
 import AboutUsCard from '../../components/AboutUsCard/AboutUsCard';
 import { MainNav } from '../../components/MainNav/MainNav';
 import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
+import logo_dark from '../../assets/LogoAuxiliumVector--dark.svg';
 export default function AboutUs() {
   return (
     <>
@@ -61,6 +62,9 @@ export default function AboutUs() {
           </li>
         </ul>
       </div>
+      <footer className={styles.footerWrapper}>
+        <img src={logo_dark} className={styles.footerLogo} alt="" />
+      </footer>
     </>
   );
 }
