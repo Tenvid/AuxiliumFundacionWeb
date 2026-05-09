@@ -1,0 +1,33 @@
+h3 {
+  font-family: AntonSC;
+  justify-content: center;
+  font-size: 3vw;
+  margin-top: 3vh;
+  text-align: center;
+}
+
+h4 {
+  font-family: Antonio;
+  text-align: center;
+  font-size: clamp(1.25rem, 3vw, 3rem);
+  margin-bottom: 2vh;
+  color: var(--dark);
+}
+
+.headerImage {
+  width: 70%;
+  display: block;
+  margin: 0 auto 3vh auto;
+}
+
+.paragraphsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1vh;
+}
+
+span {
+  text-align: center;
+  width: 100%;
+  display: block;
+}
