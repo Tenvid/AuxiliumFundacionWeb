@@ -5,6 +5,26 @@ import UnorderedList from '../../components/UnorderedList/UnorderedList';
 import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
 import logo_dark from '../../assets/LogoAuxiliumVector--dark.svg';
 
+const values = [
+  {
+    title: 'Transparencia',
+    description: 'Gestionamos los recursos de forma responsable y clara.',
+  },
+  {
+    title: 'Solidaridad',
+    description:
+      'Trabajamos con el compromiso de apoyar a quienes más lo necesitan.',
+  },
+  {
+    title: 'Cooperación',
+    description: 'Colaboramos con organizaciones locales y comunidades.',
+  },
+  {
+    title: 'Respeto cultural',
+    description: 'Respetamos las tradiciones y la identidad de cada comunidad.',
+  },
+];
+
 const objectives = [
   'Promover proyectos de cooperación internacional',
   'Facilitar el acceso al agua potable en comunidades rurales',
@@ -38,20 +58,13 @@ export default function AboutUs() {
         </p>
         <h2 className={styles.aboutUsSubtitle}>Nuestros Valores</h2>
 
-        <div className={styles.aboutUsCardsContainer}>
-          <AboutUsCard title="Transparencia">
-            Gestionamos los recursos de forma responsable y clara.
-          </AboutUsCard>
-          <AboutUsCard title="Solidaridad">
-            Trabajamos con el compromiso de apoyar a quienes más lo necesitan
-          </AboutUsCard>
-          <AboutUsCard title="Cooperación">
-            Colaboramos con organizaciones locales y comunidades
-          </AboutUsCard>
-          <AboutUsCard title="Respeto cultural">
-            Respetamos las tradiciones y la identidad de cada comunidad
-          </AboutUsCard>
-        </div>
+        <ul className={styles.aboutUsCardsContainer}>
+          {values.map(({ title, description }) => (
+            <AboutUsCard key={title} title={title}>
+              {description}
+            </AboutUsCard>
+          ))}
+        </ul>
 
         <h2 className={styles.aboutUsSubtitle}>Nuestros Objetivos</h2>
         <UnorderedList
