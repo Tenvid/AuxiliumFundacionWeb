@@ -1,4 +1,5 @@
 import styles from './AboutUs.module.css';
+import Footer from '../../components/Footer/Footer/Footer.jsx';
 import AboutUsCard from '../../components/AboutUsCard/AboutUsCard';
 import { MainNav } from '../../components/MainNav/MainNav';
 import UnorderedList from '../../components/UnorderedList/UnorderedList';
@@ -73,9 +74,7 @@ export default function AboutUs() {
           elementClassName={styles.aboutUsObjectiveCard}
         />
       </div>
-      <footer className={styles.footerWrapper}>
-        <img src={logo_dark} className={styles.footerLogo} alt="" />
-      </footer>
+      <Footer />
     </>
   );
 }

@@ -7,6 +7,7 @@ import projectsData from '../../../mocked_results/mocked_projects.json';
 import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
 import ProjectStyles from '../../components/ProjectStyles/ProjectStyles';
 
+import Footer from '../../components/Footer/Footer/Footer.jsx';
 const ProjectStyle = {
   ONE: 'styleOne',
   TWO: 'styleTwo',
@@ -71,9 +72,8 @@ function ProjectsPage() {
         image1={projects.Project3.Image1}
         image2=""
       />
-      <footer className={styles.footerWrapper}>
-        <img src={logo_dark} alt="" />
-      </footer>
+
+      <Footer />
     </div>
   );
 }
