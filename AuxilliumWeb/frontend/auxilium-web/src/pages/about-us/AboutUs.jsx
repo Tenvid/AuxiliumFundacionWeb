@@ -1,8 +1,18 @@
 import styles from './AboutUs.module.css';
 import AboutUsCard from '../../components/AboutUsCard/AboutUsCard';
 import { MainNav } from '../../components/MainNav/MainNav';
+import UnorderedList from '../../components/UnorderedList/UnorderedList';
 import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
 import logo_dark from '../../assets/LogoAuxiliumVector--dark.svg';
+
+const objectives = [
+  'Promover proyectos de cooperación internacional',
+  'Facilitar el acceso al agua potable en comunidades rurales',
+  'Apoyar la educación y el desarrollo infantil',
+  'Impulsar proyectos de desarrollo comunitario',
+  'Fomentar la solidaridad y el voluntariado',
+];
+
 export default function AboutUs() {
   return (
     <>
@@ -44,23 +54,11 @@ export default function AboutUs() {
         </div>
 
         <h2 className={styles.aboutUsSubtitle}>Nuestros Objetivos</h2>
-        <ul className={styles.aboutUsUnorderedList}>
-          <li className={styles.aboutUsObjectiveCard}>
-            Promover proyectos de cooperación internacional
-          </li>
-          <li className={styles.aboutUsObjectiveCard}>
-            Facilitar el acceso al agua potable en comunidades rurales
-          </li>
-          <li className={styles.aboutUsObjectiveCard}>
-            Apoyar la educación y el desarrollo infantil
-          </li>
-          <li className={styles.aboutUsObjectiveCard}>
-            Impulsar proyectos de desarrollo comunitario
-          </li>
-          <li className={styles.aboutUsObjectiveCard}>
-            Fomentar la solidaridad y el voluntariado
-          </li>
-        </ul>
+        <UnorderedList
+          elementList={objectives}
+          listClassName={styles.aboutUsUnorderedList}
+          elementClassName={styles.aboutUsObjectiveCard}
+        />
       </div>
       <footer className={styles.footerWrapper}>
         <img src={logo_dark} className={styles.footerLogo} alt="" />
