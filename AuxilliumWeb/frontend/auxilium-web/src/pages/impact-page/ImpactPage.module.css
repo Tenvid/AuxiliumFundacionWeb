@@ -35,10 +35,11 @@ span {
   display: block;
 }
 
-.beneficiaryCard {
-  width: 100%;
-  margin: 0 auto;
+.cardsContainer {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2vw;
+  margin: 2vh auto;
+  width: 90%;
 }

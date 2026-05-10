@@ -30,33 +30,37 @@ export default function ImpactPage() {
 
       <h3>Conoce a quienes se han beneficiado de nuestros proyectos</h3>
 
-      <BeneficiaryCard
-        image={main_image}
-        imageAlt=""
-        imageAlignment={CardAlignment.LEFT}
-      >
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
-        doloremque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Voluptas, doloremque? Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Voluptas, doloremque? lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Voluptas, doloremque? Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Voluptas, doloremque? Lorem ipsum dolor
-        sit amet consectetur adipisicing elit. Voluptas, doloremque?
-      </BeneficiaryCard>
+      <div className={styles.cardsContainer}>
+        <BeneficiaryCard
+          image={main_image}
+          imageAlt=""
+          imageAlignment={CardAlignment.LEFT}
+        >
+          lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+          doloremque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Voluptas, doloremque? Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Voluptas, doloremque? lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Voluptas, doloremque? Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Voluptas, doloremque? Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+          doloremque?
+        </BeneficiaryCard>
 
-      <BeneficiaryCard
-        image={main_image}
-        imageAlt=""
-        imageAlignment={CardAlignment.RIGHT}
-      >
-        lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
-        doloremque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Voluptas, doloremque? Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Voluptas, doloremque? lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Voluptas, doloremque? Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Voluptas, doloremque? Lorem ipsum dolor
-        sit amet consectetur adipisicing elit. Voluptas, doloremque?
-      </BeneficiaryCard>
+        <BeneficiaryCard
+          image={main_image}
+          imageAlt=""
+          imageAlignment={CardAlignment.RIGHT}
+        >
+          lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+          doloremque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Voluptas, doloremque? Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Voluptas, doloremque? lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Voluptas, doloremque? Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Voluptas, doloremque? Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+          doloremque?
+        </BeneficiaryCard>
+      </div>
 
       <Footer />
     </>
