@@ -6,13 +6,15 @@ import styles from './NewsPage.module.css';
 import newsData from '../../../mocked_results/mocked_news.json';
 import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
 
-function NewInGrid({ title = '', image = '' }) {
+function NewInGrid({ slug = '', title = '', image = '' }) {
   return (
     <>
-      <div className={styles.NewInGrid}>
-        <img src={image} className={styles.NewImageonGrid}></img>
-        <span className={styles.NewTitleinGrid}>{title}</span>
-      </div>
+      <a href={`/news/${slug}`} className={styles.NewsCardLink}>
+        <div className={styles.NewInGrid}>
+          <img src={image} className={styles.NewImageonGrid}></img>
+          <span className={styles.NewTitleinGrid}>{title}</span>
+        </div>
+      </a>
     </>
   );
 }
@@ -47,7 +49,12 @@ function NewsPage() {
       </form>
       <div className={styles.NewsGrid}>
         {Object.values(news).map((article, index) => (
-          <NewInGrid key={index} title={article.title} image={article.image} />
+          <NewInGrid
+            key={index}
+            slug={article.slug}
+            title={article.title}
+            image={article.image}
+          />
         ))}
       </div>
       <footer className={styles.footerWrapper}>
