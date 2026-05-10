@@ -1,0 +1,100 @@
+article {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.NewInPageContainer {
+	min-height: 100vh;
+}
+
+.NewsDetailWrapper {
+	width: min(80vw, 1400px);
+	justify-self: center;
+	padding: clamp(18px, 2vw, 28px) 0 clamp(26px, 3vw, 40px);
+}
+
+.NewsTitle {
+	font-size: clamp(30px, 4vw, 42px);
+	margin-bottom: clamp(6px, 0.5vw, 10px);
+    font-family: AntonSC;
+    letter-spacing: 3px;
+}
+
+.NewsDate {
+	font-size: clamp(14px, 1.6vw, 18px);
+	margin-bottom: clamp(12px, 1vw, 18px);
+}
+
+.NewsImage {
+	width: 100%;
+	max-width: 900px;
+	display: block;
+	border-radius: 14px;
+	margin-bottom: clamp(14px, 1.2vw, 20px);
+    align-self: center;
+}
+
+.NewsHeader {
+	font-size: clamp(20px, 2.4vw, 24px);
+	line-height: 1.35;
+	margin-bottom: clamp(12px, 1vw, 18px);
+}
+
+.NewsContent {
+	font-size: clamp(17px, 2.1vw, 20px);
+	line-height: 1.5;
+}
+
+.ErrorMessage {
+	font-size: clamp(22px, 2.5vw, 26px);
+	color: #8b0000;
+}
+
+.footerWrapper {
+	background: var(--accent-dark);
+	display: flex;
+	justify-content: center;
+	padding: clamp(24px, 5vw, 56px);
+}
+
+.footerWrapper img {
+	width: min(80vw, 260px);
+	height: auto;
+}
+
+@media (max-width: 900px) {
+	.NewsDetailWrapper {
+		width: 94vw;
+	}
+
+	.NewsImage {
+		border-radius: 12px;
+	}
+}
+
+@media (max-width: 600px) {
+	.NewsDetailWrapper {
+		width: 95vw;
+		padding-top: 18px;
+		padding-bottom: 26px;
+	}
+
+	.NewsHeader {
+		font-size: 17px;
+		line-height: 1.3;
+	}
+
+	.NewsTitle {
+		letter-spacing: 1px;
+	}
+
+	.NewsHeader,
+	.NewsContent,
+	.NewsDate {
+		text-align: left;
+	}
+
+	.footerWrapper {
+		padding: 24px 16px;
+	}
+}
