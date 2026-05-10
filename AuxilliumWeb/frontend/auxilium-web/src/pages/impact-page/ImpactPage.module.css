@@ -4,7 +4,7 @@ h3 {
   font-size: 3vw;
   margin: 2vh auto 0 auto;
   text-align: center;
-  font-size: clamp(0.75rem, 3vw, 3rem);
+  font-size: clamp(0.75rem, 3vw, 10rem);
   width: 80%;
   text-align: center;
 }
@@ -12,7 +12,7 @@ h3 {
 h4 {
   font-family: Antonio;
   text-align: center;
-  font-size: clamp(0.75rem, 3vw, 3rem);
+  font-size: clamp(0.75rem, 3vw, 8rem);
   margin-bottom: 2vh;
   color: var(--dark);
 }
@@ -33,4 +33,12 @@ span {
   text-align: center;
   font-size: clamp(0.5rem, 2vw, 5rem);
   display: block;
+}
+
+.beneficiaryCard {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

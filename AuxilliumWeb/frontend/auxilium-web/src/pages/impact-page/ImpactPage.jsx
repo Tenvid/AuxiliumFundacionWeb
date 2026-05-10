@@ -3,6 +3,12 @@ import { MainNav } from '../../components/MainNav/MainNav';
 import { TextImage } from '../../components/TextImage/TextImage';
 import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
 import styles from './ImpactPage.module.css';
+import BeneficiaryCard from '../../components/BeneficiaryCard/BeneficiaryCard';
+
+const CardAlignment = {
+  LEFT: 'floatLeft',
+  RIGHT: 'floatRight',
+};
 
 export default function ImpactPage() {
   return (
@@ -11,7 +17,7 @@ export default function ImpactPage() {
       <TextImage image={main_image}>Impacto de la asociación</TextImage>
       <h3>Nuestro impacto en 2026</h3>
       <h4>
-        En 2026 mas de 2000 personas mejorarón su situación personal gracias a
+        En 2026 mas de 2000 personas mejoraron su situación personal gracias a
         los proyectos de nuestra asociación
       </h4>
 
@@ -23,6 +29,35 @@ export default function ImpactPage() {
       </div>
 
       <h3>Conoce a quienes se han beneficiado de nuestros proyectos</h3>
+
+      <BeneficiaryCard
+        image={main_image}
+        imageAlt=""
+        imageAlignment={CardAlignment.LEFT}
+      >
+        lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+        doloremque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Voluptas, doloremque? Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Voluptas, doloremque? lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Voluptas, doloremque? Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Voluptas, doloremque? Lorem ipsum dolor
+        sit amet consectetur adipisicing elit. Voluptas, doloremque?
+      </BeneficiaryCard>
+
+      <BeneficiaryCard
+        image={main_image}
+        imageAlt=""
+        imageAlignment={CardAlignment.RIGHT}
+      >
+        lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+        doloremque? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Voluptas, doloremque? Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Voluptas, doloremque? lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Voluptas, doloremque? Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Voluptas, doloremque? Lorem ipsum dolor
+        sit amet consectetur adipisicing elit. Voluptas, doloremque?
+      </BeneficiaryCard>
+
       <Footer />
     </>
   );
