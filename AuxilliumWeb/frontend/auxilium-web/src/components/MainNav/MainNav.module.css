@@ -46,28 +46,6 @@
 
 .minusNinetyDegrees {
   transform: rotate(-90deg);
-  transition: transform 0.5s ease;
-}
-
-.homeNavContentToggle {
-  display: block;
-  height: 10em;
-  background-color: var(--accent-dark);
-  margin-top: var(--nav-height);
-  position: absolute;
-  margin-left: -3vw;
-  width: 100vw;
-  text-align: center;
-}
-
-.homeNavContentToggle .homeNavContentList {
-  flex-direction: column;
-  margin-top: 1vh;
-  gap: 0.5vh;
-}
-
-.homeNavContentToggle a {
-  color: var(--paragraph-dark);
 }
 
 /* Media Queries */
@@ -84,7 +62,32 @@
 
 @media screen and (max-width: 425px) {
   .homeNavContent {
-    display: none;
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--accent-dark);
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    z-index: 1;
+  }
+
+  .homeNavOpen {
+    max-height: 10em;
+  }
+
+  .homeNavContent .homeNavContentList {
+    flex-direction: column;
+    padding: 0;
+    margin-top: 1vh;
+    gap: 0.5vh;
+  }
+
+  .homeNavContent a {
+    color: var(--paragraph-dark);
   }
 
   .homeNavToggleNavButton {
