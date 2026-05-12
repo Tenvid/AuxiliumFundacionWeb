@@ -5,6 +5,7 @@ import logo_dark from '../../assets/LogoAuxiliumVector--dark.svg';
 import styles from './NewsPage.module.css';
 import newsData from '../../../mocked_results/mocked_news.json';
 import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
+import LinkListInNews from '../../components/LinkListInNews/LinkListInNews';
 
 function NewInGrid({ slug = '', title = '', image = '' }) {
   return (
@@ -57,6 +58,7 @@ function NewsPage() {
           />
         ))}
       </div>
+      <LinkListInNews numberOfLinks={5} />
       <footer className={styles.footerWrapper}>
         <img src={logo_dark} alt="" />
       </footer>
