@@ -2,22 +2,10 @@ import logo_light from '../../assets/LogoAuxiliumVector.svg';
 import { NavLink } from '../NavLink/NavLink';
 import { LeftArrow } from '../LeftArrow/LeftArrow';
 import styles from './MainNav.module.css';
+import { useState } from 'react';
 
 export function MainNav() {
-  const toggleNav = () => {
-    const navContent = document.getElementById('homeNavContent');
-    navContent.className =
-      navContent.className == styles.homeNavContent
-        ? styles.homeNavContentToggle
-        : styles.homeNavContent;
-    const navButton = document.getElementById('navButton');
-
-    navButton.className = navButton.className.includes(
-      styles.minusNinetyDegrees
-    )
-      ? styles.homeNavToggleNavButton
-      : `${styles.homeNavToggleNavButton} ${styles.minusNinetyDegrees}`;
-  };
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
     <nav className={styles.homeNav}>
@@ -28,7 +16,9 @@ export function MainNav() {
           className={styles.homeNavLogoWrapperLogo}
         ></img>
       </div>
-      <div className={styles.homeNavContent} id="homeNavContent">
+      <div
+        className={`${styles.homeNavContent}${isNavOpen ? ` ${styles.homeNavOpen}` : ''}`}
+      >
         <ul className={styles.homeNavContentList}>
           <NavLink href="/">Inicio</NavLink>
           <NavLink href="/about-us">Quiénes somos</NavLink>
@@ -41,9 +31,8 @@ export function MainNav() {
       </div>
       <button
         type="button"
-        className={styles.homeNavToggleNavButton}
-        onClick={toggleNav}
-        id="navButton"
+        className={`${styles.homeNavToggleNavButton}${isNavOpen ? ` ${styles.minusNinetyDegrees}` : ''}`}
+        onClick={() => setIsNavOpen((prev) => !prev)}
       >
         <LeftArrow />
       </button>
