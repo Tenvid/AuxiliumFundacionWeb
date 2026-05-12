@@ -1,4 +1,5 @@
 import { HeaderImage } from '../../components/HeaderImage/HeaderImage';
+import Footer from '../../components/Footer/Footer/Footer.jsx';
 import styles from './ContactPage.module.css';
 import { MainNav } from '../../components/MainNav/MainNav';
 import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
@@ -27,9 +28,8 @@ function ContactPage() {
       </div>
       {/*TODO */}
       <ContactForm />
-      <footer className={styles.footerWrapper}>
-        <img src={logo_dark} className={styles.footerLogo} alt="" />
-      </footer>
+
+      <Footer />
     </>
   );
 }
