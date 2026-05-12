@@ -24,7 +24,7 @@ export function MainNav() {
       <div className={styles.homeNavLogoWrapper}>
         <img
           src={logo_light}
-          alt="Ola"
+          alt="Ola" //TODO: Cambiar el alt por algo más descriptivo
           className={styles.homeNavLogoWrapperLogo}
         ></img>
       </div>
