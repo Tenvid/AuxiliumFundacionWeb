@@ -12,7 +12,7 @@ function NewInGrid({ slug = '', title = '', image = '' }) {
     <>
       <a href={`/news/${slug}`} className={styles.NewsCardLink}>
         <div className={styles.NewInGrid}>
-          <img src={image} className={styles.NewImageonGrid}></img>
+          <img src={image} className={styles.NewImageOnGrid} alt={title}/>
           <span className={styles.NewTitleinGrid}>{title}</span>
         </div>
       </a>
