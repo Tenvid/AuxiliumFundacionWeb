@@ -23,7 +23,7 @@ function NewsPage() {
   const [news, _] = useState(newsData);
 
   return (
-    <div className={styles.ProjectsPageContainer}>
+    <div>
       <MainNav />
       <HeaderImage image={main_image}>Noticias</HeaderImage>
       <form className={styles.FilterGrid}>
