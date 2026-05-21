@@ -19,11 +19,9 @@
 }
 
 .floatLeft {
-  float: left;
   text-align: right;
 }
 
 .floatRight {
-  float: right;
   text-align: left;
 }
