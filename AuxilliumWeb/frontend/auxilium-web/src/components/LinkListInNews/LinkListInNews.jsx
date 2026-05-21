@@ -2,7 +2,7 @@ import styles from './LinkListInNews.module.css';
 export default function LinkListInNews({ numberOfLinks = 5 , startPosition = 2, totalPages = 10}) {
   var firstelement = startPosition >= 2 ? (
     <a href={`/news/page/1`} rel="noopener noreferrer">
-      <span className={styles.FirstLink}>
+      <span>
         {'<<'}
       </span>
     </a>
