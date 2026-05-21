@@ -41,11 +41,11 @@ function NewsPage() {
         </div>
         <div className={styles.NewsFilter}>
           <label htmlFor="date-from">Fecha desde:</label>
-          <input id="date-from" type="date"></input>
+          <input id="date-from" type="date"/>
         </div>
         <div className={styles.NewsFilter}>
           <label htmlFor="date-to">Fecha hasta:</label>
-          <input id="date-to" type="date"></input>
+          <input id="date-to" type="date"/>
         </div>
       </form>
       <div className={styles.NewsGrid}>
