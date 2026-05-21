@@ -28,7 +28,7 @@
     display: inline-block;
 }
 
-.NewImageonGrid {
+.NewImageOnGrid {
     display: flex;
     justify-self: center;
     width: clamp(150px, 20vw, 350px);
@@ -90,7 +90,7 @@ label {
     .NewInGrid {
         width: 80vw;
     }
-    .NewImageonGrid {
+    .NewImageOnGrid {
         width: 90%;
         margin-top: 3%;
     }
@@ -114,7 +114,7 @@ label {
     .NewInGrid {
         width: 40vw;
     }
-    .NewImageonGrid {
+    .NewImageOnGrid {
         margin-top: 3%;
         width: 95%;
     }
