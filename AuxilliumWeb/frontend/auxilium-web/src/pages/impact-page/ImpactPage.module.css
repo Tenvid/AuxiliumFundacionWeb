@@ -1,12 +1,9 @@
 h3 {
   font-family: AntonSC;
-  justify-content: center;
-  font-size: 3vw;
   margin: 2vh auto 0 auto;
   text-align: center;
   font-size: clamp(0.75rem, 3vw, 10rem);
   width: 80%;
-  text-align: center;
 }
 
 h4 {
