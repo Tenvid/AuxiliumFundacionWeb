@@ -1,9 +1,7 @@
 import newsData from '../../../mocked_results/mocked_news.json';
 import { MainNav } from '../../components/MainNav/MainNav';
-import { HeaderImage } from '../../components/HeaderImage/HeaderImage';
 import { useParams } from 'react-router-dom';
 import logo_dark from '../../assets/LogoAuxiliumVector--dark.svg';
-import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
 import styles from './NewInPage.module.css';
 
 export default function NewInPage() {
