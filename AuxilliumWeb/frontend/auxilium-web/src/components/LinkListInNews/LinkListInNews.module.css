@@ -13,7 +13,7 @@
     font-size: clamp(18px, 5vw, 40px);
 }
 .LastLink {
-    font-style: bold;
+    font-weight: bold;
 }
 .CurrentPage {
     font-weight: bold;
