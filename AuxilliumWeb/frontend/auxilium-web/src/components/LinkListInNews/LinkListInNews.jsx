@@ -1,11 +1,12 @@
 import styles from './LinkListInNews.module.css';
-export default function LinkListInNews({ numberOfLinks = 5 , startPosition = 2, totalPages = 10}) {
+import { Link } from 'react-router';
+export default function LinkListInNews({ numberOfLinks = 5 , startPosition = 1, totalPages = 10}) {
   var firstelement = startPosition >= 2 ? (
-    <a href={`/news/page/1`} rel="noopener noreferrer">
+    <Link to={`/news/page/1`} rel="noopener noreferrer">
       <span>
         {'<<'}
       </span>
-    </a>
+    </Link>
   ) : null;
   var lastElement = startPosition + numberOfLinks < totalPages ? (<a href={`/news/page/${totalPages}`} rel="noopener noreferrer">
     <span className={styles.LastLink}>
@@ -20,9 +21,9 @@ export default function LinkListInNews({ numberOfLinks = 5 , startPosition = 2, 
         return pageNumber === startPosition ? (
           <span key={index} className={styles.CurrentPage}>{pageNumber}</span>
         ) : (
-          <a key={index} href={`/news/page/${pageNumber}`} rel="noopener noreferrer">
+          <Link key={index} to={`/news/page/${pageNumber}`} rel="noopener noreferrer">
             {pageNumber}
-          </a>
+          </Link>
         );
       })}
       {lastElement}
