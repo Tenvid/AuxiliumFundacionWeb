@@ -1,4 +1,4 @@
-article {
+.NewInPageContainer article {
     display: flex;
     flex-direction: column;
     width: 100%;

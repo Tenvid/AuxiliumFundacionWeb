@@ -59,7 +59,7 @@
     gap: clamp(0.5rem, 0.5vw, 1rem);
 }
 
-input, select {
+.FilterGrid input, .FilterGrid select {
     width: 100%;
     height: clamp(2rem, 4vw, 2.5rem);
     font-size: clamp(14px, 3vw, 20px);
@@ -68,7 +68,7 @@ input, select {
     background-color: var(--accent-dark);
 }
 
-label {
+.FilterGrid label {
     font-size: clamp(14px, 3vw, 20px);
     margin-top: clamp(0.5rem, 1vw, 1.25rem);
 }
