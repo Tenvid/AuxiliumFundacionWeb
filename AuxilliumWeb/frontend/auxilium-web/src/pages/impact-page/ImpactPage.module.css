@@ -29,7 +29,7 @@ h4 {
   gap: 0.1vh;
 }
 
-span {
+.impacPageSpan {
   text-align: center;
   font-size: clamp(0.5rem, 2vw, 5rem);
   display: block;

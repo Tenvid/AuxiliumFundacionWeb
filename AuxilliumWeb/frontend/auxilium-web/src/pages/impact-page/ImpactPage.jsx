@@ -23,9 +23,13 @@ export default function ImpactPage() {
 
       <img src={main_image} alt="" className={styles.headerImage} />
       <div className={styles.paragraphsWrapper}>
-        <span>+1000 Personas ayudadas</span>
-        <span>+500 Nuevas oportunidades creadas</span>
-        <span>+10000€ Destinados a proyectos de integración social</span>
+        <span className={styles.impacPageSpan}>+1000 Personas ayudadas</span>
+        <span className={styles.impacPageSpan}>
+          +500 Nuevas oportunidades creadas
+        </span>
+        <span className={styles.impacPageSpan}>
+          +10000€ Destinados a proyectos de integración social
+        </span>
       </div>
 
       <h3>Conoce a quienes se han beneficiado de nuestros proyectos</h3>
