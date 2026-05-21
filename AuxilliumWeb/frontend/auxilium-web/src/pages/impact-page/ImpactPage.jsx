@@ -1,14 +1,10 @@
 import Footer from '../../components/Footer/Footer/Footer';
+import { CardAlignment } from '../../shared/CardAlignment';
 import { MainNav } from '../../components/MainNav/MainNav';
 import { TextImage } from '../../components/TextImage/TextImage';
 import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
 import styles from './ImpactPage.module.css';
 import BeneficiaryCard from '../../components/BeneficiaryCard/BeneficiaryCard';
-
-const CardAlignment = {
-  LEFT: 'floatLeft',
-  RIGHT: 'floatRight',
-};
 
 export default function ImpactPage() {
   return (

@@ -1,3 +1,4 @@
+import { CardAlignment } from '../../shared/CardAlignment';
 import styles from './BeneficiaryCard.module.css';
 export default function BeneficiaryCard({
   image,
@@ -5,16 +6,13 @@ export default function BeneficiaryCard({
   children,
   imageAlignment,
 }) {
-  const CardAlignment = {
-    LEFT: 'floatLeft',
-    RIGHT: 'floatRight',
-  };
-
   function CardImage() {
     return (
       <img
         src={image}
-        className={[styles.beneficiaryCard__Image, imageAlignment].join(' ')}
+        className={[styles.beneficiaryCard__Image, styles[imageAlignment]].join(
+          ' '
+        )}
         alt={imageAlt}
       />
     );
