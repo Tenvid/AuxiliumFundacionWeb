@@ -7,6 +7,7 @@ import newsData from '../../../mocked_results/mocked_news.json';
 import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
 import LinkListInNews from '../../components/LinkListInNews/LinkListInNews';
 import { Link } from 'react-router';
+import { useParams } from 'react-router-dom';
 function NewInGrid({ slug = '', title = '', image = '' }) {
   return (
     <>
@@ -21,6 +22,9 @@ function NewInGrid({ slug = '', title = '', image = '' }) {
 }
 function NewsPage() {
   const [news, _] = useState(newsData);
+    const { page: pageString } = useParams();
+    const page = parseInt(pageString, 10) || 1;
+    console.log(page)
 
   return (
     <div>
@@ -58,7 +62,7 @@ function NewsPage() {
           />
         ))}
       </div>
-      <LinkListInNews numberOfLinks={5} />
+      <LinkListInNews numberOfLinks={5} startPosition={page} />
       <footer className={styles.footerWrapper}>
         <img src={logo_dark} alt="" />
       </footer>

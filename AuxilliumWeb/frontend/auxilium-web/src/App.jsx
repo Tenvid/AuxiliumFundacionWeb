@@ -5,10 +5,12 @@ import ContactPage from './pages/contact-page/ContactPage.jsx';
 import TransparencyPage from './pages/transparency-page/TransparencyPage.jsx';
 import NewsPage from './pages/news-page/NewsPage.jsx';
 import NewInPage from './pages/new-in-page/NewInPage.jsx';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop.jsx';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
