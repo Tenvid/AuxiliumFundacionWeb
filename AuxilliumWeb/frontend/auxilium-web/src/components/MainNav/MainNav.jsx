@@ -23,7 +23,7 @@ export function MainNav() {
           <NavLink href="/">Inicio</NavLink>
           <NavLink href="/about-us">Quiénes somos</NavLink>
           <NavLink href="/projects">Proyectos</NavLink>
-          <NavLink href="#">Impacto</NavLink>
+          <NavLink href="/impact">Impacto</NavLink>
           <NavLink href="/transparency">Transparencia</NavLink>
           <NavLink href="#">Noticias</NavLink>
           <NavLink href="/contact">Contacto</NavLink>

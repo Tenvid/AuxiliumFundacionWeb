@@ -1,0 +1,29 @@
+.beneficiaryCard {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.beneficiaryCard__Image {
+  border-radius: 50%;
+  width: 20%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+}
+
+.beneficiaryCard__Text {
+  font-family: Monda;
+  font-size: clamp(0.5rem, 2vw, 5rem);
+  width: 70%;
+}
+
+.floatLeft {
+  text-align: right;
+}
+
+.floatRight {
+  text-align: left;
+}
