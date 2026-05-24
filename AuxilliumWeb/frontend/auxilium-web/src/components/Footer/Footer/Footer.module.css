@@ -1,0 +1,11 @@
+.footerWrapper {
+  background: var(--accent-dark);
+  display: flex;
+  justify-content: center;
+  padding: 5vw 0;
+  width: 100%;
+}
+
+.footerLogo {
+  width: 50%;
+}

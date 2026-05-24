@@ -2,38 +2,28 @@ import logo_light from '../../assets/LogoAuxiliumVector.svg';
 import { NavLink } from '../NavLink/NavLink';
 import { LeftArrow } from '../LeftArrow/LeftArrow';
 import styles from './MainNav.module.css';
+import { useState } from 'react';
 
 export function MainNav() {
-  const toggleNav = () => {
-    const navContent = document.getElementById('homeNavContent');
-    navContent.className =
-      navContent.className == styles.homeNavContent
-        ? styles.homeNavContentToggle
-        : styles.homeNavContent;
-    const navButton = document.getElementById('navButton');
-
-    navButton.className = navButton.className.includes(
-      styles.minusNinetyDegrees
-    )
-      ? styles.homeNavToggleNavButton
-      : `${styles.homeNavToggleNavButton} ${styles.minusNinetyDegrees}`;
-  };
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
     <nav className={styles.homeNav}>
       <div className={styles.homeNavLogoWrapper}>
         <img
           src={logo_light}
-          alt="Ola"
+          alt="Ola" //TODO: Cambiar el alt por algo más descriptivo
           className={styles.homeNavLogoWrapperLogo}
         ></img>
       </div>
-      <div className={styles.homeNavContent} id="homeNavContent">
+      <div
+        className={`${styles.homeNavContent}${isNavOpen ? ` ${styles.homeNavOpen}` : ''}`}
+      >
         <ul className={styles.homeNavContentList}>
           <NavLink href="/">Inicio</NavLink>
-          <NavLink href="#">Quiénes somos</NavLink>
+          <NavLink href="/about-us">Quiénes somos</NavLink>
           <NavLink href="/projects">Proyectos</NavLink>
-          <NavLink href="#">Impacto</NavLink>
+          <NavLink href="/impact">Impacto</NavLink>
           <NavLink href="/transparency">Transparencia</NavLink>
           <NavLink href="/news/page/1">Noticias</NavLink>
           <NavLink href="/contact">Contacto</NavLink>
@@ -41,9 +31,8 @@ export function MainNav() {
       </div>
       <button
         type="button"
-        className={styles.homeNavToggleNavButton}
-        onClick={toggleNav}
-        id="navButton"
+        className={`${styles.homeNavToggleNavButton}${isNavOpen ? ` ${styles.minusNinetyDegrees}` : ''}`}
+        onClick={() => setIsNavOpen((prev) => !prev)}
       >
         <LeftArrow />
       </button>

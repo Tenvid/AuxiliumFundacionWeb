@@ -3,8 +3,7 @@ import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
 import { MainNav } from '../../components/MainNav/MainNav';
 import { TextImage } from '../../components/TextImage/TextImage';
 import { ImageWithHeaderAndButton } from '../../components/ImageWithHeaderAndButton/ImageWithHeaderAndButton.jsx';
-import logo_dark from '../../assets/LogoAuxiliumVector--dark.svg';
-
+import Footer from '../../components/Footer/Footer/Footer.jsx';
 function MainPage() {
   const loadGridImages = () => {
     const gridImages = [];
@@ -61,9 +60,7 @@ function MainPage() {
         />
       </section>
 
-      <footer className="footer-wrapper">
-        <img src={logo_dark} className="footer-logo" alt="" />
-      </footer>
+      <Footer />
     </>
   );
 }
