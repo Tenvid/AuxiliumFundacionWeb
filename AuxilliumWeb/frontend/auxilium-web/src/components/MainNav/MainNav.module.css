@@ -48,6 +48,13 @@
   transform: rotate(-90deg);
 }
 
+.homeNavContent a:hover {
+  color: var(--accent-dark);
+}
+
+.homeNavContentList a:hover {
+  color: var(--accent-light);
+}
 /* Media Queries */
 
 @media screen and (max-width: 768px) {
