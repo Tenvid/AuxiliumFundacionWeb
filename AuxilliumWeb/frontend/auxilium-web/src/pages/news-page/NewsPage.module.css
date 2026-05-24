@@ -1,0 +1,132 @@
+.footerWrapper {
+  background: var(--accent-dark);
+  display: flex;
+  justify-content: center;
+  padding: 5vw;
+}
+
+.NewsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: min(90vw, 1200px);
+    max-width: 90%;
+    margin: 2vw auto 1vw;
+    gap: clamp(1rem, 2vw, 2.5rem);
+    justify-items: center;
+}
+
+.NewInGrid {
+    background-color: var(--accent-dark);
+    width: fit-content;
+    padding: clamp(0.25rem, 0.5vw, 0.75rem);
+    border-radius: 15px;
+}
+
+.NewsCardLink {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.NewImageOnGrid {
+    display: flex;
+    justify-self: center;
+    width: clamp(150px, 20vw, 350px);
+    height: auto;
+}
+
+.NewTitleinGrid {
+    display: flex;
+    margin-top: clamp(0.5rem, 1.5vw, 1.5rem);
+    font-weight: bold;
+    font-family: Antonio;
+    font-size: clamp(12px, 3.5vw, 18px);
+    width: clamp(150px, 20vw, 350px);
+}
+
+.FilterGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: min(90vw, 1200px);
+    max-width: 90%;
+    margin: 0 auto;
+    gap: clamp(1rem, 2vw, 2rem);
+}
+
+.NewsFilter {
+    display: grid;
+    grid-auto-rows: auto auto;
+    gap: clamp(0.5rem, 0.5vw, 1rem);
+}
+
+.FilterGrid input, .FilterGrid select {
+    width: 100%;
+    height: clamp(2rem, 4vw, 2.5rem);
+    font-size: clamp(14px, 3vw, 20px);
+    border-radius: 10px;
+    border-width: 2px;
+    background-color: var(--accent-dark);
+}
+
+.FilterGrid label {
+    font-size: clamp(14px, 3vw, 20px);
+    margin-top: clamp(0.5rem, 1vw, 1.25rem);
+}
+
+/* Mobile (< 768px) */
+@media (max-width: 767px) {
+    .NewsGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .FilterGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .footerWrapper {
+        padding: 4vw;
+    }
+    .NewInGrid {
+        width: 80vw;
+    }
+    .NewImageOnGrid {
+        width: 90%;
+        margin-top: 3%;
+    }
+    .NewTitleinGrid {
+        width: 95%;
+        font-size: clamp(15px, 4.5vw, 20px);
+        margin-left: 3%;
+    }
+}
+
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .NewsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .FilterGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .NewInGrid {
+        width: 40vw;
+    }
+    .NewImageOnGrid {
+        margin-top: 3%;
+        width: 95%;
+    }
+    .NewTitleinGrid {
+        width: 95%;
+        font-size: clamp(13px, 5vw, 20px);
+        margin-left: 2%;
+        margin-right: 5%;
+    }
+    .NewsCardLink:last-child {
+        display: block;
+        grid-column: span 2;
+        justify-self: center;
+    }
+}

@@ -1,0 +1,137 @@
+{
+    "New1":{
+        "title": "Lorem Ipsun",
+        "slug": "lorem-ipsun",
+        "type": "otros",
+        "header": "En los últimos meses hemos intensificado nuestras actividades en terreno para atender necesidades prioritarias de la comunidad. Estas acciones buscan fortalecer capacidades locales y generar soluciones sostenibles a largo plazo.",
+        "image": "https://placehold.co/600x400?text=Noticia+1",
+        "content": "En los últimos meses hemos intensificado nuestras actividades en terreno para atender necesidades prioritarias de la comunidad. Estas acciones incluyen talleres, asistencia técnica y acompañamiento social que han generado mejoras visibles en la calidad de vida local. Seguiremos documentando los avances y compartiendo experiencias para replicar buenas prácticas.",
+        "date": "2026-05-10"
+    },
+    "New2":{
+        "title": "Proyecto comunitario exitoso",
+        "slug": "proyecto-comunitario-exitoso",
+        "type": "resultados-proyecto",
+        "header": "Cerramos un proyecto comunitario con amplia participación local y resultados palpables. La experiencia ha fortalecido capacidades y generado aprendizajes replicables en otras comunidades.",
+        "image": "https://placehold.co/600x400?text=Noticia+2",
+        "content": "Finalizamos un proyecto comunitario que involucró a cientos de beneficiarios y contó con la participación activa de organizaciones locales. Los testimonios recogidos muestran cómo las iniciativas han fortalecido capacidades y generado oportunidades económicas sostenibles. Los resultados servirán como modelo para futuras intervenciones en la región.",
+        "date": "2026-05-09"
+    },
+    "New3":{
+        "title": "Nuevas iniciativas para el desarrollo sostenible",
+        "slug": "nuevas-iniciativas-para-el-desarrollo-sostenible",
+        "type": "nuevo-proyecto",
+        "header": "Presentamos iniciativas que integran protección ambiental y producción local para promover un desarrollo sostenible. Estas acciones buscan equilibrio entre crecimiento y conservación.",
+        "image": "https://placehold.co/600x400?text=Noticia+3",
+        "content": "Hemos lanzado nuevas iniciativas orientadas al desarrollo sostenible, combinando la protección ambiental con actividades productivas para la comunidad. Estas propuestas promueven prácticas agrícolas regenerativas, manejo responsable de recursos y cadenas de valor locales. Buscamos generar beneficios económicos duraderos sin comprometer los ecosistemas locales.",
+        "date": "2026-05-08"
+    },
+    "New4":{
+        "title": "Auxilium y la comunidad crece cada día",
+        "slug": "auxilium-y-la-comunidad-crece-cada-dia",
+        "type": "evento",
+        "header": "Compartimos experiencias de crecimiento conjunto que nacen de la colaboración y la confianza entre Auxilium y comunidades. Son ejemplos de procesos participativos que generan autonomía.",
+        "image": "https://placehold.co/600x400?text=Noticia+4",
+        "content": "Compartimos historias de crecimiento donde la colaboración entre Auxilium y las comunidades ha sido clave para lograr metas comunes. A través del trabajo conjunto se han creado redes de apoyo y proyectos autogestionados que consolidan la autonomía local. Estas experiencias refuerzan nuestro compromiso con procesos participativos y sostenibles.",
+        "date": "2026-05-07"
+    },
+    "New5":{
+        "title": "Impacto transformador de nuestros programas en la región",
+        "slug": "impacto-transformador-de-nuestros-programas-en-la-region",
+        "type": "resultados-proyecto",
+        "header": "Mostramos evidencia cuantitativa y cualitativa del impacto de nuestros programas en salud, educación y economía local. Los resultados orientan mejoras continuas en la intervención.",
+        "image": "https://placehold.co/600x400?text=Noticia+5",
+        "content": "Presentamos evidencia del impacto obtenido por nuestros programas, con indicadores que reflejan mejoras en salud, educación y condiciones económicas. Los datos recopilados muestran tendencias positivas y áreas de oportunidad para ajustar estrategias. Continuaremos midiendo resultados para maximizar la eficacia de nuestras intervenciones.",
+        "date": "2026-05-06"
+    },
+    "New6":{
+        "title": "Alianzas estratégicas que fortalecen nuestras iniciativas comunitarias",
+        "slug": "alianzas-estrategicas-que-fortalecen-nuestras-iniciativas-comunitarias",
+        "type": "otros",
+        "header": "Hemos establecido alianzas estratégicas que amplían recursos y capacidades para los proyectos. La cooperación en red permite escalar soluciones con mayor eficacia.",
+        "image": "https://placehold.co/600x400?text=Noticia+6",
+        "content": "Hemos establecido alianzas estratégicas con entidades nacionales e internacionales para potenciar nuestras iniciativas. Estas colaboraciones permiten compartir recursos, conocimientos y buenas prácticas, ampliando el alcance e impacto de los proyectos. El trabajo en red es fundamental para escalar soluciones sostenibles.",
+        "date": "2026-05-05"
+    },
+    "New7":{
+        "title": "Capacitación y oportunidades laborales para jóvenes del sector",
+        "slug": "capacitacion-y-oportunidades-laborales-para-jovenes-del-sector",
+        "type": "evento",
+        "header": "Lanzamos programas de capacitación para jóvenes que combinan habilidades técnicas y soporte para emprendimientos. Buscamos facilitar oportunidades laborales reales y sostenibles.",
+        "image": "https://placehold.co/600x400?text=Noticia+7",
+        "content": "Lanzamos programas de capacitación dirigidos a jóvenes para mejorar sus competencias técnicas y blandas, facilitando su inserción laboral o el desarrollo de emprendimientos. Las actividades incluyen formación práctica, mentoría y apoyo en la búsqueda de empleo. Varios participantes ya muestran avances en sus trayectorias profesionales.",
+        "date": "2026-05-04"
+    },
+    "New8":{
+        "title": "Logros alcanzados gracias al compromiso y dedicación de nuestro equipo",
+        "slug": "logros-alcanzados-gracias-al-compromiso-y-dedicacion-de-nuestro-equipo",
+        "type": "otros",
+        "header": "Reconocemos el esfuerzo del equipo y voluntarios cuyo compromiso impulsa resultados en terreno. Su dedicación es clave para el avance de nuestras metas sociales.",
+        "image": "https://placehold.co/600x400?text=Noticia+8",
+        "content": "Celebramos los logros alcanzados por nuestro equipo y voluntarios, cuyo esfuerzo sostenido ha sido determinante para el avance de los proyectos. Este reconocimiento destaca la dedicación, resiliencia y creatividad con la que enfrentan desafíos locales. Valoramos profundamente la labor colectiva que hace posibles estos resultados.",
+        "date": "2026-05-03"
+    },
+    "New9":{
+        "title": "Nuevos proyectos de infraestructura que benefician a miles de personas",
+        "slug": "nuevos-proyectos-de-infraestructura-que-benefician-a-miles-de-personas",
+        "type": "nuevo-proyecto",
+        "header": "Iniciamos proyectos de infraestructura orientados a mejorar servicios básicos y conectividad. Las obras se ejecutan con enfoque participativo y criterios de sostenibilidad.",
+        "image": "https://placehold.co/600x400?text=Noticia+9",
+        "content": "Hemos comenzado obras de infraestructura orientadas a mejorar el acceso a servicios básicos como agua potable, saneamiento y caminos rurales. Estos proyectos se realizan en coordinación con autoridades y comunidades para asegurar pertinencia y sostenibilidad. Las obras buscan reducir brechas y facilitar el día a día de miles de personas.",
+        "date": "2026-05-02"
+    },
+    "New10":{
+        "title": "Transformación digital y acceso a tecnología en comunidades vulnerables del país",
+        "slug": "transformacion-digital-y-acceso-a-tecnologia-en-comunidades-vulnerables-del-pais",
+        "type": "nuevo-proyecto",
+        "header": "Impulsamos iniciativas de inclusión digital que acercan herramientas y oportunidades educativas a comunidades con acceso limitado. La formación tecnológica es central para la equidad.",
+        "image": "https://placehold.co/600x400?text=Noticia+10",
+        "content": "Impulsamos iniciativas de transformación digital que acercan herramientas tecnológicas y recursos educativos a comunidades con acceso limitado. Las actividades incluyen instalación de puntos de acceso, formación en competencias digitales y apoyo a proyectos educativos. La meta es cerrar brechas y generar oportunidades de aprendizaje para todas las edades.",
+        "date": "2026-05-01"
+    },
+    "New11":{
+        "title": "Impacto ambiental positivo mediante programas de educación y conservación comunitaria",
+        "slug": "impacto-ambiental-positivo-mediante-programas-de-educacion-y-conservacion-comunitaria",
+        "type": "evento",
+        "header": "Desarrollamos campañas de educación ambiental que movilizan escuelas y familias hacia prácticas de conservación. La sensibilización busca cambios sostenibles en hábitos cotidianos.",
+        "image": "https://placehold.co/600x400?text=Noticia+11",
+        "content": "Desplegamos campañas de educación ambiental y conservación que involucran a familias, escuelas y líderes comunitarios. Estas acciones buscan fomentar hábitos responsables, restauración de espacios naturales y participación ciudadana en la protección del entorno. La sensibilización es un pilar para lograr cambios culturales duraderos.",
+        "date": "2026-04-30"
+    },
+    "New12":{
+        "title": "Fortalecimiento de capacidades locales para garantizar sostenibilidad y crecimiento económico",
+        "slug": "fortalecimiento-de-capacidades-locales-para-garantizar-sostenibilidad-y-crecimiento-economico",
+        "type": "estado-proyecto",
+        "header": "Implementamos talleres técnicos y proyectos productivos para mejorar la resiliencia económica local. Estas acciones generan nuevas fuentes de ingreso y fortalecen capacidades.",
+        "image": "https://placehold.co/600x400?text=Noticia+12",
+        "content": "Implementamos talleres técnicos y proyectos productivos que fortalecen la capacidad económica local y la resiliencia ante crisis. Se trabaja en diversificación de ingresos, mejores prácticas productivas y acceso a mercados locales. Los participantes reportan mayor seguridad económica y nuevas oportunidades de negocio.",
+        "date": "2026-04-29"
+    },
+    "New13":{
+        "title": "Auxilium reconocida como organización líder en desarrollo social e impacto comunitario",
+        "slug": "auxilium-reconocida-como-organizacion-lider-en-desarrollo-social-e-impacto-comunitario",
+        "type": "otros",
+        "header": "Recibimos un reconocimiento que valida nuestro enfoque basado en evidencia y participación comunitaria. Este logro impulsa la mejora continua y la transparencia.",
+        "image": "https://placehold.co/600x400?text=Noticia+13",
+        "content": "Hemos sido reconocidos por nuestra trayectoria en desarrollo social gracias a un enfoque basado en evidencia y participación comunitaria. Este reconocimiento valida el esfuerzo conjunto y nos motiva a seguir innovando en programas con impacto real. Continuaremos consolidando estándares de calidad y transparencia.",
+        "date": "2026-04-28"
+    },
+    "New14":{
+        "title": "Programa innovador de empoderamiento femenino y liderazgo en sectores marginados",
+        "slug": "programa-innovador-de-empoderamiento-femenino-y-liderazgo-en-sectores-marginados",
+        "type": "nuevo-proyecto",
+        "header": "Lanzamos un programa integral que potencia liderazgo y autonomía económica de mujeres en contextos vulnerables. La intervención combina formación, mentoría y apoyo a iniciativas lideradas por mujeres.",
+        "image": "https://placehold.co/600x400?text=Noticia+14",
+        "content": "Presentamos un programa integral de empoderamiento femenino que promueve liderazgo, formación y acceso a recursos económicos para mujeres en zonas marginadas. La intervención combina formación técnica, mentoría y apoyo para iniciativas productivas lideradas por mujeres. Buscamos generar espacios de decisión y autonomía sostenibles.",
+        "date": "2026-04-27"
+    },
+    "New15":{
+        "title": "Expansión regional de servicios básicos alcanzando a población desatendida del territorio nacional",
+        "slug": "expansion-regional-de-servicios-basicos-alcanzando-a-poblacion-desatendida-del-territorio-nacional",
+        "type": "estado-proyecto",
+        "header": "Iniciamos la expansión regional de servicios básicos para alcanzar poblaciones desatendidas, con coordinación local y enfoque participativo. La meta es mejorar condiciones de vida y acceso a derechos.",
+        "image": "https://placehold.co/600x400?text=Noticia+15",
+        "content": "Iniciamos la expansión regional de servicios básicos para alcanzar poblaciones históricamente desatendidas, priorizando salud, educación y agua. La estrategia incluye diagnósticos locales, coordinación con gobiernos y ejecución participativa. Esperamos que estas acciones mejoren la calidad de vida de familias enteras.",
+        "date": "2026-04-26"
+    }
+}
