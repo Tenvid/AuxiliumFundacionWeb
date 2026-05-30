@@ -15,7 +15,7 @@ class IndexView(View):
         return render(request, "core/index.html")
 
 
-def get_projects(request):
+def get_all_projects(request):
     projects = Project.objects.all()
     data = []
     for project in projects:
