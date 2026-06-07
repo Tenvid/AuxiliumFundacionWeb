@@ -18,23 +18,38 @@ class IndexView(View):
         return render(request, "core/index.html")
 
 
-def get_new_by_id(request, new_id: int):
+def get_news(request):
     if request.method == "GET":
-        new = New.objects.get(id=new_id)
-        data = {
-            "title": new.title,
-            "slug": new.slug,
-            "type": new.get_type_display(),
-            "header": new.header,
-            "image": new.image if new.image else "",
-            "content": new.content,
-            "publish_date": new.publish_date,
-        }
-        return JsonResponse(data)
+        new_id = request.GET.get("id", None)
 
+        if new_id is not None:
+            new = New.objects.get(id=new_id)
+            data = {
+                "title": new.title,
+                "slug": new.slug,
+                "type": new.get_type_display(),
+                "header": new.header,
+                "image": new.image if new.image else "",
+                "content": new.content,
+                "publish_date": new.publish_date,
+            }
+            return JsonResponse(data)
 
-def get_all_news(request):
-    if request.method == "GET":
+        new_slug = request.GET.get("slug", None)
+
+        if new_slug is not None:
+            new = New.objects.get(slug=new_slug)
+            data = {
+                "title": new.title,
+                "slug": new.slug,
+                "type": new.get_type_display(),
+                "header": new.header,
+                "image": new.image if new.image else "",
+                "content": new.content,
+                "publish_date": new.publish_date,
+            }
+            return JsonResponse(data)
+
         news_type = request.GET.get("type", None)
         start_date_str = request.GET.get("start_date", None)
         end_date_str = request.GET.get("end_date", None)

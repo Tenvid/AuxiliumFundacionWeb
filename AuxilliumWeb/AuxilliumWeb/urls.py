@@ -22,7 +22,6 @@ from core import views as core_views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("core.urls")),
-    path("news/<int:new_id>", core_views.get_new_by_id, name="news_by_id"),
-    path("news", core_views.get_all_news, name="news"),
+    path("news", core_views.get_news, name="news"),
     path("news/add/", core_views.add_new, name="add_new"),
 ]
