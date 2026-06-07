@@ -23,5 +23,5 @@ class New(models.Model):
     )
     header = models.CharField(max_length=300)
     image = models.CharField()
-    content = models.CharField()
+    content = models.JSONField()
     publish_date = models.DateField()

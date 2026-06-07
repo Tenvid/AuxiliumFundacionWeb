@@ -62,7 +62,13 @@ export default function NewInPage() {
               alt={newInPage.title}
               className={styles.NewsImage}
             />
-            <p className={styles.NewsContent}>{newInPage.content}</p>
+            <p className={styles.NewsContentWrapper}>
+              {Array.isArray(newInPage.content) && newInPage.content.map((paragraph, index) => (
+                <p key={index} className={styles.NewsContent}>
+                  {paragraph}
+                </p>
+              ))}
+            </p>
           </article>
         ) : (
           <h2 className={styles.ErrorMessage}>

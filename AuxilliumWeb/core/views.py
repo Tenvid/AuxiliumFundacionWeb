@@ -30,7 +30,7 @@ def get_news(request):
                 "type": new.get_type_display(),
                 "header": new.header,
                 "image": new.image if new.image else "",
-                "content": new.content,
+                "content": new.content["content"],
                 "publish_date": new.publish_date,
             }
             return JsonResponse(data)
@@ -45,7 +45,7 @@ def get_news(request):
                 "type": new.get_type_display(),
                 "header": new.header,
                 "image": new.image if new.image else "",
-                "content": new.content,
+                "content": new.content["content"],
                 "publish_date": new.publish_date,
             }
             return JsonResponse(data)
