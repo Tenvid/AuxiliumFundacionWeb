@@ -22,6 +22,6 @@ class New(models.Model):
         default=NewsType.OTROS,
     )
     header = models.CharField(max_length=300)
-    image = models.CharField()
-    content = models.JSONField()
+    image = models.ImageField(upload_to='news_images/')
+    content = models.TextField()
     publish_date = models.DateField()

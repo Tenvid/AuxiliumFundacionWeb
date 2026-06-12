@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { MainNav } from '../../components/MainNav/MainNav';
+import ReactMarkdown from 'react-markdown';
 import logo_dark from '../../assets/LogoAuxiliumVector--dark.svg';
+import remarkGfm from 'remark-gfm';
 import styles from './NewInPage.module.css';
 
 export default function NewInPage() {
@@ -51,7 +53,6 @@ export default function NewInPage() {
     <div className={styles.NewInPageContainer}>
       <MainNav />
       <section className={styles.NewsDetailWrapper}>
-        {/* El renderizado condicional ahora solo depende de newInPage */}
         {newInPage ? (
           <article>
             <h1 className={styles.NewsTitle}>{newInPage.title}</h1>
@@ -62,13 +63,11 @@ export default function NewInPage() {
               alt={newInPage.title}
               className={styles.NewsImage}
             />
-            <p className={styles.NewsContentWrapper}>
-              {Array.isArray(newInPage.content) && newInPage.content.map((paragraph, index) => (
-                <p key={index} className={styles.NewsContent}>
-                  {paragraph}
-                </p>
-              ))}
-            </p>
+            <div className={styles.NewsContent}>
+              <ReactMarkdown remarkPlugins={[remarkGfm]} >
+                {newInPage.content}
+              </ReactMarkdown>
+            </div>
           </article>
         ) : (
           <h2 className={styles.ErrorMessage}>
