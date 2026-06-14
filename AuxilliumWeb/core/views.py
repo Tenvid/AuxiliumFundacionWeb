@@ -32,9 +32,7 @@ def get_news(request):
                 else:
                     new = New.objects.get(slug=new_slug)
 
-                image_url = (
-                    request.build_absolute_uri(new.image.url) if new.image else ""
-                )
+                image_url = new.image.url if new.image else ""
 
                 data = {
                     "title": new.title,
@@ -74,7 +72,7 @@ def get_news(request):
 
         data = []
         for new in news:
-            image_url = request.build_absolute_uri(new.image.url) if new.image else ""
+            image_url = new.image.url if new.image else ""
             data.append(
                 {
                     "id": new.id,

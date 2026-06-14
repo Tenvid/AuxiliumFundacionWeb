@@ -46,7 +46,7 @@ function NewsPage() {
     }
 
     const queryString = params.toString();
-    const apiUrl = `http://127.0.0.1:8000/news${queryString ? `?${queryString}` : ''}`;
+    const apiUrl = `/api/news/${queryString ? `?${queryString}` : ''}`;
 
 
     fetch(apiUrl)

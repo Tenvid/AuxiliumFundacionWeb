@@ -13,7 +13,9 @@ export default function NewInPage() {
   const { slug } = useParams();
 
   useEffect(() => {
-    const apiUrl = `http://127.0.0.1:8000/news?slug=${slug}`;
+    // CAMBIO: Añade el prefijo /api/ a la URL
+    // Y usa el slug en la ruta para ser más consistente
+    const apiUrl = `/api/news/?slug=${slug}`;
 
     const fetchNew = async () => {
       try {
