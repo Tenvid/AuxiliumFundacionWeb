@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react'; // Importa useEffect
 import { MainNav } from '../../components/MainNav/MainNav';
 import { HeaderImage } from '../../components/HeaderImage/HeaderImage';
 import logo_dark from '../../assets/LogoAuxiliumVector--dark.svg';
 import styles from './NewsPage.module.css';
-import newsData from '../../../mocked_results/mocked_news.json';
 import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
 import LinkListInNews from '../../components/LinkListInNews/LinkListInNews';
 import { Link } from 'react-router';
@@ -21,11 +20,47 @@ function NewInGrid({ slug = '', title = '', image = '' }) {
   );
 }
 function NewsPage() {
-  const [news, _] = useState(newsData);
+  const [news, setNews] = useState([]);
+  const [filters, setFilters] = useState({
+    type: '',
+    start_date: '',
+    end_date: ''
+  });
     const { page: pageString } = useParams();
     const page = parseInt(pageString, 10) || 1;
     console.log(page)
 
+  // 3. useEffect para buscar datos cuando los filtros cambian
+  useEffect(() => {
+    // Construye la URL con los parámetros de búsqueda
+    const params = new URLSearchParams();
+    if (filters.type) {
+      params.append('type', filters.type);
+    }
+    if (filters.start_date) {
+      params.append('start_date', filters.start_date);
+    }
+    if (filters.end_date) {
+      params.append('end_date', filters.end_date);
+    }
+
+    const queryString = params.toString();
+    const apiUrl = `/api/news/${queryString ? `?${queryString}` : ''}`;
+
+
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+
+        console.log("Datos recibidos de la API:", data);
+
+        setNews(data);
+      })
+      .catch(error => console.error("Error fetching news:", error));
+
+  }, [filters]);
+
+    
   return (
     <div>
       <MainNav />
@@ -53,9 +88,9 @@ function NewsPage() {
         </div>
       </form>
       <div className={styles.NewsGrid}>
-        {Object.values(news).map((article, index) => (
+        {news.map((article, index) => (
           <NewInGrid
-            key={index}
+            key={article.id}
             slug={article.slug}
             title={article.title}
             image={article.image}
