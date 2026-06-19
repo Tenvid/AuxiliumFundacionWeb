@@ -22,6 +22,12 @@ class Migration(migrations.Migration):
                 ('image', models.CharField()),
                 ('content', models.CharField()),
                 ('publish_date', models.DateField()),
+            name='Project',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('title', models.CharField(max_length=200)),
+                ('paragraph_list', models.JSONField()),
+                ('image_list', models.JSONField()),
             ],
         ),
     ]

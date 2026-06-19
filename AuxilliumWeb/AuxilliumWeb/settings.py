@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "corsheaders.middleware.CorsMiddleware",
@@ -129,9 +130,8 @@ STATICFILES_DIRS = [
 MEDIA_URL = "media/"  # URL to access media files
 MEDIA_ROOT = BASE_DIR / "media"  # This is where media files will be stored on
 
+
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
-    "http://192.168.1.69:5173",
-    "http://172.16.0.2:5173",
 ]

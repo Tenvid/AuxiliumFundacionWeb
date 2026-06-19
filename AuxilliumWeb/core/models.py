@@ -25,3 +25,7 @@ class New(models.Model):
     image = models.ImageField(upload_to='news_images/')
     content = models.TextField()
     publish_date = models.DateField()
+class Project(models.Model):
+    title = models.CharField(max_length=200)
+    paragraph_list = models.JSONField()
+    image_list = models.JSONField()
