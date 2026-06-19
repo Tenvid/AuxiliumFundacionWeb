@@ -3,7 +3,6 @@ import { MainNav } from '../../components/MainNav/MainNav';
 import { HeaderImage } from '../../components/HeaderImage/HeaderImage';
 import logo_dark from '../../assets/LogoAuxiliumVector--dark.svg';
 import styles from './NewsPage.module.css';
-// import newsData from '../../../mocked_results/mocked_news.json';
 import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
 import LinkListInNews from '../../components/LinkListInNews/LinkListInNews';
 import { Link } from 'react-router';
