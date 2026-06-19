@@ -5,4 +5,6 @@ from core.models import Project
 # Register your models here.
 
 
-admin.site.register(Project, admin.ModelAdmin)
+@admin.register(Project)
+class ProjectAdmin(admin.ModelAdmin):
+    list_display = ("title",)
