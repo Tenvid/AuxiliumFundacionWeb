@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import { MainNav } from '../../components/MainNav/MainNav';
 import { HeaderImage } from '../../components/HeaderImage/HeaderImage';
-import logo_dark from '../../assets/LogoAuxiliumVector--dark.svg';
 import styles from './ProjectsPage.module.css';
-import projectsData from '../../../mocked_results/mocked_projects.json';
 import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
 import ProjectStyles from '../../components/ProjectStyles/ProjectStyles';
 
@@ -15,9 +13,15 @@ const ProjectStyle = {
   FOUR: 'styleFour',
 };
 
+const projectsData = await fetch('http://localhost:8000/projects').then(
+  (response) => response.json()
+);
+
+console.log(projectsData);
+
 function DisplayProject({
   title = '',
-  style = ProjectStyle.ONE,
+  style = '',
   text1 = '',
   text2 = '',
   image1 = '',
@@ -49,28 +53,28 @@ function ProjectsPage() {
       <MainNav />
       <HeaderImage image={main_image}>Proyectos</HeaderImage>
       <DisplayProject
-        title={projects.Project1.Title}
+        title={projects[0].title}
         style={ProjectStyle.ONE}
-        text1={projects.Project1.Text1}
-        text2={projects.Project1.Text2}
-        image1={projects.Project1.Image1}
-        image2={projects.Project1.Image2}
+        text1={projects[0].paragraph_list[0]}
+        text2={projects[0].paragraph_list[1]}
+        image1={projects[0].image_list[0]}
+        image2={projects[0].image_list[1]}
       />
       <DisplayProject
-        title={projects.Project2.Title}
+        title={projects[1].title}
         style={ProjectStyle.THREE}
-        text1={projects.Project2.Text1}
-        text2=""
-        image1={projects.Project2.Image1}
-        image2={projects.Project2.Image2}
+        text1={projects[1].paragraph_list[0]}
+        text2={projects[1].paragraph_list[1]}
+        image1={projects[1].image_list[0]}
+        image2={projects[1].image_list[1]}
       />
       <DisplayProject
-        title={projects.Project3.Title}
+        title={projects[2].title}
         style={ProjectStyle.FOUR}
-        text1={projects.Project3.Text1}
-        text2={projects.Project3.Text2}
-        image1={projects.Project3.Image1}
-        image2=""
+        text1={projects[2].paragraph_list[0]}
+        text2={projects[2].paragraph_list[1]}
+        image1={projects[2].image_list[0]}
+        image2={projects[2].image_list[1]}
       />
 
       <Footer />
