@@ -4,30 +4,60 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='New',
+            name="New",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=100)),
-                ('slug', models.CharField(max_length=30)),
-                ('type', models.CharField(choices=[('0', 'Donación'), ('1', 'Nuevoproyecto'), ('2', 'Estadoproyecto'), ('3', 'Resultadoproyecto'), ('4', 'Evento'), ('5', 'Otros')], default='5')),
-                ('header', models.CharField(max_length=300)),
-                ('image', models.CharField()),
-                ('content', models.CharField()),
-                ('publish_date', models.DateField()),
-            name='Project',
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.CharField(max_length=100)),
+                ("slug", models.CharField(max_length=30)),
+                (
+                    "type",
+                    models.CharField(
+                        choices=[
+                            ("0", "Donación"),
+                            ("1", "Nuevoproyecto"),
+                            ("2", "Estadoproyecto"),
+                            ("3", "Resultadoproyecto"),
+                            ("4", "Evento"),
+                            ("5", "Otros"),
+                        ],
+                        default="5",
+                    ),
+                ),
+                ("header", models.CharField(max_length=300)),
+                ("image", models.CharField()),
+                ("content", models.CharField()),
+                ("publish_date", models.DateField()),
+            ],
+        ),
+        migrations.CreateModel(
+            name="Project",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=200)),
-                ('paragraph_list', models.JSONField()),
-                ('image_list', models.JSONField()),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.CharField(max_length=200)),
+                ("paragraph_list", models.JSONField()),
+                ("image_list", models.JSONField()),
             ],
         ),
     ]

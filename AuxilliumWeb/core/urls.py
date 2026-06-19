@@ -6,7 +6,7 @@ urlpatterns = [
     path("news/", views.get_news, name="news_list"),
     path("news/<slug:slug>/", views.get_news, name="news_detail"),
     path("news/add/", views.add_new, name="add_new"),
-    path("", core_views.IndexView.as_view(), name="index"),
-    path("projects/", core_views.get_all_projects, name="projects"),
-    path("projects/add", core_views.add_project, name="add_project"),
+    path("", views.IndexView.as_view(), name="index"),
+    path("projects/", views.get_all_projects, name="projects"),
+    path("projects/add", views.add_project, name="add_project"),
 ]
