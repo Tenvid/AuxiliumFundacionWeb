@@ -1,10 +1,10 @@
+from datetime import datetime
 import json
 from django.http import JsonResponse
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.views.decorators.csrf import csrf_exempt
 from django.views import View
-from django.views.decorators.csrf import csrf_exempt
-from core.models import Project
+from core.models import New, Project
 # Create your views here.
 
 
@@ -15,7 +15,7 @@ class HomeView(View):
 
 class IndexView(View):
     def get(self, request):
-        return render(request, "core/index.html")
+        return redirect("admin:index")
 
 
 def get_news(request):
@@ -85,6 +85,9 @@ def get_news(request):
                 }
             )
 
+        return JsonResponse(data, safe=False)
+
+
 def get_all_projects(request):
     if request.method == "GET":
         projects = Project.objects.all()
@@ -149,6 +152,8 @@ def add_new(request):
             return JsonResponse({"error": str(e)}, status=400)
 
     return JsonResponse({"error": "Invalid request method"}, status=405)
+
+
 def add_project(request):
     if request.method == "POST":
         try:

@@ -33,8 +33,8 @@ export default function TransparencyPage() {
           elementList={[
             'Domicilio fiscal: Calle Gloria 79 2B 30150 Murcia.',
             'Domicilio social: Calle Gloria 79 2B 30150 Murcia.',
-            'Número de asociados: []',
-            ['Miembros: ', ['Presidente: []', 'Vicepresidente: []']],
+            'Número de asociados: 200',
+            ['Miembros: ', ['Secretario: Gumersindo Vitos Gonzalez', 'Tesorera: Maravillas Del Carmen Monteal', 'Vicepresidente: Julia Vicente Martínez', 'Vocal: Henry Delepaut', "Vocal: Maria Julia Cañizares"]],
           ]}
           listClassName={styles.transparencyList}
           elementClassName={styles.transparencyListElement}

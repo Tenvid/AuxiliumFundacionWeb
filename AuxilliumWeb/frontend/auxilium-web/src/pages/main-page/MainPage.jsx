@@ -17,12 +17,12 @@ function MainPage() {
     ];
 
     const gridImagesText = [
-      'Lorem Ipsum dolor sit amet',
-      'Lorem Ipsum dolor sit amet',
-      'Lorem Ipsum dolor sit amet',
-      'Lorem Ipsum dolor sit amet',
-      'Lorem Ipsum dolor sit amet',
-      'Lorem Ipsum dolor sit amet',
+      'Quienes somos',
+      'Proyectos',
+      'Impacto',
+      'Transparencia',
+      'Contacto',
+      'Noticias',
     ];
 
     for (let i = 0; i < 6; i++) {
