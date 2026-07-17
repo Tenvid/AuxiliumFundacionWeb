@@ -1,18 +1,33 @@
+// react dependecies
 import { useState } from 'react';
+
+//import styles
 import styles from './ContactForm.module.css';
 
+/**
+ * Create the contact form and manage the data on it.
+ * 
+ * @returns {JSX.Element}
+ */
 export default function ContactForm() {
-  /* Object that contains the form data */
+  // Object that contains the form data
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
     message: '',
   });
-  /* Form sent corrected and Error in form set */
+
+  // Flag indicating a successful temporary submission
   const [isSubmitted, setIsSubmitted] = useState(false);
+  // Error message shown to the user
   const [error, setError] = useState('');
 
+  /**
+   * handleChange
+   * Updates `formData` when inputs change.
+   * @param {Event} e change event from input/textarea
+   */
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -21,11 +36,17 @@ export default function ContactForm() {
     });
   };
 
+  /**
+   * handleSubmit
+   * Validates fields, simulates sending, and displays messages.
+   * Prevents default form submission behavior.
+   * @param {Event} e submit event
+   */
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
 
-    // Validate all the forms inputs
+    // Validate all form inputs
     if (
       !formData.name ||
       !formData.email ||
@@ -37,12 +58,12 @@ export default function ContactForm() {
     }
 
     try {
-      // Placeholder to the backend, at the moment show the message on the console log
+      // TODO: replace with real backend submission
       console.log('Formulario enviado:', formData);
       setIsSubmitted(true);
       setFormData({ name: '', email: '', subject: '', message: '' });
 
-      // Delete the successful message on the form in 3 seconds
+      // Remove the success message after 3 seconds
       setTimeout(() => {
         setIsSubmitted(false);
       }, 3000);

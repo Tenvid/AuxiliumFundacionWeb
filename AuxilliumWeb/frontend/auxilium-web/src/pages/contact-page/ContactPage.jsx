@@ -17,7 +17,7 @@ function ContactPage() {
       <div className={styles.ContactGrid}>
         <ContactWrapper
           title="Sede en Murcia"
-          adress="Calle de la gloria 79 | 30150 | Murcia "
+          address="Calle de la gloria 79 | 30150 | Murcia "
           contact_name=""
           phone_number="+34 603 73 80 00"
           email="auxiliumasociacion@gmail.com"

@@ -1,3 +1,13 @@
+/**
+ * LeftArrow
+ *
+ * Simple presentational SVG icon used as a left/back arrow in the mobile
+ * navigation. This component is stateless and does not accept props; styling
+ * (color, size) can be controlled via CSS targeting the `.left-arrow` class
+ * or by wrapping this component in an element with additional styles.
+ *
+ * @returns {JSX.Element} SVG element for the left arrow icon.
+ */
 export function LeftArrow() {
   return (
     <svg
