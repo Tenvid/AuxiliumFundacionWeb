@@ -1,5 +1,6 @@
 import './MainPage.css';
 import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
+import title_image from '../../assets/gallery/projects/index/ManosUnidas.jpeg';
 import { MainNav } from '../../components/MainNav/MainNav';
 import { TextImage } from '../../components/TextImage/TextImage';
 import { ImageWithHeaderAndButton } from '../../components/ImageWithHeaderAndButton/ImageWithHeaderAndButton.jsx';
@@ -39,11 +40,10 @@ function MainPage() {
 
   return (
     <>
-      <MainNav></MainNav>
+      <MainNav />
 
-      <TextImage image={main_image}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
-        fringilla leo.
+      <TextImage image={title_image} className="header">
+        "Donde la solidaridad se convierte en acción"
       </TextImage>
 
       <section className="image-grid-wrapper">

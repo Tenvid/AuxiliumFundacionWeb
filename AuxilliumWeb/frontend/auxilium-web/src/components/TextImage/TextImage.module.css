@@ -1,23 +1,23 @@
 .textImageContent {
-  width: 100vw;
-  height: 80%;
-  max-height: 600px;
-  object-fit: cover;
-  filter: brightness(50%);
+        width: 100vw;
+        height: 80%;
+        max-height: 600px;
+        object-fit: cover;
+        filter: brightness(50%);
 }
 
 .textImageWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
 }
 
 .textImageText {
-  position: absolute;
-  font-size: clamp(0.5rem, 5vw, 3rem);
-  color: var(--paragraph-light);
-  text-align: center;
-  font-family: Monda;
-  z-index: 1;
+        position: absolute;
+        font-size: clamp(0.5rem, 5vw, 3rem);
+        color: var(--paragraph-light);
+        text-align: center;
+        font-family: Monda;
+        z-index: 1;
 }
