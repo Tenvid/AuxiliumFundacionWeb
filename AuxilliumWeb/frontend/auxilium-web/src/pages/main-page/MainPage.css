@@ -9,14 +9,15 @@
 
 .image-grid {
         display: grid;
-        grid-template-columns: auto auto;
-        grid-gap: 10px;
+        grid-template-columns: auto auto auto;
+        grid-gap: 3vw;
         align-content: center;
         margin: 1rem;
 }
 
 .image-grid img {
-        max-width: 40vw;
+        max-width: 20vw;
+        height: 15vw;
         border-radius: 10px;
 }
 
@@ -43,5 +44,6 @@
 
         .image-grid img {
                 max-width: 80vw;
+                height: auto;
         }
 }

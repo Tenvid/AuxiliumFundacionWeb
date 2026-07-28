@@ -28,7 +28,6 @@ function NewsPage() {
   });
     const { page: pageString } = useParams();
     const page = parseInt(pageString, 10) || 1;
-    console.log(page)
 
   // 3. useEffect para buscar datos cuando los filtros cambian
   useEffect(() => {
@@ -52,8 +51,6 @@ function NewsPage() {
       .then(response => response.json())
       .then(data => {
 
-        console.log("Datos recibidos de la API:", data);
-
         setNews(data);
       })
       .catch(error => console.error("Error fetching news:", error));
@@ -65,10 +62,14 @@ function NewsPage() {
     <div>
       <MainNav />
       <HeaderImage image={main_image}>Noticias</HeaderImage>
-      <form className={styles.FilterGrid}>
+      <form className={styles.FilterGrid} onSubmit={(event) => event.preventDefault()}>
         <div className={styles.NewsFilter}>
           <label htmlFor="event-type">Tipo de evento:</label>
-          <select id="event-type">
+          <select
+            id="event-type"
+            value={filters.type}
+            onChange={(event) => setFilters((current) => ({ ...current, type: event.target.value }))}
+          >
             <option value="">Seleccionar tipo de evento</option>
             <option value="donacion">Donación</option>
             <option value="nuevo-proyecto">Nuevo Proyecto</option>
@@ -80,15 +81,25 @@ function NewsPage() {
         </div>
         <div className={styles.NewsFilter}>
           <label htmlFor="date-from">Fecha desde:</label>
-          <input id="date-from" type="date"/>
+          <input
+            id="date-from"
+            type="date"
+            value={filters.start_date}
+            onChange={(event) => setFilters((current) => ({ ...current, start_date: event.target.value }))}
+          />
         </div>
         <div className={styles.NewsFilter}>
           <label htmlFor="date-to">Fecha hasta:</label>
-          <input id="date-to" type="date"/>
+          <input
+            id="date-to"
+            type="date"
+            value={filters.end_date}
+            onChange={(event) => setFilters((current) => ({ ...current, end_date: event.target.value }))}
+          />
         </div>
       </form>
       <div className={styles.NewsGrid}>
-        {news.map((article, index) => (
+        {news.map((article) => (
           <NewInGrid
             key={article.id}
             slug={article.slug}

@@ -1,4 +1,5 @@
 import styles from './ImageWithHeaderAndButton.module.css';
+import { Link } from 'react-router-dom';
 
 export function ImageWithHeaderAndButton({
   header,
@@ -18,9 +19,9 @@ export function ImageWithHeaderAndButton({
       <div className={styles.imageWithHeaderAndButtonContent}>
         <h4 className={styles.imageWithHeaderAndButtonHeader}>{header}</h4>
         <p className={styles.imageWithHeaderAndButtonText}>{text}</p>
-        <a href={buttonHref} className={styles.imageWithHeaderAndButtonButton}>
+        <Link to={buttonHref} className={styles.imageWithHeaderAndButtonButton}>
           {buttonText}
-        </a>
+        </Link>
       </div>
     </section>
   );

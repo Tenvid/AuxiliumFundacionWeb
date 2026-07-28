@@ -4,7 +4,6 @@ import AboutUsCard from '../../components/AboutUsCard/AboutUsCard';
 import { MainNav } from '../../components/MainNav/MainNav';
 import UnorderedList from '../../components/UnorderedList/UnorderedList';
 import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
-import logo_dark from '../../assets/LogoAuxiliumVector--dark.svg';
 
 const values = [
   {

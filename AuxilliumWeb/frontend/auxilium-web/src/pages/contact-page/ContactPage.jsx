@@ -3,7 +3,6 @@ import Footer from '../../components/Footer/Footer/Footer.jsx';
 import styles from './ContactPage.module.css';
 import { MainNav } from '../../components/MainNav/MainNav';
 import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
-import logo_dark from '../../assets/LogoAuxiliumVector--dark.svg';
 import ContactWrapper from '../../components/ContactContainer/ContactWrapper';
 import ContactForm from '../../components/ContactForm/ContactForm';
 function ContactPage() {
