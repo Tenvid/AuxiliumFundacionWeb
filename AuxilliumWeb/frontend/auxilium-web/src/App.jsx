@@ -9,7 +9,17 @@ import ScrollToTop from './components/ScrollToTop/ScrollToTop.jsx';
 import AboutUs from './pages/about-us/AboutUs.jsx';
 import Impact from './pages/impact-page/ImpactPage.jsx';
 
-function App() {
+/**
+ * App
+ *
+ * Define the pages of the website. 
+ * 
+ * 
+ *
+ *
+ */
+
+export function App() {
   return (
     <Router>
       <ScrollToTop />
@@ -26,5 +36,3 @@ function App() {
     </Router>
   );
 }
-
-export default App;
