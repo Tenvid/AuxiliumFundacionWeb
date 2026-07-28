@@ -1,22 +1,25 @@
 .aboutUsCard {
-  background-color: var(--secondary);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 5px solid var(--dark);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        background-color: var(--secondary);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 5px solid var(--dark);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .aboutUsCard__Title {
-  margin: 0;
-  padding: 0 1rem 0 1rem;
+        margin: 0;
+        padding: 0 1rem 0 1rem;
+        font-size: 2.5vw;
 }
 
 .aboutUsCard p {
-  font-family: Antonio;
-  color: var(--primary-dark);
-  width: 75%;
-  font-size: clamp(0.8rem, 3vw, 1rem);
-  text-align: center;
+        font-family: Antonio;
+        color: var(--primary-dark);
+        width: auto;
+        margin: auto;
+        font-size: clamp(1rem, 3vw, 1.3rem);
+        text-align: center;
+        margin-bottom: 1vw;
 }

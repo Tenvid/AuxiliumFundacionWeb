@@ -7,21 +7,21 @@ import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
 
 const values = [
   {
-    title: 'Transparencia',
-    description: 'Gestionamos los recursos de forma responsable y clara.',
-  },
-  {
-    title: 'Solidaridad',
+    title: 'Solidaridad efectiva',
     description:
-      'Trabajamos con el compromiso de apoyar a quienes más lo necesitan.',
+      'No solo palabras, sino compromiso real con quienes más lo necesitan.',
   },
   {
-    title: 'Cooperación',
-    description: 'Colaboramos con organizaciones locales y comunidades.',
+    title: 'Transparencia',
+    description: 'En cada decisión, en cada gestión, en cada proyecto.',
   },
   {
-    title: 'Respeto cultural',
-    description: 'Respetamos las tradiciones y la identidad de cada comunidad.',
+    title: 'Inclusión',
+    description: 'Todos tienen cabida en Auxilium.',
+  },
+  {
+    title: 'Sostenibilidad',
+    description: 'Construimos para el largo plazo, con recursos responsables.',
   },
 ];
 

@@ -60,7 +60,7 @@ function MainPage() {
       <section>
         <ImageWithHeaderAndButton
           header="COLABORA"
-          text="Forma parte del cambio: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac pretium mi, eget vulputate ante. Integer sodales, mauris at laoreet posuere, erat libero tempus diam, quis varius massa massa a."
+          text="En Auxilium no dependemos de grandes instituciones: nos financiamos al 100% gracias a personas como tú. Cada euro cuenta para transformar vidas. ¿Nos acompañas? Haz tu donación hoy y sé parte del cambio."
           buttonText="COLABORA CON NOSOTROS"
           buttonHref="/contact"
           image={main_image}
