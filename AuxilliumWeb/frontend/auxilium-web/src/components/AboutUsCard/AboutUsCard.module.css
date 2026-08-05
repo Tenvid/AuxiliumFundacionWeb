@@ -4,6 +4,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: flex-start;
         border: 5px solid var(--dark);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
@@ -11,7 +12,7 @@
 .aboutUsCard__Title {
         margin: 0;
         padding: 0 1rem 0 1rem;
-        font-size: 2.5vw;
+        font-size: clamp(1.4rem, 1.8vw, 2.6rem);
 }
 
 .aboutUsCard p {
@@ -19,7 +20,54 @@
         color: var(--primary-dark);
         width: auto;
         margin: auto;
-        font-size: clamp(1rem, 3vw, 1.3rem);
+        font-size: clamp(1.1rem, 1.4vw, 2rem);
         text-align: center;
         margin-bottom: 1vw;
+        margin-top: 0;
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+        .aboutUsCard__Title {
+                font-size: 3.5vw;
+        }
+
+        .aboutUsCard p {
+                font-size: clamp(1rem, 2.5vw, 1.3rem);
+                margin-left: 1vw;
+                margin-right: 1vw;
+        }
+}
+
+@media (max-width: 768px) and (min-width: 431px) {
+        .aboutUsCard__Title {
+                font-size: 3.5vw;
+        }
+
+        .aboutUsCard {
+                width: 40vw;
+        }
+}
+
+@media (max-width: 430px) and (min-width: 321px) {
+        .aboutUsCard__Title {
+                font-size: 6.5vw;
+        }
+}
+
+@media (max-width: 320px) {
+        .aboutUsCard__Title {
+                font-size: 6.5vw;
+        }
+
+        .aboutUsCard p {
+                font-size: 5vw;
+                width: 90%;
+                text-align: center;
+                margin: 0 auto 1vw auto;
+                display: block;
+        }
+
+        .aboutUsCard {
+                width: 90vw;
+        }
 }
