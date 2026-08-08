@@ -14,7 +14,7 @@ export default function MemberCard({
     <div
       className={[
         styles.memberCard,
-        hasOnlyTitle == true ? styles.titleText : styles.normalText,
+        hasOnlyTitle ? styles.titleText : styles.normalText,
       ].join(' ')}
     >
       <>
