@@ -7,7 +7,7 @@
   justify-content: space-between;
   padding: 0 3vw;
   background: var(--primary);
-  color: var(paragraph-light);
+  color: var(--paragraph-light);
   height: var(--nav-height);
   box-shadow: 1px 1px 5px color-mix(in srgb, var(--dark) 50%, transparent 50%);
   position: sticky;

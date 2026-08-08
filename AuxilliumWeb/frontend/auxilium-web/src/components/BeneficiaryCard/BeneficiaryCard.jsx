@@ -6,44 +6,39 @@ export default function BeneficiaryCard({
   children,
   imageAlignment,
 }) {
-  function CardImage() {
-    return (
-      <img
-        src={image}
-        className={[styles.beneficiaryCard__Image, styles[imageAlignment]].join(
-          ' '
-        )}
-        alt={imageAlt}
-      />
-    );
-  }
-
-  function CardText() {
-    return (
-      <span
-        className={[
-          styles.beneficiaryCard__Text,
-          imageAlignment == CardAlignment.LEFT
-            ? styles.floatLeft
-            : styles.floatRight,
-        ].join(' ')}
-      >
-        {children}
-      </span>
-    );
-  }
+  const cardImage = (
+    <img
+      src={image}
+      className={[styles.beneficiaryCard__Image, styles[imageAlignment]].join(
+        ' '
+      )}
+      alt={imageAlt}
+    />
+  );
+  const cardText = (
+    <span
+      className={[
+        styles.beneficiaryCard__Text,
+        imageAlignment === CardAlignment.LEFT
+          ? styles.floatLeft
+          : styles.floatRight,
+      ].join(' ')}
+    >
+      {children}
+    </span>
+  );
 
   return (
     <div className={styles.beneficiaryCard}>
-      {imageAlignment == CardAlignment.LEFT ? (
+      {imageAlignment === CardAlignment.LEFT ? (
         <>
-          <CardImage />
-          <CardText />
+          {cardImage}
+          {cardText}
         </>
       ) : (
         <>
-          <CardText />
-          <CardImage />
+          {cardText}
+          {cardImage}
         </>
       )}
     </div>

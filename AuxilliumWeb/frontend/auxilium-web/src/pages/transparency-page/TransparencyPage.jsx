@@ -6,7 +6,6 @@ import styles from './TransparencyPage.module.css';
 import UnorderedLinkList from '../../components/UnorderedLinkList/UnorderedLinkList.jsx';
 import Footer from '../../components/Footer/Footer/Footer.jsx';
 
-import logo_dark from '../../assets/LogoAuxiliumVector--dark.svg';
 export default function TransparencyPage() {
   return (
     <>
