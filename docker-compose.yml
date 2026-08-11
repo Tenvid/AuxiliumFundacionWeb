@@ -1,0 +1,34 @@
+services:
+  backend:
+    build:
+      context: ./AuxilliumWeb
+      dockerfile: Dockerfile
+    environment:
+      DJANGO_ALLOWED_HOSTS: localhost,127.0.0.1,backend,auxilium.local,api.auxilium.local,auxiliumasociacion.com,www.auxiliumasociacion.com
+    volumes:
+      - ./AuxilliumWeb:/app
+
+  frontend:
+    build:
+      context: ./AuxilliumWeb/frontend/auxilium-web
+      dockerfile: Dockerfile
+    depends_on:
+      - backend
+    
+  npm-proxy-manager:
+    image: jc21/nginx-proxy-manager:latest
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "81:81"
+      - "443:443"
+    depends_on:
+      - frontend
+      - backend
+    volumes:
+      - npm_data:/data
+      - npm_letsencrypt:/etc/letsencrypt
+
+volumes:
+  npm_data:
+  npm_letsencrypt:
