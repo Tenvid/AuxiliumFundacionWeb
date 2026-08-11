@@ -50,6 +50,11 @@
         box-shadow: 0 2px 8px rgba(22, 31, 40, 0.06);
 }
 
+.platformBanner a {
+        color: inherit;
+        text-decoration: none;
+}
+
 .platformBanner p {
         margin: 0;
         text-align: center;
@@ -59,6 +64,13 @@
         font-size: 2rem;
         letter-spacing: 1.8px;
         font-family: Antonio;
+        text-decoration: underline;
+        transition: color 0.2s ease;
+}
+
+.platformBanner a:hover p,
+.platformBanner a:focus-visible p {
+        color: #1d4ed8;
 }
 
 @media (max-width: 768px) {

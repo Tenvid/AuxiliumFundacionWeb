@@ -14,10 +14,10 @@ export default function Colaborators() {
       <HeaderImage image={main_image}>Colaboradores</HeaderImage>
       <div className={styles.cardsContainer}>
         <ColaboratorCard image={photo_caritas} title={'Caritas Cartagena'}>
-          En nuestra colación con Caritas Cartagena.... Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit. Sed egestas blandit mi ac feugiat.
-          Nulla facilisi. Fusce consectetur nunc massa, nec pulvinar nisi
-          egestas tristique. Duis efficitur nisi dui, vel.
+          Colaboramos activamente con Caritas Cartagena, impulsando una alianza
+          que favorece la colaboración con distintas entidades. Juntos
+          trabajamos en beneficio de ambas asociaciones y de todas las personas
+          que reciben su apoyo.
         </ColaboratorCard>
         <ColaboratorCard image={photo_hevea} title={'Hevea Manufacturas'}>
           En Agosto de 2023 firmamos nuestra colaboración con Hevea Manufacturas
@@ -28,7 +28,9 @@ export default function Colaborators() {
       </div>
 
       <div className={styles.platformBanner}>
-        <p>PERNENECEMOS A LA PLATAFORMA DE VOLUNTARIOS DE MURCIA</p>
+        <a href="https://www.plataformadelvoluntariadoregiondemurcia.org/red-entidades/">
+          <p>PERNENECEMOS A LA PLATAFORMA DE VOLUNTARIOS DE MURCIA</p>
+        </a>
       </div>
       <Footer />
     </>
