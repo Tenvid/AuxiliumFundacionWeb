@@ -4,7 +4,7 @@ services:
       context: ./AuxilliumWeb
       dockerfile: Dockerfile
     environment:
-      DJANGO_ALLOWED_HOSTS: localhost,127.0.0.1,backend,auxilium.local,api.auxilium.local
+      DJANGO_ALLOWED_HOSTS: localhost,127.0.0.1,backend,auxilium.local,api.auxilium.local,auxiliumasociacion.com,www.auxiliumasociacion.com
     volumes:
       - ./AuxilliumWeb:/app
 

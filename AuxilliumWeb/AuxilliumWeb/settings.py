@@ -28,7 +28,7 @@ DEBUG = True
 
 allowed_hosts = os.getenv(
     "DJANGO_ALLOWED_HOSTS",
-    "localhost,127.0.0.1,backend,auxilium.local,api.auxilium.local",
+    "localhost,127.0.0.1,backend,auxilium.local,api.auxilium.local,auxiliumasociacion.com,www.auxiliumasociacion.com",
 )
 ALLOWED_HOSTS = [host.strip() for host in allowed_hosts.split(",") if host.strip()]
 
@@ -141,6 +141,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5173",
     "http://auxilium.local",
     "http://api.auxilium.local",
+    "https://auxiliumasociacion.com",
+    "https://www.auxiliumasociacion.com",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -148,4 +150,6 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:5173",
     "http://auxilium.local",
     "http://api.auxilium.local",
+    "https://auxiliumasociacion.com",
+    "https://www.auxiliumasociacion.com",
 ]
