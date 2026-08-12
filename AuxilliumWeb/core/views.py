@@ -156,19 +156,32 @@ def add_new(request):
 
 def add_project(request):
     if request.method == "POST":
-        try:
-            data = json.loads(request.body)
-        except json.JSONDecodeError:
-            return JsonResponse({"error": "Invalid JSON"}, status=400)
+        if request.FILES:
+            data = request.POST
+            title = data.get("title")
+            paragraph_1 = data.get("paragraph_1")
+            paragraph_2 = data.get("paragraph_2")
 
-        title = data.get("title")
-        paragraph_list = data.get("paragraph_list")
-        image_list = data.get("image_list")
+            image_1 = request.FILES.get("image_1")
+            image_2 = request.FILES.get("image_2")
+        else:
+            try:
+                data = json.loads(request.body)
+            except json.JSONDecodeError:
+                return JsonResponse({"error": "Invalid JSON"}, status=400)
+
+            title = data.get("title")
+            paragraph_1 = data.get("paragraph_1")
+            paragraph_2 = data.get("paragraph_2")
+            image_1 = None
+            image_2 = None
 
         project = Project.objects.create(
             title=title,
-            paragraph_list=paragraph_list,
-            image_list=image_list,
+            paragraph_1=paragraph_1,
+            paragraph_2=paragraph_2,
+            image_1=image_1,
+            image_2=image_2,
         )
         return JsonResponse(
             {
