@@ -165,3 +165,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://auxiliumasociacion.com",
     "https://www.auxiliumasociacion.com",
 ]
+
+# Reverse proxy SSL headers (Nginx Proxy Manager / Hostinger VPS)
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+USE_X_FORWARDED_HOST = True
