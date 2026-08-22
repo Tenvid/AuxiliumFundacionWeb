@@ -22,7 +22,6 @@ function App() {
         <Route path="/news/page/:page" element={<NewsPage />}></Route>
         <Route path="/news/:slug" element={<NewInPage />}></Route>
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/impact" element={<Impact />} />
         <Route path="/colaborators" element={<Colaborators />} />
       </Routes>
     </Router>
