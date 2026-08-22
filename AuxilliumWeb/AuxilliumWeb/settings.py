@@ -21,10 +21,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-896^jeu5y5xji#v=+vtsbm56r*03nn--*+dl4rr3)n8k)22^be"
+SECRET_KEY = os.getenv(
+    "SECRET_KEY",
+    "django-insecure-896^jeu5y5xji#v=+vtsbm56r*03nn--*+dl4rr3)n8k)22^be",
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv("DEBUG", "False").lower() in ("true", "1", "t")
 
 allowed_hosts = os.getenv(
     "DJANGO_ALLOWED_HOSTS",
@@ -49,8 +52,8 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
-    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -130,6 +133,15 @@ STATIC_ROOT = (
 STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]  # This is where you can put your static files during development
+
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 # Media files (user-uploaded)
 MEDIA_URL = "media/"  # URL to access media files

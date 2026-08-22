@@ -3,15 +3,18 @@ services:
     build:
       context: ./AuxilliumWeb
       dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
     environment:
       DJANGO_ALLOWED_HOSTS: localhost,127.0.0.1,backend,auxilium.local,api.auxilium.local,auxiliumasociacion.com,www.auxiliumasociacion.com
     volumes:
       - ./AuxilliumWeb:/app
-
   frontend:
     build:
       context: ./AuxilliumWeb/frontend/auxilium-web
       dockerfile: Dockerfile
+    restart: unless-stopped
     depends_on:
       - backend
     
