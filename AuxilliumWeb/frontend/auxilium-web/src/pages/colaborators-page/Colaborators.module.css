@@ -1,0 +1,131 @@
+/* Contenedor de tarjetas: fila en pantallas grandes, columna en móvil */
+.cardsContainer {
+        display: flex;
+        flex-direction: row;
+        gap: 8rem;
+        justify-content: center;
+        align-items: stretch;
+        /* estira las tarjetas a la misma altura */
+        flex-wrap: wrap;
+        margin: 2rem auto;
+        max-width: 1200px;
+        padding: 0 1rem;
+}
+
+.cardsContainer :global(.ColaboratorCard) {
+        flex: 0 1 420px;
+        /* tarjetas más grandes en escritorio */
+}
+
+@media (max-width: 768px) {
+        .cardsContainer {
+                flex-direction: column;
+                gap: 1rem;
+                max-width: 100%;
+                padding: 1rem;
+                align-items: stretch;
+                margin: 1rem 0;
+        }
+
+        .cardsContainer :global(.ColaboratorCard) {
+                flex: 1 1 100%;
+                width: 100%;
+                max-width: 100%;
+                margin: 0 0 1rem 0;
+                border-radius: 10px;
+                overflow: visible;
+        }
+}
+
+/* Banner plataforma de voluntarios */
+.platformBanner {
+        background: var(--accent-dark);
+        border-radius: 10px;
+        max-width: 1100px;
+        margin: 3rem auto;
+        padding: 1.3rem 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(22, 31, 40, 0.06);
+}
+
+.platformBanner a {
+        color: inherit;
+        text-decoration: none;
+}
+
+.platformBanner p {
+        margin: 0;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #2b2b2b;
+        font-size: 2rem;
+        letter-spacing: 1.8px;
+        font-family: Antonio;
+        text-decoration: underline;
+        transition: color 0.2s ease;
+}
+
+.platformBanner a:hover p,
+.platformBanner a:focus-visible p {
+        color: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+        .platformBanner {
+                margin: 1rem;
+                padding: 0.5rem 0.8rem;
+        }
+
+        .platformBanner p {
+                font-size: 0.95rem;
+                letter-spacing: 1px;
+        }
+}
+
+@media (max-width: 1024px) {
+        .platformBanner {
+                margin: 1rem;
+                padding: 1rem 0.8rem;
+        }
+
+        .platformBanner p {
+                font-size: 1.4rem;
+                letter-spacing: 1px;
+        }
+}
+
+/* Ajustes para pantallas muy grandes / 4K */
+@media (min-width: 2560px) {
+        .cardsContainer {
+                gap: 4rem;
+                max-width: 2200px;
+        }
+
+        .cardsContainer :global(.ColaboratorCard) {
+                flex: 0 1 520px;
+        }
+
+        .platformBanner p {
+                font-size: 2.6rem;
+                letter-spacing: 2.6px;
+        }
+}
+
+@media (min-width: 3840px) {
+        .cardsContainer {
+                gap: 6rem;
+                max-width: 3200px;
+        }
+
+        .cardsContainer :global(.ColaboratorCard) {
+                flex: 0 1 640px;
+        }
+
+        .platformBanner p {
+                font-size: 3.2rem;
+                letter-spacing: 3.2px;
+        }
+}

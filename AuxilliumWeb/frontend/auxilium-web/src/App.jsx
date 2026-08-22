@@ -8,6 +8,7 @@ import NewInPage from './pages/new-in-page/NewInPage.jsx';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop.jsx';
 import AboutUs from './pages/about-us/AboutUs.jsx';
 import Impact from './pages/impact-page/ImpactPage.jsx';
+import Colaborators from './pages/colaborators-page/Colaborators.jsx';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/news/:slug" element={<NewInPage />}></Route>
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/impact" element={<Impact />} />
+        <Route path="/colaborators" element={<Colaborators />} />
       </Routes>
     </Router>
   );
