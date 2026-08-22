@@ -1,0 +1,125 @@
+.ColaboratorCard {
+        box-sizing: border-box;
+        max-width: 420px;
+        width: 100%;
+        height: fit-content;
+        /* altura fija en escritorio */
+        background: var(--accent-dark);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 6px 16px rgba(22, 31, 40, 0.08);
+        border: 1px solid rgba(0, 0, 0, 0.04);
+        display: flex;
+        flex-direction: column;
+}
+
+.ColaboratorCard .image {
+        width: 95%;
+        margin: 2.5%;
+        border-radius: 14px;
+        height: fit-content;
+        aspect-ratio: 4/5;
+        object-fit: cover;
+        display: block;
+}
+
+.ColaboratorCard .title {
+        display: flex;
+        justify-content: center;
+        margin: 0.8rem 1rem 0.2rem 1rem;
+        text-align: center;
+        color: #2b2b2b;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-family: Antonio;
+}
+
+.ColaboratorCard .content {
+        margin: 0.4rem 1.1rem 1.1rem 1.1rem;
+        color: #333333;
+        text-align: center;
+        font-size: 1.3rem;
+        line-height: 1.55;
+        flex: 1 1 auto;
+        overflow: auto;
+        font-style: Monda;
+
+}
+
+/* Versión móvil ligeramente más compacta */
+@media (min-width: 320px) and (max-width: 767px) {
+        .ColaboratorCard {
+                height: auto;
+                /* permitir altura variable en móvil */
+                max-width: 95%;
+                margin: 0 auto;
+        }
+
+        .ColaboratorCard img {
+                height: fit-content;
+                aspect-ratio: 4/5;
+        }
+
+        .ColaboratorCard .title {
+                font-size: 1.7rem;
+        }
+
+        .ColaboratorCard .content {
+                font-size: 1.1rem;
+                line-height: 1.3;
+                overflow: hidden;
+                text-align: left;
+        }
+}
+
+
+/* Tablet sizes (between mobile and desktop) */
+@media (min-width: 768px) and (max-width: 1023px) {
+        .ColaboratorCard {
+                height: auto;
+                /* permitir altura variable en móvil */
+                max-width: 50%;
+                margin: 0 auto;
+        }
+
+        .ColaboratorCard .title {
+                font-size: 2.0rem;
+        }
+
+        .ColaboratorCard .content {
+                font-size: 1.25rem;
+        }
+}
+
+/* Ajustes para pantallas muy grandes / 4K */
+@media (min-width: 2560px) {
+        .ColaboratorCard {
+                max-width: 520px;
+        }
+
+        .ColaboratorCard .image {
+                aspect-ratio: 4/5;
+        }
+
+        .ColaboratorCard .title {
+                font-size: 2.8rem;
+        }
+
+        .ColaboratorCard .content {
+                font-size: 1.45rem;
+        }
+}
+
+@media (min-width: 3840px) {
+        .ColaboratorCard {
+                max-width: px;
+        }
+
+        .ColaboratorCard .title {
+                font-size: 3.2rem;
+        }
+
+        .ColaboratorCard .content {
+                font-size: 1.6rem;
+        }
+}
