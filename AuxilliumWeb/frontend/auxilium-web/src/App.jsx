@@ -9,6 +9,7 @@ import ScrollToTop from './components/ScrollToTop/ScrollToTop.jsx';
 import AboutUs from './pages/about-us/AboutUs.jsx';
 import Impact from './pages/impact-page/ImpactPage.jsx';
 import Colaborators from './pages/colaborators-page/Colaborators.jsx';
+import DonationPage from './pages/donations/DonationsPage.jsx';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/impact" element={<Impact />} />
         <Route path="/colaborators" element={<Colaborators />} />
+        <Route path="/donations" element={<DonationPage />} />
       </Routes>
     </Router>
   );
