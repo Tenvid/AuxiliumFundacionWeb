@@ -1,0 +1,72 @@
+.donationsContent {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.donationsArticle {
+  background: color-mix(var(--primary) 70%, transparent);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.donationsArticle h4 {
+  color: var(--light);
+  font-family: Antonio;
+}
+
+.donationsArticle__InnerContainer {
+  color: var(--dark);
+  border-radius: 10px;
+  padding: 0 1rem;
+  background: var(--light);
+  width: 50%;
+  margin: 0 0 2rem 2rem;
+}
+
+.paragraphContainer {
+  width: 50%;
+}
+
+.paragraphContainer p {
+  text-align: center;
+  color: var(--light);
+}
+
+.donationsArticleContent {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.ibanCopy {
+  background: var(--accent-dark);
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: clamp(0.5rem, 2vw, 5rem);
+  width: 70%;
+}
+
+.projectsLink {
+  background: var(--accent-dark);
+  color: var(--dark);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 725px) {
+  .donationsArticleContent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .donationsArticle__InnerContainer {
+    margin: 0 auto;
+  }
+}

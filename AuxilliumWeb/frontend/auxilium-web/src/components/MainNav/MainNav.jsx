@@ -28,6 +28,7 @@ export function MainNav() {
           <NavLink href="/news/page/1">Noticias</NavLink>
           <NavLink href="/contact">Contacto</NavLink>
           <NavLink href="/colaborators">Colaboradores</NavLink>
+          <NavLink href="/donations">Donaciones</NavLink>
         </ul>
       </div>
       <button
