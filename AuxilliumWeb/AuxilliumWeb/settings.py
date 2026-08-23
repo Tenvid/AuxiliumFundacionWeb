@@ -31,7 +31,7 @@ DEBUG = os.getenv("DEBUG", "False").lower() in ("true", "1", "t")
 
 allowed_hosts = os.getenv(
     "DJANGO_ALLOWED_HOSTS",
-    "localhost,127.0.0.1,backend,auxilium.local,api.auxilium.local,auxiliumasociacion.com,www.auxiliumasociacion.com",
+    "localhost,127.0.0.1,backend,auxilium.local,api.auxilium.local,auxiliumasociacion.com,www.auxiliumasociacion.com,auxiliumasociacion.online,www.auxiliumasociacion.online,api.auxiliumasociacion.online",
 )
 ALLOWED_HOSTS = [host.strip() for host in allowed_hosts.split(",") if host.strip()]
 
@@ -155,6 +155,12 @@ CORS_ALLOWED_ORIGINS = [
     "http://api.auxilium.local",
     "https://auxiliumasociacion.com",
     "https://www.auxiliumasociacion.com",
+    "https://auxiliumasociacion.online",
+    "https://www.auxiliumasociacion.online",
+    "http://auxiliumasociacion.online",
+    "http://www.auxiliumasociacion.online",
+    "http://api.auxiliumasociacion.online",
+    "https://api.auxiliumasociacion.online",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -164,6 +170,11 @@ CSRF_TRUSTED_ORIGINS = [
     "http://api.auxilium.local",
     "https://auxiliumasociacion.com",
     "https://www.auxiliumasociacion.com",
+    "https://auxiliumasociacion.online",
+    "https://www.auxiliumasociacion.online",
+    "http://auxiliumasociacion.online",
+    "http://www.auxiliumasociacion.online",
+    "https://api.auxiliumasociacion.online",
 ]
 
 # Reverse proxy SSL headers (Nginx Proxy Manager / Hostinger VPS)

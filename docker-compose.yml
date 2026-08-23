@@ -7,7 +7,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      DJANGO_ALLOWED_HOSTS: localhost,127.0.0.1,backend,auxilium.local,api.auxilium.local,auxiliumasociacion.com,www.auxiliumasociacion.com
+      DJANGO_ALLOWED_HOSTS: localhost,127.0.0.1,backend,auxilium.local,api.auxilium.local,auxiliumasociacion.com,www.auxiliumasociacion.com,auxiliumasociacion.online,www.auxiliumasociacion.online,api.auxiliumasociacion.online
     volumes:
       - ./AuxilliumWeb:/app
   frontend:
