@@ -1,14 +1,14 @@
 import { MainNav } from '../../components/MainNav/MainNav';
-import { TextImage } from '../../components/TextImage/TextImage';
 import main_image from '../../assets/jessica-neves-sbMIZxxhgbw-unsplash.jpg';
 import styles from './DonationsPage.module.css';
 import { Link } from 'react-router-dom';
+import { HeaderImage } from '../../components/HeaderImage/HeaderImage';
 
 export default function DonationPage() {
   return (
     <>
       <MainNav />
-      <TextImage image={main_image}>DONACIONES</TextImage>
+      <HeaderImage image={main_image}>DONACIONES</HeaderImage>
       <h3>
         El importe íntegro de las donaciones que recibimos se destina a nuestra
         causa
