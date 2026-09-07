@@ -16,10 +16,10 @@ En Nginx Proxy Manager crea un proxy host que apunte a `frontend:80` para `/` y 
 
 ### SSL / Let's Encrypt
 
-1. Asegúrate de que los registros DNS (`A` o `AAAA`) de `auxiliumasociacion.com` y `www.auxiliumasociacion.com` apunten a la IP pública del servidor.
-2. En Nginx Proxy Manager crea un "Proxy Host" para `www.auxiliumasociacion.com` (y opcionalmente otro para `auxiliumasociacion.com`) apuntando al host `frontend:80`.
+1. Asegúrate de que los registros DNS (`A` o `AAAA`) de `auxiliumasociacion.online` y `www.auxiliumasociacion.online` (o `auxiliumasociacion.com`) apunten a la IP pública del servidor.
+2. En Nginx Proxy Manager crea un "Proxy Host" para `auxiliumasociacion.online` y `www.auxiliumasociacion.online` apuntando al host `frontend:80`.
 	- En la pestaña "SSL" marca "Request a new SSL certificate" y selecciona "Force SSL".
-3. Actualiza la variable de entorno `DJANGO_ALLOWED_HOSTS` (ya incluida en `docker-compose.yml`) para incluir `auxiliumasociacion.com` y `www.auxiliumasociacion.com`.
+3. La variable de entorno `DJANGO_ALLOWED_HOSTS` (ya incluida en `docker-compose.yml` y `settings.py`) ya incluye `auxiliumasociacion.online` y `www.auxiliumasociacion.online`.
 4. Reinicia los servicios:
 
 ```bash
