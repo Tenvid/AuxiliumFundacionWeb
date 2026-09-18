@@ -1,16 +1,68 @@
-/* Estilos para componentes de proyectos */
+.ProjectsPageContainer {
+        --img-height: 30vh;
+        --border-radius: 20px;
+        --gap: 4vw;
+        --margin-left: 3vw;
+        --margin-top: 2vh;
+        --font-family: Monda;
+        --font-size: clamp(1rem, 1.1vw, 1.5rem);
+}
+
+.ProjectHeader {
+        display: flex;
+        font-size: clamp(2rem, 3vw, 5rem);
+        width: 95%;
+        margin: 3vh auto 0;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary);
+        border-radius: 15px;
+        font-weight: bolder;
+        color: #ffffff;
+        padding: 1.5vh 2vw;
+        font-family: AntonSC;
+        text-align: center;
+        box-sizing: border-box;
+}
+
+.footerWrapper {
+        background: var(--accent-dark);
+        display: flex;
+        justify-content: center;
+        padding: 5vw;
+}
+
+@media (max-width: 850px) {
+        .ProjectHeader {
+                font-size: clamp(1.8rem, 4vw, 3rem);
+                width: 90%;
+                padding: 2vh;
+                margin-top: 2vh;
+        }
+}
+
+@media (max-width: 425px) {
+        .ProjectHeader {
+                font-size: clamp(1.5rem, 6vw, 2.5rem);
+                width: 95%;
+                padding: 2vh 1vh;
+                border-radius: 10px;
+        }
+
+        .footerWrapper {
+                padding: 8vw 5vw;
+        }
+}
 
 /* Mixins para textos */
 p {
         display: flex;
         font-family: Monda;
-        font-size: clamp(1rem, 1.1vw, 1.5rem);
 }
 
 .ProjectMarkdownText {
         display: block;
         font-family: Monda;
-        font-size: clamp(1rem, 1.1vw, 1.5rem);
         min-width: 0;
 }
 
@@ -53,11 +105,10 @@ p {
         text-align: center;
 }
 
-
-
 .ProjectOneWrapperOne>div,
 .ProjectOneWrapperTwo>div,
 .ProjectTwoWrapper>div {
+        display: flex;
         font-family: Monda;
         font-size: clamp(1rem, 1.1vw, 1.5rem);
         flex-direction: column;
@@ -92,34 +143,42 @@ p {
 .ProjectOneWrapperOne,
 .ProjectTwoWrapper {
         display: grid;
-        gap: 2vw;
+        gap: var(--gap);
         margin-left: var(--margin-left);
         margin-top: var(--margin-top);
+        align-items: center;
 
         @media (max-width: 768px) {
                 margin-left: 0;
         }
 }
 
+/* ====================================================
+   PROJECT STYLE 1 (Adaptativo Horizontal/Vertical)
+   ==================================================== */
 .ProjectOneWrapperOne {
-        grid-template-columns: 70% 25%;
+        grid-template-columns: 1fr auto;
 }
-
-/* PROJECT STYLE 1 */
 
 .ProjectOneWrapperOne img {
         border-radius: var(--border-radius);
-        height: var(--img-height);
-        justify-self: left;
+        max-width: 25vw;
+        max-height: 45vh;
+        /* Ajustado para que las verticales ocupen un máximo de ~2/3 de pantalla */
+        width: auto;
+        height: auto;
+        justify-self: right;
+        margin-right: 3vw;
 }
 
 .ProjectOneWrapperTwo {
         display: grid;
-        grid-template-columns: 20% 70%;
+        grid-template-columns: auto 1fr;
         gap: var(--gap);
         margin-left: var(--margin-left);
         margin-top: var(--margin-top);
         margin-bottom: var(--margin-top);
+        align-items: center;
 
         @media (max-width: 768px) {
                 margin-left: 0;
@@ -128,14 +187,15 @@ p {
 
 .ProjectOneWrapperTwo img {
         border-radius: var(--border-radius);
-        height: var(--img-height);
+        max-width: 25vw;
+        max-height: 45vh;
+        /* Ajustado para limitar la altura de las verticales */
+        width: auto;
+        height: auto;
 }
 
+/* Media Queries Estilo 1 */
 @media (max-width: 1920px) {
-        .ProjectOneWrapperOne {
-                grid-template-columns: 67% 40%;
-        }
-
         .ProjectOneWrapperTwo p {
                 display: flex;
                 width: 95%;
@@ -143,67 +203,43 @@ p {
         }
 }
 
+@media (max-width: 1350px) {
+
+        .ProjectOneWrapperOne img,
+        .ProjectOneWrapperTwo img {
+                max-width: 50vw;
+        }
+}
 
 @media (max-width: 1200px) {
-        .ProjectOneWrapperOne {
-                grid-template-columns: 55% 40%;
-        }
-
-        .ProjectOneWrapperOne img {
-                width: auto;
-        }
-
-        .ProjectOneWrapperTwo {
-                grid-template-columns: 35vw 45vw;
-        }
-
         .ProjectOneWrapperTwo p {
-                display: flex;
                 width: 100%;
-                justify-self: end;
-
-        }
-}
-
-@media (max-width: 1350px) {
-        .ProjectOneWrapperTwo {
-                grid-template-columns: 25% 60%;
-        }
-}
-
-@media (max-width: 1150px) {
-        .ProjectOneWrapperTwo {
-                grid-template-columns: 35% 50%;
+                justify-self: center;
         }
 }
 
 @media (max-width: 850px) {
-        .ProjectHeader {
-                font-size: clamp(1rem, 1.5vw, 2rem);
-                text-align: center;
-                padding: 1vh;
-                width: 90%;
-        }
 
         .ProjectOneWrapperOne,
         .ProjectOneWrapperTwo {
                 grid-template-columns: 1fr;
-
         }
 
         .ProjectOneWrapperOne img {
-                display: flex;
-                width: auto;
-                height: 35vw;
-                width: auto;
+                width: 100%;
+                max-width: 90vw;
+                height: auto;
+                max-height: 45vh;
+                /* En móvil, un alto más pequeño para no abrumar */
                 margin: auto;
         }
 
         .ProjectOneWrapperTwo img {
                 order: 2;
-                display: flex;
-                width: auto;
-                height: 35vw;
+                width: 100%;
+                max-width: 90vw;
+                height: auto;
+                max-height: 45vh;
                 margin: auto;
         }
 
@@ -212,19 +248,20 @@ p {
                 display: flex;
                 width: 90vw;
                 justify-self: center;
-                text-align: center
+                text-align: center;
         }
 
         .ProjectOneWrapperOne p {
                 display: flex;
                 width: 90vw;
                 justify-self: center;
-                text-align: center
+                text-align: center;
         }
 }
 
-/* PROJECT STYLE 2 */
-
+/* ====================================================
+   PROJECT STYLE 2 
+   ==================================================== */
 .ProjectTwoWrapper {
         grid-template-columns: 1fr;
         justify-items: center;
@@ -234,10 +271,11 @@ p {
 
 .ProjectTwoWrapper img {
         border-radius: var(--border-radius);
-        height: 45vh;
-        max-width: 100%;
-        object-fit: cover;
-        /* Evita que la imagen se deforme */
+        max-width: 80vw;
+        max-height: 65vh;
+        /* Altura máxima contenida (~2/3 de pantalla) */
+        width: auto;
+        height: auto;
 }
 
 .ProjectType2 {
@@ -252,77 +290,73 @@ p {
         margin-top: 1vh;
 }
 
-/* =========================================
-   MEDIA QUERIES PROJECT 2 (TABLET & MOBILE) 
-   ========================================= */
-
-/* Tablets (hasta 850px, coincidiendo con el breakpoint de Project 1) */
 @media (max-width: 850px) {
 
         .ProjectType2,
         .ProjectTwoWrapper {
                 margin-left: 0;
-                /* Quitamos el margen izquierdo grande */
                 width: 100%;
                 justify-content: center;
         }
 
         .ProjectTwoWrapper img {
-                height: auto;
-                width: 80vw;
-                /* La imagen ocupará el 80% del ancho de la pantalla */
+                max-width: 90vw;
         }
 
         .ProjectTwoText,
         .ProjectTwoButtomText {
                 width: 90%;
-                /* Damos más espacio al texto en tablet */
         }
 }
 
-/* Móviles (hasta 425px) */
 @media (max-width: 425px) {
         .ProjectTwoWrapper img {
-                width: 95vw;
-                /* La imagen ocupa casi todo el ancho */
+                max-width: 95vw;
         }
 
         .ProjectTwoText,
         .ProjectTwoButtomText {
                 width: 95%;
-                /* Maximizamos el espacio de lectura */
                 font-size: clamp(1rem, 4vw, 1.25rem);
-                /* Ajuste de fuente para móviles */
         }
 
         .ProjectTwoWrapper>div {
                 gap: 3vw;
-                /* Separamos un poco más los párrafos en móvil */
         }
 }
 
-/* PROJECT STYLE 3 */
+/* ====================================================
+   PROJECT STYLE 3
+   ==================================================== */
 .ProjectThreeWrapper {
         display: grid;
-        grid-template-columns: 70% 20%;
+        grid-template-columns: 1fr auto;
         margin-top: 3vh;
         margin-bottom: 3vh;
+        gap: var(--gap);
+        align-items: center;
 }
 
 .ProjectThreePhotoWrapper {
         display: grid;
         grid-template-rows: auto auto;
         gap: 2vh;
+        width: 35vw;
+        justify-content: end;
 }
 
 .ProjectThreePhotoWrapper img {
         border-radius: var(--border-radius);
-        height: var(--img-height);
+        max-width: 80%;
+        max-height: 40vh;
+        /* Altura más estricta porque hay dos imágenes apiladas */
+        width: auto;
+        height: auto;
 }
 
 .ProjectThreeText {
         display: block;
-        width: 80%;
+        width: 90%;
         justify-content: center;
         margin: auto;
         font-family: var(--font-family);
@@ -341,27 +375,27 @@ p {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 gap: 2vh;
-                width: 75%;
+                width: 90%;
                 margin: 0 auto;
         }
 
         .ProjectThreePhotoWrapper img {
                 width: 100%;
                 height: auto;
-                border-radius: var(--border-radius);
+                max-height: 40vh;
         }
 
         .ProjectThreeText {
                 width: 90%;
                 margin: 2vh auto;
-                text-align: center
+                text-align: center;
         }
 }
 
 @media (max-width: 425px) {
         .ProjectThreeWrapper {
                 grid-template-columns: 1fr;
-                width: 75%;
+                width: 85%;
         }
 
         .ProjectThreePhotoWrapper {
@@ -370,7 +404,7 @@ p {
         }
 
         .ProjectThreeText {
-                width: 95%;
+                width: 100%;
                 font-size: clamp(0.85rem, 2vw, 1.5rem);
                 text-align: center;
         }
