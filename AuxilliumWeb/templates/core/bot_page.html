@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }}</title>
+    <meta name="description" content="{{ page_description }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    <!-- Open Graph / Facebook / WhatsApp / LinkedIn / Telegram / Signal -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Asociación Auxilium">
+    <meta property="og:url" content="{{ canonical_url }}">
+    <meta property="og:title" content="{{ page_title }}">
+    <meta property="og:description" content="{{ page_description }}">
+    {% if image_url %}
+    <meta property="og:image" content="{{ image_url }}">
+    <meta property="og:image:secure_url" content="{{ image_url }}">
+    <meta property="og:image:alt" content="{{ page_title }}">
+    {% endif %}
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page_title }}">
+    <meta name="twitter:description" content="{{ page_description }}">
+    {% if image_url %}
+    <meta name="twitter:image" content="{{ image_url }}">
+    {% endif %}
+
+    <!-- Redirección para usuarios humanos -->
+    <meta http-equiv="refresh" content="0;url={{ canonical_url }}">
+    <script>
+        window.location.replace("{{ canonical_url }}");
+    </script>
+</head>
+<body>
+    <main>
+        <h1>{{ page_title }}</h1>
+        <p>{{ page_description }}</p>
+
+        {% if items %}
+        <section>
+            <ul>
+                {% for item in items %}
+                <li>
+                    {% if item.url %}<a href="{{ item.url }}">{% endif %}
+                    <strong>{{ item.title }}</strong>
+                    {% if item.url %}</a>{% endif %}
+                    {% if item.description %}<p>{{ item.description }}</p>{% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
+
+        <p><a href="{{ canonical_url }}">Ver en el sitio web</a></p>
+    </main>
+</body>
+</html>
+

@@ -1,6 +1,7 @@
 from datetime import datetime
 import json
-from django.http import JsonResponse
+from django.conf import settings
+from django.http import HttpResponseNotFound, JsonResponse
 from django.shortcuts import redirect, render
 from django.views.decorators.csrf import csrf_exempt
 from django.views import View
@@ -195,3 +196,135 @@ def add_project(request):
                 "image_list": project.image_list,
             }
         )
+
+
+def get_request_scheme_and_base_url(request):
+    host = request.get_host()
+    # Si viene por proxy con HTTPS, o estamos en producción, o el host es de dominio público
+    is_secure = (
+        request.is_secure()
+        or request.headers.get("x-forwarded-proto") == "https"
+        or (not settings.DEBUG and "localhost" not in host and "127.0.0.1" not in host)
+    )
+    scheme = "https" if is_secure else request.scheme
+    return scheme, f"{scheme}://{host}"
+
+
+def bot_news_detail(request, slug):
+    try:
+        new = New.objects.get(slug=slug)
+        scheme, base_url = get_request_scheme_and_base_url(request)
+        image_url = f"{base_url}{new.image.url}" if new.image else ""
+        canonical_url = f"{base_url}/news/{new.slug}"
+        return render(
+            request,
+            "core/bot_news.html",
+            {
+                "new": new,
+                "image_url": image_url,
+                "canonical_url": canonical_url,
+            },
+        )
+    except New.DoesNotExist:
+        return HttpResponseNotFound("Noticia no encontrada")
+
+
+SECTIONS_METADATA = {
+    "": {
+        "title": "Asociación Auxilium | Donde la solidaridad se convierte en acción",
+        "description": "Asociación sin ánimo de lucro dedicada a proyectos solidarios, ayuda a familias necesitadas y cooperación comunitaria.",
+    },
+    "projects": {
+        "title": "Proyectos | Asociación Auxilium",
+        "description": "Descubre los proyectos e iniciativas sociales y solidarias llevadas a cabo por la Asociación Auxilium.",
+    },
+    "news": {
+        "title": "Noticias | Asociación Auxilium",
+        "description": "Actualidad, campañas y últimas noticias sobre las actividades de la Asociación Auxilium.",
+    },
+    "about-us": {
+        "title": "Quiénes somos | Asociación Auxilium",
+        "description": "Conoce la misión, visión y valores de la Asociación Auxilium: solidaridad efectiva, transparencia, inclusión y sostenibilidad.",
+    },
+    "transparency": {
+        "title": "Portal de Transparencia | Asociación Auxilium",
+        "description": "Cuentas claras, memorias de actividad y total transparencia en la gestión de la Asociación Auxilium.",
+    },
+    "contact": {
+        "title": "Contacto | Asociación Auxilium",
+        "description": "Ponte en contacto con la Asociación Auxilium. Sede en Murcia, teléfono y formulario de contacto.",
+    },
+    "colaborators": {
+        "title": "Colaboradores | Asociación Auxilium",
+        "description": "Entidades, empresas y personas que colaboran y hacen posible la labor de la Asociación Auxilium.",
+    },
+    "donations": {
+        "title": "Donaciones | Asociación Auxilium",
+        "description": "Colabora con tu donación a la Asociación Auxilium. El importe íntegro se destina a nuestras causas y proyectos sociales.",
+    },
+    "impact": {
+        "title": "Impacto Social | Asociación Auxilium",
+        "description": "El impacto real de nuestras campañas y proyectos solidarios en la vida de las personas.",
+    },
+}
+
+
+def bot_page_view(request, subpath=""):
+    clean_path = (subpath or "").strip("/")
+    parts = [p for p in clean_path.split("/") if p]
+
+    # Si es una noticia individual (/news/<slug>), delegar a la vista detallada
+    if len(parts) >= 2 and parts[0] == "news" and parts[1] != "page":
+        return bot_news_detail(request, parts[1])
+
+    section_key = parts[0] if parts else ""
+    meta = SECTIONS_METADATA.get(section_key, SECTIONS_METADATA[""])
+
+    scheme, base_url = get_request_scheme_and_base_url(request)
+    canonical_url = f"{base_url}/{clean_path}" if clean_path else f"{base_url}/"
+    default_image_url = (
+        f"{base_url}/static/vendor/img/jessica-neves-sbMIZxxhgbw-unsplash.jpg"
+    )
+    image_url = default_image_url
+    items = []
+
+    if section_key == "projects":
+        projects = Project.objects.all()[:10]
+        for p in projects:
+            if p.image_1:
+                image_url = f"{base_url}{p.image_1.url}"
+                break
+        items = [
+            {
+                "title": p.title,
+                "description": (p.paragraph_1[:200] + "...")
+                if len(p.paragraph_1) > 200
+                else p.paragraph_1,
+                "url": canonical_url,
+            }
+            for p in projects
+        ]
+    elif section_key == "news":
+        news_list = New.objects.order_by("-publish_date")[:10]
+        if news_list and news_list[0].image:
+            image_url = f"{base_url}{news_list[0].image.url}"
+        items = [
+            {
+                "title": n.title,
+                "description": n.header,
+                "url": f"{base_url}/news/{n.slug}",
+            }
+            for n in news_list
+        ]
+
+    return render(
+        request,
+        "core/bot_page.html",
+        {
+            "page_title": meta["title"],
+            "page_description": meta["description"],
+            "image_url": image_url,
+            "canonical_url": canonical_url,
+            "items": items,
+        },
+    )

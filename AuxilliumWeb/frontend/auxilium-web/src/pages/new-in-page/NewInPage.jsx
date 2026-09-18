@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async'; // NUEVO: Importación de Helmet
 import { MainNav } from '../../components/MainNav/MainNav';
 import ReactMarkdown from 'react-markdown';
 import logo_dark from '../../assets/LogoAuxiliumVector--dark.svg';
@@ -11,48 +12,60 @@ export default function NewInPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { slug } = useParams();
+  const [currentUrl, setCurrentUrl] = useState('');
 
   useEffect(() => {
-    // CAMBIO: Añade el prefijo /api/ a la URL
-    // Y usa el slug en la ruta para ser más consistente
+    setCurrentUrl(window.location.href);
     const apiUrl = `/api/news/?slug=${slug}`;
 
     const fetchNew = async () => {
       try {
         const response = await fetch(apiUrl);
-        // Si la respuesta no es exitosa (ej. 404 Not Found), lanza un error
-        if (!response.ok) {
-          throw new Error('No se pudo encontrar la noticia.');
-        }
-        // Convierte la respuesta en un objeto JSON
+        if (!response.ok) throw new Error('No se pudo encontrar la noticia.');
         const data = await response.json();
-        // Actualiza el estado con el objeto de la noticia
         setNewInPage(data);
       } catch (e) {
-        // Captura cualquier error de la red o del parsing
         setError(e.message);
       } finally {
-        // Se ejecuta siempre, tanto si hay éxito como si hay error
         setLoading(false);
       }
     };
 
     fetchNew();
-  }, [slug]); // El efecto se vuelve a ejecutar si el slug cambia
+  }, [slug]);
 
-  // Muestra un mensaje mientras se cargan los datos
-  if (loading) {
-    return <div>Cargando...</div>;
-  }
+  if (loading) return <div>Cargando...</div>;
+  if (error) return <div className={styles.ErrorMessage}>Error: {error}</div>;
 
-  // Muestra un mensaje si ocurrió un error
-  if (error) {
-    return <div className={styles.ErrorMessage}>Error: {error}</div>;
-  }
-
-  // Renderiza la página con los datos de la noticia
   return (
     <div className={styles.NewInPageContainer}>
+      {/* --- ETIQUETAS OPEN GRAPH Y TWITTER CARDS --- */}
+      {newInPage && (
+        <Helmet>
+          <title>{newInPage.title} | Auxilium</title>
+
+          {/* Open Graph (Facebook, WhatsApp, LinkedIn) */}
+          <meta property="og:type" content="article" />
+          <meta property="og:url" content={currentUrl} />
+          <meta property="og:title" content={newInPage.title} />
+          {/* Usamos el header como descripción corta para la vista previa */}
+          <meta property="og:description" content={newInPage.header} />
+          <meta
+            property="og:image"
+            content={'https://auxiliumasociacion.online' + newInPage.image}
+          />
+
+          {/* Twitter Cards */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={newInPage.title} />
+          <meta name="twitter:description" content={newInPage.header} />
+          <meta
+            name="twitter:image"
+            content={'https://auxiliumasociacion.online' + newInPage.image}
+          />
+        </Helmet>
+      )}
+
       <MainNav />
       <section className={styles.NewsDetailWrapper}>
         {newInPage ? (
@@ -66,7 +79,7 @@ export default function NewInPage() {
               className={styles.NewsImage}
             />
             <div className={styles.NewsContent}>
-              <ReactMarkdown remarkPlugins={[remarkGfm]} >
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>
                 {newInPage.content}
               </ReactMarkdown>
             </div>

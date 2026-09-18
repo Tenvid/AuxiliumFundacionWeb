@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ new.title }} | Asociación Auxilium</title>
+    <meta name="description" content="{{ new.header }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    <!-- Open Graph / Facebook / WhatsApp / LinkedIn / Telegram -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Asociación Auxilium">
+    <meta property="og:url" content="{{ canonical_url }}">
+    <meta property="og:title" content="{{ new.title }}">
+    <meta property="og:description" content="{{ new.header }}">
+    {% if image_url %}
+    <meta property="og:image" content="{{ image_url }}">
+    <meta property="og:image:secure_url" content="{{ image_url }}">
+    <meta property="og:image:alt" content="{{ new.title }}">
+    {% endif %}
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ new.title }}">
+    <meta name="twitter:description" content="{{ new.header }}">
+    {% if image_url %}
+    <meta name="twitter:image" content="{{ image_url }}">
+    {% endif %}
+
+    <!-- Redirección para usuarios humanos en caso de que accedan a esta vista -->
+    <meta http-equiv="refresh" content="0;url={{ canonical_url }}">
+    <script>
+        window.location.replace("{{ canonical_url }}");
+    </script>
+</head>
+<body>
+    <article>
+        <h1>{{ new.title }}</h1>
+        <p><time datetime="{{ new.publish_date|date:'Y-m-d' }}">{{ new.publish_date }}</time></p>
+        <p><strong>{{ new.header }}</strong></p>
+        {% if image_url %}
+        <img src="{{ image_url }}" alt="{{ new.title }}">
+        {% endif %}
+        <div>
+            {{ new.content|linebreaks }}
+        </div>
+        <p><a href="{{ canonical_url }}">Ver noticia en el sitio web</a></p>
+    </article>
+</body>
+</html>
+
