@@ -160,7 +160,7 @@ def add_project(request):
             data = request.POST
             title = data.get("title")
             paragraph_1 = data.get("paragraph_1")
-            paragraph_2 = data.get("paragraph_2")
+            paragraph_2 = data.get("paragraph_2", "") or ""
 
             image_1 = request.FILES.get("image_1")
             image_2 = request.FILES.get("image_2")
@@ -172,9 +172,14 @@ def add_project(request):
 
             title = data.get("title")
             paragraph_1 = data.get("paragraph_1")
-            paragraph_2 = data.get("paragraph_2")
+            paragraph_2 = data.get("paragraph_2", "") or ""
             image_1 = None
             image_2 = None
+
+        if not title or not paragraph_1:
+            return JsonResponse(
+                {"error": "title and paragraph_1 are required"}, status=400
+            )
 
         project = Project.objects.create(
             title=title,

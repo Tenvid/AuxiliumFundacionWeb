@@ -1,39 +1,71 @@
 .ProjectsPageContainer {
-  --img-height: 30vh;
-  --border-radius: 20px;
-  --gap: 4vw;
-  --margin-left: 3vw;
-  --margin-top: 2vh;
-  --font-family: Monda;
-  --font-size: clamp(1rem, 1.1vw, 1.5rem);
+        --img-height: 30vh;
+        --border-radius: 20px;
+        --gap: 4vw;
+        --margin-left: 3vw;
+        --margin-top: 2vh;
+        --font-family: Monda;
+        --font-size: clamp(1rem, 1.1vw, 1.5rem);
 }
 
+/* Estilos base para la cabecera (Desktop) */
 .ProjectHeader {
-  display: flex;
-  font-size: clamp(2rem, 2.5vw, 5rem);
-  width: 95%;
-  margin: 3vh auto 0;
-  justify-content: center;
-  background-color: var(--primary);
-  border-radius: 15px;
-  font-weight: bolder;
-  color: #ffffff;
-  padding: 0.5vh;
-  font-family: AntonSC;
-}
-
-@media (max-width: 425px) {
-  .ProjectHeader {
-    font-size: clamp(1.75rem, 2vw, 5rem);
-    text-align: center;
-    padding: 1vh;
-    width: 90%;
-  }
+        display: flex;
+        font-size: clamp(2rem, 3vw, 5rem);
+        /* Valor central ajustado a 3vw para mejor escalado */
+        width: 95%;
+        margin: 3vh auto 0;
+        justify-content: center;
+        align-items: center;
+        /* Asegura centrado vertical */
+        background-color: var(--primary);
+        border-radius: 15px;
+        font-weight: bolder;
+        color: #ffffff;
+        padding: 1.5vh 2vw;
+        /* Añadido padding lateral para evitar que el texto toque los bordes */
+        font-family: AntonSC;
+        text-align: center;
+        /* Asegura el centrado si el texto hace salto de línea */
+        box-sizing: border-box;
+        /* Previene desbordes provocados por el padding */
 }
 
 .footerWrapper {
-  background: var(--accent-dark);
-  display: flex;
-  justify-content: center;
-  padding: 5vw;
+        background: var(--accent-dark);
+        display: flex;
+        justify-content: center;
+        padding: 5vw;
+}
+
+/* =========================================
+   MEDIA QUERIES CABECERAS (TABLET & MOBILE) 
+   ========================================= */
+
+/* Tablets (hasta 850px) */
+@media (max-width: 850px) {
+        .ProjectHeader {
+                font-size: clamp(1.8rem, 4vw, 3rem);
+                width: 90%;
+                padding: 2vh;
+                margin-top: 2vh;
+        }
+}
+
+/* Móviles (hasta 425px) */
+@media (max-width: 425px) {
+        .ProjectHeader {
+                font-size: clamp(1.5rem, 6vw, 2.5rem);
+                /* Aumentado el valor vw para que resalte en pantallas pequeñas */
+                width: 95%;
+                /* Se aprovecha casi todo el ancho disponible */
+                padding: 2vh 1vh;
+                border-radius: 10px;
+                /* Bordes ligeramente más suaves en móvil */
+        }
+
+        .footerWrapper {
+                padding: 8vw 5vw;
+                /* Aumenta ligeramente el espacio vertical en móviles para áreas táctiles más cómodas */
+        }
 }

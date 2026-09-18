@@ -31,7 +31,7 @@ class Project(models.Model):
     title = models.CharField(max_length=200)
     paragraph_1 = models.TextField()
     image_1 = models.ImageField(upload_to="project_images/", blank=True, null=True)
-    paragraph_2 = models.TextField()
+    paragraph_2 = models.TextField(blank=True, default="")
     image_2 = models.ImageField(upload_to="project_images/", blank=True, null=True)
 
     @property
